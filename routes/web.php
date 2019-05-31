@@ -12,6 +12,14 @@
 */
 
 Route::get('/', 'WelcomeController@index');
+Route::get('/clear-cache', function() {
+
+    $exitCode = Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('route:clear');
+    Artisan::call('route:cache');
+    // return what you want
+});
 
 Route::get('/search','WelcomeController@search');
 
