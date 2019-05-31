@@ -1,7 +1,7 @@
 @extends('layouts.therapist')
 
 
-@section('title','Search Results')
+@section('title',' | Search Results')
 
 
 @section('styles')
@@ -11,7 +11,7 @@
 
 
 @section('scripts')
-    <script async defer
+    <script
             src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_MAPS_API')}}">
     </script>
     <script src="/theme/js/markerclusterer.js"></script>
@@ -27,12 +27,12 @@
                 <div class="col-md-6">
                     <h4><strong>Showing {{sizeof($therapists)<$perPage?sizeof($therapists):$perPage}}</strong> of {{$total}} results</h4>
                 </div>
-                <div class="col-md-6">
+                {{--<div class="col-md-6">
                     <div class="search_bar_list">
                         <input type="text" class="form-control" placeholder="Ex. Specialist, Name, Doctor...">
                         <input type="submit" value="Search">
                     </div>
-                </div>
+                </div>--}}
             </div>
             <!-- /row -->
         </div>
@@ -106,6 +106,12 @@
                         </div>
                     </div>
                     @endforeach
+                    @if($total<1)
+                        <div class="col-md-12 alert alert-warning">
+                            No Therapists Found
+                        </div>
+
+                    @endif
 
                     <!-- /box_list -->
 

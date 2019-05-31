@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Find easily a doctor and book online an appointment">
     <meta name="author" content="Ansonika">
-    <title>Therapist.co.uk @yield('title')</title>
+    <title>Therapist @yield('title')</title>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -47,7 +47,7 @@
         <div class="row">
             <div class="col-lg-3 col-6">
                 <div id="logo_home">
-                    <h1><a style="background: url('/theme/img/mainLogo.png') no-repeat 0 0;background-size: 163px 36px" href="index.html" title="Findoctor">Findoctor</a></h1>
+                    <h1><a style="background: url('/theme/img/mainLogo.png') no-repeat 0 0;background-size: 163px 36px" href="/" title="Findoctor">Findoctor</a></h1>
                 </div>
             </div>
             <nav class="col-lg-9 col-6">

@@ -41,7 +41,7 @@
 
                             </div>--}}
                             <div id="locationDiv">
-                                <input id="locationName" type="text" class="form-control" onfocus="initMap()" placeholder="Select Location">
+                                <input id="locationName" autocomplete="off" type="text" class="form-control" onfocus="initMap()" placeholder="Select Location">
                                 <input id="locationLatLng" name="latLng" type="hidden">
                             </div>
                         </div>
