@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController@index');
+
+Route::get('/search','WelcomeController@search');
 
 Auth::routes();
 Route::group(['prefix'=>'admin'],function(){

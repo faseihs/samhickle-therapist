@@ -28,7 +28,7 @@ class GroupSeeder extends Seeder
         ];
 
         foreach ($groups as $group){
-            \App\Model\Problem::create(['name'=>$group]);
+            \App\Model\Group::create(['name'=>$group]);
         }
     }
 }
