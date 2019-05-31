@@ -51,6 +51,16 @@ class WelcomeController extends Controller
            array_push($therapists,$therapist);
             array_push($positions,$latlng);
         };
+
+
+        if(!$request->has('page'))
+            $page=1;
+        else $page=$request->page;
+        $total = sizeof($therapists);
+        $perPage =10;
+
+        $therapists=$this->paginate($therapists,$perPage,$page);
+
         $mapsData =  [];
         foreach ($therapists as $therapist){
             $tempObj = new \stdClass();
@@ -65,16 +75,8 @@ class WelcomeController extends Controller
             $tempObj->get_directions_start_address= '';
             $tempObj->phone= '+3934245255';
             array_push($mapsData,$tempObj);
-
         }
         $mapsData=json_encode($mapsData);
-        if(!$request->has('page'))
-            $page=1;
-        else $page=$request->page;
-        $total = sizeof($therapists);
-        $perPage =10;
-        $therapists=$this->paginate($therapists,$perPage,$page);
-
 
 
 
