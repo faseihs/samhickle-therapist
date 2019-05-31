@@ -41,11 +41,33 @@ class WelcomeController extends Controller
             ->orderBy('distance')
             ->get();
         $therapists=[];
+        $positions=[];
         foreach ($result as $item){
            $therapist=Therapist::find($item->id);
            $therapist->distance=$item->distance;
+           $latlng=new \stdClass();
+           $latlng->lat=$therapist->profile->latitude;
+            $latlng->lng=$therapist->profile->longitude;
            array_push($therapists,$therapist);
+            array_push($positions,$latlng);
         };
+        $mapsData =  [];
+        foreach ($therapists as $therapist){
+            $tempObj = new \stdClass();
+            $tempObj->name=$therapist->name;
+            $tempObj->location_latitude=$therapist->profile->latitude;
+            $tempObj->location_longitude=$therapist->profile->longitude;
+            $tempObj->map_image_url= '/theme/img/doctor_listing_1.jpg';
+            $tempObj->type= 'therapist';
+            $tempObj->url_detail= 'detail-page.html';
+            $tempObj->name_point=$therapist->name;
+            $tempObj->description_point= '35 Newtownards Road, Belfast, BT4.';
+            $tempObj->get_directions_start_address= '';
+            $tempObj->phone= '+3934245255';
+            array_push($mapsData,$tempObj);
+
+        }
+        $mapsData=json_encode($mapsData);
         if(!$request->has('page'))
             $page=1;
         else $page=$request->page;
@@ -55,10 +77,17 @@ class WelcomeController extends Controller
 
 
 
+
+
+
+
         return view('searchResult',compact([
             'therapists',
             'total',
-            'perPage'
+            'perPage',
+            'positions'
+            ,'mapsData',
+            'input'
         ]));
     }
 
