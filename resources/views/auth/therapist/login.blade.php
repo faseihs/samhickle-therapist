@@ -23,7 +23,7 @@
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" placeholder="Your password" name="password" id="password">
-                                <a href="password/reset" class="forgot"><small>Forgot password?</small></a>
+                                <a href="/password/reset" class="forgot"><small>Forgot password?</small></a>
                             </div>
                             <div class="form-group">
                                 <input class="btn_1" type="submit" value="Login">
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                 </form>
-                <p class="text-center link_bright">Do not have an account yet? <a href="/register"><strong>Register now!</strong></a></p>
+                <p class="text-center link_bright">Do not have an account yet? <a href="/therapist/register"><strong>Register now!</strong></a></p>
             </div>
             <!-- /login -->
         </div>

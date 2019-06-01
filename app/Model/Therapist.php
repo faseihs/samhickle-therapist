@@ -43,4 +43,13 @@ class Therapist extends Authenticatable
         return $this->hasOne('App\Model\TherapistProfile');
     }
 
+    public function groups(){
+            return $this->belongsToMany('App\Model\Group','therapist_groups');
+    }
+
+    public function problems(){
+        return $this->belongsToMany('App\Model\Problem','therapist_problems');
+    }
+
+
 }

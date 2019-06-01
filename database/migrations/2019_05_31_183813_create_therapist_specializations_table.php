@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateReviewsTable extends Migration
+class CreateTherapistSpecializationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateReviewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('reviews', function (Blueprint $table) {
+        Schema::create('therapist_specializations', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('therapist_id');
-            $table->unsignedBigInteger('user_id');
-            $table->longText('review')->nullable();
-            $table->unsignedBigInteger('stars');
-            $table->foreign('therapist_id')->references('id')->on('therapists')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('therapist_id')->references('id')->on('therapists')
+                ->onDelete('cascade');
+            $table->string('specialization');
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ class CreateReviewsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reviews');
+        Schema::dropIfExists('therapist_specializations');
     }
 }

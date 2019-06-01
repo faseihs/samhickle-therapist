@@ -27,5 +27,19 @@ Auth::routes();
 Route::group(['prefix'=>'admin'],function(){
     Route::get('/login','Auth\LoginController@showAdminLogin');
     Route::post('/login','Auth\LoginController@adminLogin')->name('admin.login');
+
+});
+
+
+Route::group(['prefix'=>'therapist'],function(){
+    Route::get('/login','Auth\LoginController@showTherapistLogin');
+    Route::post('/login','Auth\LoginController@therapistLogin')->name('therapist.login');
+    Route::get('/register','Auth\RegisterController@showTherapistRegister');
+    Route::post('/register','Auth\RegisterController@therapistRegister');
+    Route::get('/dashboard','Therapist\DashboardController@index');
+
 });
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
