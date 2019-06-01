@@ -109,6 +109,7 @@ class RegisterController extends Controller
             $profile->contact=$request->contact;
             $profile->latitude=$request->latitude;
             $profile->longitude=$request->longitude;
+            $profile->save();
             $therapist->problems()->sync($request->problems);
             $therapist->groups()->sync($request->groups);
             DB::commit();
