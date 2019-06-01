@@ -68,13 +68,13 @@ class LoginController extends Controller
     {
         $this->validate($request, [
             'email'   => 'required|email',
-            'password' => 'required|min:8'
+            'password' => 'required|min:6'
         ]);
 
         if (Auth::guard('therapist')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
 
             return redirect()->intended('/therapist/dashboard');
         }
-        return back()->withInput($request->only('email', 'remember'));
+        return back()->withInput($request->only('email', 'remember'))->withErrors(['email'=>'Your credentials do not match our records']);
     }
 }

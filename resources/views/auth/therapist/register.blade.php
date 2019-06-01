@@ -154,6 +154,11 @@
                             <div class="text-center"><small>Ut nam graece accumsan cotidieque. Has voluptua vivendum accusamus cu. Ut per assueverit temporibus dissentiet.</small></div>
                             @include('includes.errors')
                         </form>
+                        <style>
+                            .invalid-feedback{
+                                display: block;
+                            }
+                        </style>
                     </div>
                     <!-- /box_form -->
                 </div>

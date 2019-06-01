@@ -51,5 +51,9 @@ class Therapist extends Authenticatable
         return $this->belongsToMany('App\Model\Problem','therapist_problems');
     }
 
+    public function services(){
+        return $this->hasMany('App\Model\TherapistService');
+    }
+
 
 }

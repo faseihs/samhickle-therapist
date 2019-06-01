@@ -37,6 +37,11 @@ Route::group(['prefix'=>'therapist'],function(){
     Route::get('/register','Auth\RegisterController@showTherapistRegister');
     Route::post('/register','Auth\RegisterController@therapistRegister');
     Route::get('/dashboard','Therapist\DashboardController@index');
+    Route::get('/edit-profile','Therapist\DashboardController@editProfile');
+    Route::post('/edit-profile','Therapist\DashboardController@updateProfile');
+    Route::resource('/service','Therapist\TherapistServiceController');
+
+
 
 });
 Route::get('/home', 'HomeController@index')->name('home');
