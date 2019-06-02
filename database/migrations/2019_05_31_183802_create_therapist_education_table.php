@@ -19,7 +19,7 @@ class CreateTherapistEducationTable extends Migration
             $table->foreign('therapist_id')->references('id')->on('therapists')
                 ->onDelete('cascade');
             $table->string('college');
-            $table->unsignedInteger('description');
+            $table->string('description');
             $table->timestamps();
         });
     }

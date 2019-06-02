@@ -92,6 +92,9 @@
                     <li>
                         <a href="/therapist/service">Services</a>
                     </li>
+                    <li>
+                        <a href="/therapist/education">Education</a>
+                    </li>
                 </ul>
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">

@@ -54,6 +54,14 @@ class Therapist extends Authenticatable
     public function services(){
         return $this->hasMany('App\Model\TherapistService');
     }
+    
+    public function educations(){
+        return $this->hasMany('App\Model\TherapistEducation');
+    }
+    
+    public function specializations(){
+        return $this->hasMany('App\Model\TherapistSpecialization');
+    }
 
 
 }

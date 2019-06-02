@@ -7,4 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class TherapistEducation extends Model
 {
     //
+    protected $guarded=[];
 }

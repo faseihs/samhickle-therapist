@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers\Therapist;
 
-use App\Model\TherapistService;
+use App\Model\TherapistSpecialization;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 
-class TherapistServiceController extends Controller
+class TherapistSpecializationController extends Controller
 {
     public function __construct()
     {
@@ -24,12 +23,6 @@ class TherapistServiceController extends Controller
     public function index()
     {
         //
-        $therapist=Auth::user();
-        $services=$therapist->services;
-        $specializations = $therapist->specializations;
-        //dd($specializations);
-        return view('therapist.services.index',compact(['specializations','therapist','services']));
-
     }
 
     /**
@@ -50,11 +43,9 @@ class TherapistServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
-
+        //
         $validator = Validator::make($request->all(), [
-            'service'=>'required|string',
-            'price'=>'required|numeric'
+            'specialization'=>'required|string'
 
         ]);
         if ($validator->fails()) {
@@ -63,16 +54,15 @@ class TherapistServiceController extends Controller
 
         try{
             DB::beginTransaction();
-            $therapist=Auth::user();
-            $service=new TherapistService($request->all());
-            $service->therapist_id=$therapist->id;
+            $service=new TherapistSpecialization($request->all());
+            $service->therapist_id=Auth::user()->id;
             $service->save();
             DB::commit();
             return response()->json($service,201);
         }
         catch(\Exception $e){
             DB::rollback();
-            return response()->json($e->getMessage(),500);
+            return response()->json($e->getTrace(),500);
         }
     }
 
@@ -110,8 +100,7 @@ class TherapistServiceController extends Controller
         //
         header('Content-Type: application/json; charset=utf-8');
         $validator = Validator::make($request->all(), [
-            'service'=>'required|string',
-            'price'=>'required|numeric'
+            'specialization'=>'required|string'
 
         ]);
         if ($validator->fails()) {
@@ -121,7 +110,7 @@ class TherapistServiceController extends Controller
         try{
             DB::beginTransaction();
 
-            $service=TherapistService::findOrFail($id);
+            $service=TherapistSpecialization::findOrFail($id);
             $service->update($request->all());
             DB::commit();
             return response()->json($service,201);
@@ -141,26 +130,8 @@ class TherapistServiceController extends Controller
     public function destroy($id)
     {
         //
-        TherapistService::findOrFail($id)->delete();
+        header('Content-Type: application/json; charset=utf-8');
+        TherapistSpecialization::findOrFail($id)->delete();
         return response()->json("Done",200);
-    }
-
-    public function editAnyProfileDetail(Request $request){
-        try{
-            DB::beginTransaction();
-
-            if($request->has('redirectPath'))
-                $redirectPath=$request->redirectPath;
-            $therapist=Auth::user();
-            $therapist->profile->update($request->except('redirectPath'));
-            DB::commit();
-            if(isset($redirectPath))
-                return redirect($redirectPath)->with('success','Updated');
-            else Redirect::back()->with('success','Updated');
-        }
-        catch(\Exception $e){
-            DB::rollback();
-            dd($e);
-        }
     }
 }

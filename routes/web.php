@@ -40,6 +40,9 @@ Route::group(['prefix'=>'therapist'],function(){
     Route::get('/edit-profile','Therapist\DashboardController@editProfile');
     Route::post('/edit-profile','Therapist\DashboardController@updateProfile');
     Route::resource('/service','Therapist\TherapistServiceController');
+    Route::post('/edit-any-profile-detail','Therapist\TherapistServiceController@editAnyProfileDetail');
+    Route::resource('/education','Therapist\TherapistEducationController');
+    Route::resource('/specialization','Therapist\TherapistSpecializationController');
 
 
 

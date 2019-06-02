@@ -107,16 +107,16 @@ class RegisterController extends Controller
             $profile = new  TherapistProfile();
             $profile->therapist_id=$therapist->id;
             $profile->contact=$request->contact;
-            $profile->latitude=$request->latitude;
-            $profile->longitude=$request->longitude;
+            $profile->latitude=$request->address_latitude;
+            $profile->longitude=$request->address_longitude;
             $profile->save();
             $therapist->problems()->sync($request->problems);
             $therapist->groups()->sync($request->groups);
             DB::commit();
             if (Auth::guard('therapist')->attempt(['email' => $therapist->email, 'password' => $request->password], false)) {
-                return redirect()->intended('/therapist/dashboard');
+                return redirect()->intended('/therapist/edit-profile');
             }
-            return redirect('/therapist/dashboard');
+            return redirect('/therapist/edit-profile');
         }
         catch(\Exception $e){
             DB::rollback();
