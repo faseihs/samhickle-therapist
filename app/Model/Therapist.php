@@ -65,6 +65,10 @@ class Therapist extends Authenticatable
     public function specializations(){
         return $this->hasMany('App\Model\TherapistSpecialization');
     }
+    
+    public function schedules(){
+        return $this->hasMany('App\Model\TherapistSchedule');
+    }
 
 
 }

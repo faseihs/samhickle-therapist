@@ -43,6 +43,8 @@ Route::group(['prefix'=>'therapist'],function(){
     Route::post('/edit-any-profile-detail','Therapist\TherapistServiceController@editAnyProfileDetail');
     Route::resource('/education','Therapist\TherapistEducationController');
     Route::resource('/specialization','Therapist\TherapistSpecializationController');
+    Route::resource('/schedule','Therapist\TherapistScheduleController');
+    Route::post('/schedule-by-date','Therapist\TherapistScheduleController@searchByDate');
 
 
 
