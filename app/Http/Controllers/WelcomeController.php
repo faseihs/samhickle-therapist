@@ -105,4 +105,31 @@ class WelcomeController extends Controller
             $options
         ))->withPath('/search')->appends(Input::except(['page']));
     }
+
+    public function therapistSearch(Request $request,$slug){
+        $therapist=Therapist::findBySlugOrFail($slug);
+        $profile=$therapist->profile;
+        $specializations=collect($therapist->specializations);
+        $sp1=collect();
+        $sp2=collect();
+        //dd($specializations->chunk(2)->all());
+        $chunk=$specializations->chunk(2)->all();
+        if(sizeof($chunk)>0)
+            $sp1=$chunk[0];
+        if(sizeof($chunk)>1)
+            $sp12=$chunk[1];
+
+        $educations = $therapist->educations;
+        $services = $therapist->services;
+
+        return view('guest.therapist-profile',compact([
+            'therapist',
+            'profile',
+            'sp1',
+            'sp2',
+            'chunk',
+            'educations',
+            'services'
+        ]));
+    }
 }

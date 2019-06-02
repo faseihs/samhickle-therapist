@@ -31,6 +31,7 @@
     <link href="/admin/css/admin.css" rel="stylesheet">
     <!-- WYSIWYG Editor -->
     <link rel="stylesheet" href="/admin/js/editor/summernote-bs4.css">
+
     @yield('styles')
 
 </head>

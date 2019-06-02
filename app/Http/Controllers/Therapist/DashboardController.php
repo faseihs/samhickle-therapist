@@ -26,14 +26,17 @@ class DashboardController extends Controller
     }
 
     public function updateProfile(Request $request){
-        //dd($request->all());
         $therapist=Auth::user();
         $profile=$therapist->profile;
         $this->validate($request,[
             'name'=>'required|string',
             'email'=>'unique:therapists,email,'.$therapist->id,
             'contact'=>'nullable|string',
-            'dp'=>'nullable|image'
+            'dp'=>'nullable|image',
+            'city'=>'nullable|string',
+            'state'=>'nullable|string',
+            'address'=>'nullable|string',
+            'postal_code'=>'nullable|string',
         ]);
         try{
             DB::beginTransaction();
@@ -77,6 +80,10 @@ class DashboardController extends Controller
                 $file->move($path,$name);
                 $profile->dp=$path.'/'.$name;
             }
+            $profile->city=$request->city;
+            $profile->state=$request->state;
+            $profile->address=$request->address;
+            $profile->postal_code=$request->postal_code;
             $therapist->save();
             $profile->save();
             DB::commit();

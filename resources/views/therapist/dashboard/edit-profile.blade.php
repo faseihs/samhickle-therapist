@@ -109,6 +109,43 @@
 
     <!-- /box_general-->
     <!-- /box_general-->
+
+        <div class="box_general padding_bottom">
+            <div class="header_box version_2">
+                <h2><i class="fa fa-map-marker"></i>Address</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>City</label>
+                        <input type="text" name="city" value="{{$profile->city}}" class="form-control" placeholder="Your address">
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Address</label>
+                        <input type="text" name="address" value="{{$profile->address}}" class="form-control" placeholder="Your address">
+                    </div>
+                </div>
+            </div>
+            <!-- /row-->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>State</label>
+                        <input type="text" name="state" value="{{$profile->state}}" class="form-control" placeholder="Your state">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Zip code</label>
+                        <input type="text" name="postal_code" value="{{$profile->postal_code}}" class="form-control" placeholder="Your zip code">
+                    </div>
+                </div>
+            </div>
+            <!-- /row-->
+        </div>
     <p><button class="btn_1 medium">Save</button></p>
     </form>
 

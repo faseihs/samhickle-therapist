@@ -2,6 +2,7 @@
 
 namespace App\Model;
 
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Notifications\Notifiable;
@@ -12,6 +13,7 @@ class Therapist extends Authenticatable
     //
     use Notifiable;
     use Sluggable;
+    use SluggableScopeHelpers;
     /**
      * Return the sluggable configuration array for this model.
      *
@@ -21,7 +23,8 @@ class Therapist extends Authenticatable
     {
         return [
             'slug' => [
-                'source' => 'name'
+                'source' => 'name',
+                'unique' => true,
             ]
         ];
     }

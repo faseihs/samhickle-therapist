@@ -53,8 +53,8 @@
             <nav class="col-lg-9 col-6">
                 <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="#0"><span>Menu mobile</span></a>
                 <ul id="top_access">
-                    <li><a href="login.html"><i class="pe-7s-user"></i></a></li>
-                    <li><a href="register-doctor.html"><i class="pe-7s-add-user"></i></a></li>
+                    <li><a href="/therapist/login"><i class="pe-7s-user"></i></a></li>
+                    <li><a href="/therapist/register"><i class="pe-7s-add-user"></i></a></li>
                 </ul>
                 <div class="main-menu">
                     <ul>

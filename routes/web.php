@@ -48,6 +48,7 @@ Route::group(['prefix'=>'therapist'],function(){
 
 });
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/therapist-profile/{slug}','WelcomeController@therapistSearch');
 
 
 
