@@ -75,10 +75,12 @@
                 </ul>
             </div>
             <div class="col-md-12">
-                <ul class="legend">
+               {{-- <ul class="legend">
                     <li><strong></strong>Available</li>
                     <li><strong></strong>Not available</li>
-                </ul>
+                </ul>--}}
+                <input id="repeat" name="repeat" type="checkbox">
+                <label for="repeat">Repeat Schedule</label>
             </div>
         </div>
             <div class="row">
@@ -105,6 +107,7 @@
             format: "yyyy-mm-dd",
             datesDisabled: ["2017/10/20", "2017/11/21","2017/12/21", "2018/01/21","2018/02/21","2018/03/21"],
         }).on('changeDate',function (e) {
+            $('#repeat').prop("checked",false);
             $("input:checkbox[name=times]").each(function(){
 
                 var checkbox= $(this);
@@ -136,6 +139,8 @@
                            checkbox.prop('checked', true);
                     });
                 });
+                var r = data.repeat===1?true:false;
+                $('#repeat').prop("checked",r);
             }).fail(function (xhr) {
                 $('.notifyjs-wrapper').trigger('notify-hide');
                 if(xhr.status===404)
@@ -160,6 +165,7 @@
             var date = $('#selectedDate').val();
             var times="";
             var timeArray=[];
+            var repeat = $('#repeat').prop("checked")===true?1:0;
             if(date.length<1)
             {
                 $.notify("Select Date....","warn");
@@ -181,7 +187,8 @@
                 data:{
                     _token:csrf,
                     times:times,
-                    date:date
+                    date:date,
+                    repeat:repeat
                 }
             }).done(function (data) {
                 $('.notifyjs-wrapper').trigger('notify-hide');

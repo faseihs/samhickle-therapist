@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Therapist;
 
 use App\Model\TherapistSchedule;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -50,7 +51,8 @@ class TherapistScheduleController extends Controller
         //
         $validator = Validator::make($request->all(), [
             'date'=>'required|date',
-            'times'=>'required|string'
+            'times'=>'required|string',
+            'repeat'=>'nullable|numeric'
 
         ]);
         if ($validator->fails()) {
@@ -59,11 +61,21 @@ class TherapistScheduleController extends Controller
         try{
             DB::beginTransaction();
             $therapist= Auth::user();
-            if($already=TherapistSchedule::where('date',$request->date)->first())
+            if($already=TherapistSchedule::where('date',$request->date)->where('therapist_id',Auth::user()->id)->first())
             {
+                $carbon=Carbon::parse($request->date);
+                $already->day_name=$carbon->dayName;
+                $already->day_number=$carbon->dayOfWeekIso;
                 $already->update($request->all());
             }
-            else $therapist->schedules()->save(new TherapistSchedule($request->all()));
+
+            else {
+                $new =new TherapistSchedule($request->all());
+                $carbon=Carbon::parse($request->date);
+                $new->day_name=$carbon->dayName;
+                $new->day_number=$carbon->dayOfWeekIso;
+                $therapist->schedules()->save($new);
+            }
             DB::commit();
             return response()->json("Done",200);
         }
@@ -127,12 +139,24 @@ class TherapistScheduleController extends Controller
         if ($validator->fails()) {
             return response()->json(['error' => $validator->errors()], 401);
         }
-        $schedule=TherapistSchedule::where('date',$request->date)->first();
+        $schedule=TherapistSchedule::where('date',$request->date)->where('therapist_id',Auth::user()->id)->first();
 
         if($schedule){
             $schedule->time=explode('|',$schedule->times);
             return response()->json($schedule,200);
         }
-        else return response()->json("Empty",404);
+        else {
+            $carbon=Carbon::parse($request->date);
+            $day=$carbon->dayOfWeekIso;
+            $repeatDay = TherapistSchedule::where('day_number',$day)->where('therapist_id',Auth::user()->id)
+                ->where('repeat',1)
+                ->first();
+            if($repeatDay) {
+                $repeatDay->time=explode('|',$repeatDay->times);
+                return response()->json($repeatDay, 200);
+            }
+             else return response()->json("Empty",404);
+        }
+        //
     }
 }

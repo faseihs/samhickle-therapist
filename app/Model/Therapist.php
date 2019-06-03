@@ -70,5 +70,9 @@ class Therapist extends Authenticatable
         return $this->hasMany('App\Model\TherapistSchedule');
     }
 
+    public function bookings(){
+        return $this->hasMany('App\Model\Booking');
+    }
+
 
 }

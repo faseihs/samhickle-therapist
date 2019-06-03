@@ -5,12 +5,17 @@ namespace App\Http\Controllers;
 use App\Model\Group;
 use App\Model\Problem;
 use App\Model\Therapist;
+use App\Model\TherapistSchedule;
+use App\Rules\TherapistSlugPresent;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Validator;
 
 class WelcomeController extends Controller
 {
@@ -122,6 +127,7 @@ class WelcomeController extends Controller
         $educations = $therapist->educations;
         $services = $therapist->services;
 
+
         return view('guest.therapist-profile',compact([
             'therapist',
             'profile',
@@ -131,5 +137,35 @@ class WelcomeController extends Controller
             'educations',
             'services'
         ]));
+    }
+
+    public function searchByDateAndSlug(Request $request){
+        $validator = Validator::make($request->all(), [
+            'date'=>'required|date',
+            'slug'=>['required',new TherapistSlugPresent]
+
+        ]);
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()], 401);
+        }
+        $thrapist=Therapist::findBySlug($request->slug);
+        $schedule=TherapistSchedule::where('date',$request->date)->where('therapist_id',$thrapist->id)->first();
+
+        if($schedule){
+            $schedule->time=explode('|',$schedule->times);
+            return response()->json($schedule,200);
+        }
+        else {
+            $carbon=Carbon::parse($request->date);
+            $day=$carbon->dayOfWeekIso;
+            $repeatDay = TherapistSchedule::where('day_number',$day)->where('therapist_id',$thrapist->id)
+                ->where('repeat',1)
+                ->first();
+            if($repeatDay) {
+                $repeatDay->time=explode('|',$repeatDay->times);
+                return response()->json($repeatDay, 200);
+            }
+            else return response()->json("Empty",404);
+        }
     }
 }

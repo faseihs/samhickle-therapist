@@ -45,12 +45,19 @@ Route::group(['prefix'=>'therapist'],function(){
     Route::resource('/specialization','Therapist\TherapistSpecializationController');
     Route::resource('/schedule','Therapist\TherapistScheduleController');
     Route::post('/schedule-by-date','Therapist\TherapistScheduleController@searchByDate');
+    Route::get('/bookings','Therapist\BookingController@index');
+    Route::post('/booking/{id}','Therapist\BookingController@update');
 
 
 
 });
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/therapist-profile/{slug}','WelcomeController@therapistSearch');
+Route::post('/schedule-by-date-and-slug','WelcomeController@searchByDateAndSlug');
 
+
+Route::group(['prefix'=>'user'],function(){
+   Route::resource('booking','User\BookingController');
+});
 
 

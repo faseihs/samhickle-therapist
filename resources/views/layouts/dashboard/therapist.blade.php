@@ -58,9 +58,9 @@
                 </a>
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Bookings">
-                <a class="nav-link" href="bookings.html">
+                <a class="nav-link" href="/therapist/bookings">
                     <i class="fa fa-fw fa-calendar-check-o"></i>
-                    <span class="nav-link-text">Bookings <span class="badge badge-pill badge-primary">6 New</span></span>
+                    <span class="nav-link-text">Bookings</span> {{--<span class="badge badge-pill badge-primary">6 New</span></span>--}}
                 </a>
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Reviews">
@@ -75,8 +75,8 @@
                     <span class="nav-link-text">Bookmarks</span>
                 </a>
             </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Add listing">
-                <a class="nav-link" href="add-listing.html">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Schedule">
+                <a class="nav-link" href="/therapist/schedule">
                     <i class="fa fa-fw fa-plus-circle"></i>
                     <span class="nav-link-text">Add listing</span>
                 </a>

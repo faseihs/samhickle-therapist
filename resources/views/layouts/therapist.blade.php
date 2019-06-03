@@ -53,24 +53,40 @@
             <nav class="col-lg-9 col-6">
                 <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="#0"><span>Menu mobile</span></a>
                 <ul id="top_access">
-                    <li><a href="/therapist/login"><i class="pe-7s-user"></i></a></li>
-                    <li><a href="/therapist/register"><i class="pe-7s-add-user"></i></a></li>
+                    <li><a data-toggle="tooltip" title="Therapist Login"  href="/therapist/login"><i class="pe-7s-user"></i></a></li>
+                    <li><a data-toggle="tooltip" title="Therapist Register" href="/therapist/register"><i class="pe-7s-add-user"></i></a></li>
+                    @auth('web')
+                    <li><a data-toggle="tooltip" title="Logout" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();" href="#"><i
+                                    class="pe-7s-delete-user"></i></a></li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                    @endauth
+                    @auth('therapist')
+                        <li><a data-toggle="tooltip" title="Therapist Logout" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();" href="#"><i
+                                        class="pe-7s-delete-user"></i></a></li>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    @endauth
                 </ul>
                 <div class="main-menu">
                     <ul>
                         <li class="submenu">
-                            <a href="#0" class="show-submenu">Home<i class="icon-down-open-mini"></i></a>
+                            <a href="#0" class="show-submenu">Patient<i class="icon-down-open-mini"></i></a>
                             <ul>
-                                <li><a href="index.html">Home Default</a></li>
-                                <li><a href="index-2.html">Home Version 2</a></li>
-                                <li><a href="index-3.html">Home Version 3</a></li>
-                                <li><a href="index-4.html">Home Version 4</a></li>
-                                <li><a href="index-7.html">Home with Map</a></li>
-                                <li><a href="index-6.html">Revolution Slider</a></li>
-                                <li><a href="index-5.html">With Cookie Bar (EU law)</a></li>
+                                @auth('web')
+                                    <li><a href="/user/dashboard">Dashboard</a></li>
+                                @else
+                                <li><a href="/login">Login</a></li>
+                                <li><a href="/register">Register</a></li>
+                                @endauth
+
                             </ul>
                         </li>
-                        <li class="submenu">
+                        {{--<li class="submenu">
                             <a href="#0" class="show-submenu">Pages<i class="icon-down-open-mini"></i></a>
                             <ul>
                                 <li class="third-level"><a href="#0">List pages</a>
@@ -120,7 +136,7 @@
                                 <li><a href="404.html">404 page</a></li>
                             </ul>
                         </li>
-                        <li><a href="#0">Buy this template</a></li>
+                        <li><a href="#0">Buy this template</a></li>--}}
                     </ul>
                 </div>
                 <!-- /main-menu -->
