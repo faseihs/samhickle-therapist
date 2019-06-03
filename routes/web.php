@@ -47,6 +47,7 @@ Route::group(['prefix'=>'therapist'],function(){
     Route::post('/schedule-by-date','Therapist\TherapistScheduleController@searchByDate');
     Route::get('/bookings','Therapist\BookingController@index');
     Route::post('/booking/{id}','Therapist\BookingController@update');
+    Route::get('/reviews','Therapist\DashboardController@reviews');
 
 
 
@@ -58,6 +59,13 @@ Route::post('/schedule-by-date-and-slug','WelcomeController@searchByDateAndSlug'
 
 Route::group(['prefix'=>'user'],function(){
    Route::resource('booking','User\BookingController');
+   Route::get('/dashboard','User\DashboardController@index');
+    Route::get('/edit-profile','User\DashboardController@editProfile');
+    Route::post('/edit-profile','User\DashboardController@updateProfile');
 });
+Route::get('/submit-review/{slug}', 'User\ReviewController@create');
+Route::post('/submit-review/{slug}', 'User\ReviewController@store');
+
+
 
 

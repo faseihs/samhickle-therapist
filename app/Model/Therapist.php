@@ -73,6 +73,40 @@ class Therapist extends Authenticatable
     public function bookings(){
         return $this->hasMany('App\Model\Booking');
     }
+    public function reviews(){
+        return $this->hasMany('App\Model\Review');
+    }
+
+    public function getStars(){
+        $reviews=$this->reviews;
+        $total=sizeof($reviews);
+        $totalStars=0;
+        foreach($reviews as $r){
+            $totalStars+=$r->stars;
+        }
+        return $total==0?0:number_format($totalStars/$total,1);
+    }
+
+    public function getStarPercentages(){
+        $reviews=$this->reviews;
+        $size=sizeof($reviews)>0?sizeof($reviews):1;
+        $stars=[];
+        $stars[1]=0;
+        $stars[2]=0;
+        $stars[3]=0;
+        $stars[4]=0;
+        $stars[5]=0;
+        foreach($reviews as $r){
+            $stars[$r->stars]++;
+        }
+
+        foreach ($stars as $index=>$star){
+            $stars[$index]=number_format(($stars[$index]*100)/$size,1);
+        }
+
+
+        return $stars;
+    }
 
 
 }

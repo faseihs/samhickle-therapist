@@ -126,6 +126,9 @@ class WelcomeController extends Controller
 
         $educations = $therapist->educations;
         $services = $therapist->services;
+        $reviews=$therapist->reviews()->orderBy('created_at','DESC')->get();
+        $stars=$therapist->getStars();
+        $starsP=$therapist->getStarPercentages();
 
 
         return view('guest.therapist-profile',compact([
@@ -135,7 +138,10 @@ class WelcomeController extends Controller
             'sp2',
             'chunk',
             'educations',
-            'services'
+            'services',
+            'reviews',
+            'stars',
+            'starsP'
         ]));
     }
 

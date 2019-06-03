@@ -39,55 +39,38 @@
 <body class="fixed-nav sticky-footer" id="page-top">
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top" id="mainNav">
-    <a  class="navbar-brand" href="/therapist/dashboard"><img src="/theme/img/mainLogo.png" data-retina="true" alt="" width="163" height="36"></a>
+    <a  class="navbar-brand" href="/"><img src="/theme/img/mainLogo.png" data-retina="true" alt="" width="163" height="36"></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="/user/dashboard">
                     <i class="fa fa-fw fa-dashboard"></i>
                     <span class="nav-link-text">Dashboard</span>
                 </a>
             </li>
-
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Bookings">
-                <a class="nav-link" href="/therapist/bookings">
+                <a class="nav-link" href="/user/bookings">
                     <i class="fa fa-fw fa-calendar-check-o"></i>
                     <span class="nav-link-text">Bookings</span> {{--<span class="badge badge-pill badge-primary">6 New</span></span>--}}
                 </a>
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Reviews">
-                <a class="nav-link" href="/therapist/reviews">
+                <a class="nav-link" href="reviews.html">
                     <i class="fa fa-fw fa-star"></i>
                     <span class="nav-link-text">Reviews</span>
                 </a>
             </li>
 
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Schedule">
-                <a class="nav-link" href="/therapist/schedule">
-                    <i class="fa fa-fw fa-plus-circle"></i>
-                    <span class="nav-link-text">Schedule</span>
-                </a>
-            </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My profile">
-                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseProfile" data-parent="#exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Profile">
+                <a class="nav-link" href="/user/edit-profile">
                     <i class="fa fa-fw fa-wrench"></i>
-                    <span class="nav-link-text">My profile</span>
+                    <span class="nav-link-text">Profile Settings</span>
                 </a>
-                <ul class="sidenav-second-level collapse" id="collapseProfile">
-                    <li>
-                        <a href="/therapist/edit-profile">Doctor profile</a>
-                    </li>
-                    <li>
-                        <a href="/therapist/service">Services</a>
-                    </li>
-                    <li>
-                        <a href="/therapist/education">Education</a>
-                    </li>
-                </ul>
             </li>
+
         </ul>
         <ul class="navbar-nav sidenav-toggler">
             <li class="nav-item">

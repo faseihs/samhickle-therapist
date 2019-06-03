@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Http\Controllers\Therapist;
+namespace App\Http\Controllers\User;
 
-use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -13,25 +12,28 @@ class DashboardController extends Controller
     //
     public function __construct()
     {
-        $this->middleware('auth:therapist');
+        $this->middleware('auth:web');
     }
 
     public function index(){
-       return view('therapist.dashboard.index');
+        $user=Auth::user();
+        return view('user.dashboard.index',compact([
+            'user'
+        ]));
     }
 
     public function editProfile(){
-        $therapist = Auth::user();
-        $profile=$therapist->profile;
-        return view('therapist.dashboard.edit-profile',compact(['therapist','profile']));
+        $user = Auth::user();
+        $profile=$user->profile;
+        return view('user.dashboard.edit-profile',compact(['user','profile']));
     }
 
     public function updateProfile(Request $request){
-        $therapist=Auth::user();
-        $profile=$therapist->profile;
+        $user=Auth::user();
+        $profile=$user->profile;
         $this->validate($request,[
             'name'=>'required|string',
-            'email'=>'unique:therapists,email,'.$therapist->id,
+            'email'=>'unique:users,email,'.$user->id,
             'contact'=>'nullable|string',
             'dp'=>'nullable|image',
             'city'=>'nullable|string',
@@ -41,8 +43,8 @@ class DashboardController extends Controller
         ]);
         try{
             DB::beginTransaction();
-            $therapist->name=$request->name;
-            $therapist->email=$request->email;
+            $user->name=$request->name;
+            $user->email=$request->email;
             if($request->contact!=null) {
                 $profile->contact=$request->contact;
             }
@@ -77,7 +79,7 @@ class DashboardController extends Controller
 
 
                 $name=time().$file->getClientOriginalName();
-                $path='images/therapists/'.$therapist->id;
+                $path='images/users/'.$user->id;
                 $file->move($path,$name);
                 $profile->dp=$path.'/'.$name;
             }
@@ -85,10 +87,10 @@ class DashboardController extends Controller
             $profile->state=$request->state;
             $profile->address=$request->address;
             $profile->postal_code=$request->postal_code;
-            $therapist->save();
+            $user->save();
             $profile->save();
             DB::commit();
-            return redirect('/therapist/edit-profile')
+            return redirect('/user/edit-profile')
                 ->with('success','Updated');
         }
         catch(\Exception $e){
@@ -96,25 +98,4 @@ class DashboardController extends Controller
             dd($e);
         }
     }
-
-    public function reviews(Request $request){
-        $therapist=Auth::user();
-        $type="latest";
-        if($request->get('type'))
-            $type=$request->type;
-        if($type=='latest')
-            $reviews=$therapist->reviews()->where('created_at','>=',Carbon::now()->subDay(7)->toDateString())
-                ->orderBy('created_at','DESC')->paginate(10);
-        else $reviews=$therapist->reviews()->where('created_at','<=',Carbon::now()->subDay(7)->toDateString())
-            ->orderBy('created_at','DESC')->paginate(10);
-
-        return view('therapist.dashboard.reviews',
-            compact([
-                'therapist',
-                'reviews',
-                'type'
-            ]));
-
-    }
-
 }

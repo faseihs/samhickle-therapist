@@ -30,7 +30,7 @@
             <ul>
                 @foreach($bookings as $b)
                     <li>
-                        <figure><img src="/theme/img/up.png" alt=""></figure>
+                        <figure><img src="{{$b->user->profile->dp?'/'.$b->user->profile->dp:'/theme/img/up.png'}}" alt=""></figure>
                         <h4>{{$b->user->name}} <i class="{{$b->getStatus()}}">{{ucfirst($b->getStatus())}}</i></h4>
                         <ul class="booking_details">
                             <li><strong>Booking date</strong> {{Carbon::parse($b->date)->format('d F Y')}}</li>

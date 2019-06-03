@@ -58,6 +58,7 @@
             <!-- /asdide -->
 
             <div class="col-xl-9 col-lg-8">
+                @include('includes.flash')
 
                 <div class="tabs_styled_2">
                     <ul class="nav nav-tabs" role="tablist">
@@ -352,20 +353,30 @@
                         <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
                             <div class="reviews-container">
                                 <div class="row">
+                                    <div class="col-md-12">
+                                        @if(sizeof($reviews)<1)
+                                            <div class="alert alert-warning">No reviews yet</div>
+                                        @endif
+                                    </div>
+
+
                                     <div class="col-lg-3">
                                         <div id="review_summary">
-                                            <strong>4.7</strong>
+                                            <strong>{{$stars}}</strong>
                                             <div class="rating">
-                                                <i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
+                                                @for($i=1;$i<=$stars;$i++)
+                                                    <i class="icon_star voted"></i>
+                                                @endfor
                                             </div>
-                                            <small>Based on 4 reviews</small>
+                                            <small>Based on {{sizeof($reviews)}} reviews</small>
                                         </div>
                                     </div>
                                     <div class="col-lg-9">
+
                                         <div class="row">
                                             <div class="col-lg-10 col-9">
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar" role="progressbar" style="width: {{$starsP[5]}}%" aria-valuenow="{{$starsP[5]}}" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-3"><small><strong>5 stars</strong></small></div>
@@ -374,7 +385,7 @@
                                         <div class="row">
                                             <div class="col-lg-10 col-9">
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar" role="progressbar" style="width: {{$starsP[4]}}%" aria-valuenow="{{$starsP[4]}}" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-3"><small><strong>4 stars</strong></small></div>
@@ -383,7 +394,7 @@
                                         <div class="row">
                                             <div class="col-lg-10 col-9">
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar" role="progressbar" style="width: {{$starsP[3]}}%" aria-valuenow="{{$starsP[3]}}" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-3"><small><strong>3 stars</strong></small></div>
@@ -392,7 +403,7 @@
                                         <div class="row">
                                             <div class="col-lg-10 col-9">
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar" role="progressbar" style="width: {{$starsP[2]}}%" aria-valuenow="{{$starsP[2]}}" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-3"><small><strong>2 stars</strong></small></div>
@@ -401,7 +412,7 @@
                                         <div class="row">
                                             <div class="col-lg-10 col-9">
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar" role="progressbar" style="width: {{$starsP[1]}}%" aria-valuenow="{{$starsP[1]}}" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-3"><small><strong>1 stars</strong></small></div>
@@ -412,65 +423,37 @@
                                 <!-- /row -->
 
                                 <hr>
-
-                                <div class="review-box clearfix">
-                                    <figure class="rev-thumb"><img src="http://via.placeholder.com/150x150.jpg" alt="">
-                                    </figure>
-                                    <div class="rev-content">
-                                        <div class="rating">
-                                            <i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
-                                        </div>
-                                        <div class="rev-info">
-                                            Admin – April 03, 2016:
-                                        </div>
-                                        <div class="rev-text">
-                                            <p>
-                                                Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /review-box -->
-
-                                <div class="review-box clearfix">
-                                    <figure class="rev-thumb"><img src="http://via.placeholder.com/150x150.jpg" alt="">
-                                    </figure>
-                                    <div class="rev-content">
-                                        <div class="rating">
-                                            <i class="icon-star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
-                                        </div>
-                                        <div class="rev-info">
-                                            Ahsan – April 01, 2016
-                                        </div>
-                                        <div class="rev-text">
-                                            <p>
-                                                Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
-                                            </p>
+                                @foreach($reviews as  $r)
+                                    <div class="review-box clearfix">
+                                        <figure class="rev-thumb"><img
+                                                    src="{{$r->user->profile->dp?'/'.$r->user->profile->dp:'http://via.placeholder.com/150x150.jpg'}}" alt="">
+                                        </figure>
+                                        <div class="rev-content">
+                                            <div class="rating">
+                                                @for($i=1;$i<=$r->stars;$i++)
+                                                    <i class="icon_star voted"></i>
+                                                @endfor
+                                            </div>
+                                            <div class="rev-info">
+                                                {{$r->user->name}} – {{Carbon::parse($r->created_at)->format('F d, Y')}}:
+                                            </div>
+                                            <div class="rev-text">
+                                                <p>
+                                                    {{$r->review}}
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- End review-box -->
+                                @endforeach
 
-                                <div class="review-box clearfix">
-                                    <figure class="rev-thumb"><img src="http://via.placeholder.com/150x150.jpg" alt="">
-                                    </figure>
-                                    <div class="rev-content">
-                                        <div class="rating">
-                                            <i class="icon-star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
-                                        </div>
-                                        <div class="rev-info">
-                                            Sara – March 31, 2016
-                                        </div>
-                                        <div class="rev-text">
-                                            <p>
-                                                Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End review-box -->
+
                                 <hr>
-                                <div class="text-right"><a href="submit-review.html" class="btn_1 add_bottom_15">Submit review</a></div>
+                                @auth('web')
+                                    @if(Auth::user()->canReview($therapist))
+                                        <div class="text-right"><a href="/submit-review/{{$therapist->slug}}" class="btn_1 add_bottom_15">Submit review</a></div>
+
+                                    @endif
+                                @endauth
                             </div>
                             <!-- End review-container -->
                         </div>

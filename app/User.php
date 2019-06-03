@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Model\Therapist;
+use Carbon\Carbon;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -39,5 +41,21 @@ class User extends Authenticatable
 
     public function profile(){
         return $this->hasOne('App\Model\UserProfile');
+    }
+
+    public function bookings(){
+        return $this->hasMany('App\Model\Booking');
+    }
+    public function reviews(){
+        return $this->hasMany('App\Model\Review');
+    }
+
+    public function canReview(Therapist $therapist){
+        $bookings=$this->bookings()
+            ->where('therapist_id',$therapist->id)
+            ->where('status',1)->where('date','<',Carbon::now()->toDateString())->get();
+        $reviews=$this->reviews()->where('therapist_id',$therapist->id)->get();
+        return sizeof($bookings)>sizeof($reviews);
+
     }
 }
