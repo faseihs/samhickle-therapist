@@ -12,8 +12,8 @@
         </li>
         <li class="breadcrumb-item active">Bookings</li>
     </ol>
-    @include('includes.flash');
-    @include('includes.errors');
+    @include('includes.flash')
+    @include('includes.errors')
     <div class="box_general">
         <div class="header_box">
             <h2 class="d-inline-block">Bookings List</h2>
@@ -27,6 +27,13 @@
             </div>
         </div>
         <div class="list_general">
+            @if(sizeof($bookings)<1)
+                <div class="col-md-12 pb-2">
+                    <div class="alert alert-warning">
+                        No reviews yet
+                    </div>
+                </div>
+            @endif
             <ul>
                 @foreach($bookings as $b)
                     <li>

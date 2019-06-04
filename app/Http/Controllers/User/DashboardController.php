@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -16,6 +17,7 @@ class DashboardController extends Controller
     }
 
     public function index(){
+        return redirect('/user/bookings');
         $user=Auth::user();
         return view('user.dashboard.index',compact([
             'user'
@@ -97,5 +99,46 @@ class DashboardController extends Controller
             DB::rollback();
             dd($e);
         }
+    }
+
+    public function bookings( Request $request){
+        $status="all";
+        $user=Auth::user();
+        if($request->has('status')) {
+            $status = $request->status;
+            $availableStatus=['all',0,1,2];
+            if(!in_array($status,$availableStatus)){
+                abort("404","Status Not Correct");
+            }
+        }
+        if($status=='all')
+            $bookings=$user->bookings()->orderBy('created_at','DESC')->paginate(5);
+        else $bookings=$user->bookings()->where('status',$status)->orderBy('created_at','DESC')->paginate(5);
+
+
+        return view('user.dashboard.bookings',compact([
+            'status',
+            'user',
+            'bookings'
+        ]));
+    }
+
+    public function reviews(Request $request){
+        $user=Auth::user();
+        $type="latest";
+        if($request->get('type'))
+            $type=$request->type;
+        if($type=='latest')
+            $reviews=$user->reviews()->where('created_at','>=',Carbon::now()->subDay(7)->toDateString())
+                ->orderBy('created_at','DESC')->paginate(10);
+        else $reviews=$user->reviews()->where('created_at','<=',Carbon::now()->subDay(7)->toDateString())
+            ->orderBy('created_at','DESC')->paginate(10);
+
+        return view('user.dashboard.reviews',
+            compact([
+                'user',
+                'reviews',
+                'type'
+            ]));
     }
 }

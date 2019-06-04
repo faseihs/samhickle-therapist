@@ -6,6 +6,7 @@ use App\Model\Group;
 use App\Model\Problem;
 use App\Model\Therapist;
 use App\Model\TherapistProfile;
+use App\Model\UserProfile;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -70,11 +71,15 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user= User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+        $profile=new UserProfile();
+        $profile->user_id=$user->id;
+        $profile->save();
+        return $user;
     }
 
 

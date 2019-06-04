@@ -62,6 +62,10 @@ Route::group(['prefix'=>'user'],function(){
    Route::get('/dashboard','User\DashboardController@index');
     Route::get('/edit-profile','User\DashboardController@editProfile');
     Route::post('/edit-profile','User\DashboardController@updateProfile');
+    Route::get('/bookings','User\DashboardController@reviews');
+    Route::get('/bookings','User\DashboardController@bookings');
+    Route::get('/reviews','User\DashboardController@reviews');
+
 });
 Route::get('/submit-review/{slug}', 'User\ReviewController@create');
 Route::post('/submit-review/{slug}', 'User\ReviewController@store');

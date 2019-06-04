@@ -84,8 +84,19 @@
                                 <li><a href="/register">Register</a></li>
                                 @endauth
 
+
                             </ul>
                         </li>
+                        @auth('therapist')
+                            <li class="submenu">
+                                <a href="#0" class="show-submenu">Therapist<i class="icon-down-open-mini"></i></a>
+                                <ul>
+                                    <li><a href="/therapist/dashboard">Dashboard</a></li>
+                                </ul>
+                            </li>
+                        @endauth
+
+
                         {{--<li class="submenu">
                             <a href="#0" class="show-submenu">Pages<i class="icon-down-open-mini"></i></a>
                             <ul>

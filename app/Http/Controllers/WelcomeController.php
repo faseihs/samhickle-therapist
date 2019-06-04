@@ -74,11 +74,11 @@ class WelcomeController extends Controller
             $tempObj->location_longitude=$therapist->profile->longitude;
             $tempObj->map_image_url= '/theme/img/doctor_listing_1.jpg';
             $tempObj->type= 'therapist';
-            $tempObj->url_detail= 'detail-page.html';
+            $tempObj->url_detail= '/therapist-profile/'.$therapist->slug;
             $tempObj->name_point=$therapist->name;
-            $tempObj->description_point= '35 Newtownards Road, Belfast, BT4.';
+            $tempObj->description_point= $therapist->profile->address?$therapist->profile->address:'-';
             $tempObj->get_directions_start_address= '';
-            $tempObj->phone= '+3934245255';
+            $tempObj->phone= $therapist->profile->contact?$therapist->profile->contact:'-';
             array_push($mapsData,$tempObj);
         }
         $mapsData=json_encode($mapsData);
