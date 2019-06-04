@@ -71,6 +71,8 @@ Route::get('/submit-review/{slug}', 'User\ReviewController@create');
 Route::post('/submit-review/{slug}', 'User\ReviewController@store');
 Route::get('/social-login/{provider}', 'SocialController@redirect');
 Route::get('login/{provider}/callback','SocialController@Callback');
+Route::get('/t-social-login/{provider}', 'SocialController@therapistRedirect');
+Route::get('t-login/{provider}/callback','SocialController@therapistCallback');
 
 
 
