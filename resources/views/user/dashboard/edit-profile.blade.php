@@ -97,6 +97,30 @@
             </div>
             <!-- /row-->
         </div>
+        <div class="box_general padding_bottom">
+            <div class="header_box version_2">
+                <h2><i class="fa fa-map-marker"></i>Change Password</h2>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password"  id="password1" class="form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}"  placeholder="Your password">
+                @error('password')
+                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                @enderror
+            </div>
+            <div class="form-group">
+                <label>Confirm password</label>
+                <input type="password"  id="password2" name="password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror" value="{{ old('password_confirmation') }}" placeholder="Confirm password">
+                @error('password_confirmation')
+                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password_confirmation') }}</strong>
+                </span>
+                @enderror
+            </div>
+
+        </div>
         <p><button class="btn_1 medium">Save</button></p>
     </form>
 

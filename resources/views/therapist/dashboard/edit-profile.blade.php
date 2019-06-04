@@ -1,6 +1,9 @@
 @extends('layouts.dashboard.therapist')
 
+@section('styles')
+    <link rel="stylesheet" href="https://unpkg.com/multiple-select@1.3.1/dist/multiple-select.min.css">
 
+@endsection
 
 @section('content')
     <ol class="breadcrumb">
@@ -146,6 +149,72 @@
             </div>
             <!-- /row-->
         </div>
+        <div class="box_general padding_bottom">
+            <div class="header_box version_2">
+                <h2><i class="fa fa-map-marker"></i>Groups and Problems</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h6>Problems Can Address</h6>
+                        </div>
+                        <div class="col-md-12">
+                            <select  name="problems[]" id="select" multiple="multiple">
+                                @foreach($problems as $p)
+                                    <option {{$therapist->problems()->where('problems.id',$p->id)->first()?'selected':''}} value="{{$p->id}}">{{$p->name}}</option>
+                                @endforeach
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h6>Groups Can Address</h6>
+                        </div>
+                        <div class="col-md-12">
+                            <select   name="groups[]" id="selectGroup" multiple="multiple">
+                                @foreach($groups as $p)
+                                    <option {{$therapist->groups()->where('groups.id',$p->id)->first()?'selected':''}} value="{{$p->id}}">{{$p->name}}</option>
+                                @endforeach
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+        </div>
+        <div class="box_general padding_bottom">
+            <div class="header_box version_2">
+                <h2><i class="fa fa-map-marker"></i>Change Password</h2>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password"  id="password1" class="form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}"  placeholder="Your password">
+                @error('password')
+                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                @enderror
+            </div>
+            <div class="form-group">
+                <label>Confirm password</label>
+                <input type="password"  id="password2" name="password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror" value="{{ old('password_confirmation') }}" placeholder="Confirm password">
+                @error('password_confirmation')
+                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password_confirmation') }}</strong>
+                </span>
+                @enderror
+            </div>
+
+        </div>
+
+
+            <hr>
+
     <p><button class="btn_1 medium">Save</button></p>
     </form>
 
@@ -157,6 +226,17 @@
 @endsection
 
 @section('scripts')
+    <script src="https://unpkg.com/multiple-select@1.3.1/dist/multiple-select.min.js"></script>
+    <script>
+        $(function () {
+            $('#select').multipleSelect({
+                width:'100%'
+            })
+            $('#selectGroup').multipleSelect({
+                width:'100%'
+            })
+        })
+    </script>
     <script>
         $('#delBtn').click(function () {
             $('#imgDiv').remove();

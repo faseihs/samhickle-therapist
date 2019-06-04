@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
 
 class DashboardController extends Controller
 {
@@ -92,13 +95,25 @@ class DashboardController extends Controller
             $user->save();
             $profile->save();
             DB::commit();
-            return redirect('/user/edit-profile')
-                ->with('success','Updated');
+
         }
         catch(\Exception $e){
             DB::rollback();
             dd($e);
         }
+
+        if($request->has('password') && $request->password!=null){
+            $this->validate($request,[
+                'password' => ['required','string','min:8','confirmed']
+            ]);
+
+            if(Hash::check($request['password'],$user->getAuthPassword()))
+                return Redirect::back()->withInput(Input::all())->withErrors(['','New Password same to old password']);
+            $user->password=bcrypt($request->password);
+            $user->save();
+        }
+        return redirect('/user/edit-profile')
+            ->with('success','Updated');
     }
 
     public function bookings( Request $request){
