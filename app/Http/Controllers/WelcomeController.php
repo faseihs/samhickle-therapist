@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Model\Group;
 use App\Model\Problem;
+use App\Model\SubscriptionPlan;
 use App\Model\Therapist;
 use App\Model\TherapistSchedule;
 use App\Rules\TherapistSlugPresent;
@@ -173,5 +174,13 @@ class WelcomeController extends Controller
             }
             else return response()->json("Empty",404);
         }
+    }
+
+    public function plans(){
+        $plans= SubscriptionPlan::all();
+        foreach ($plans as $p){
+            $p->desc= explode("|",$p->description);
+        }
+        return view('plans',compact(['plans']));
     }
 }

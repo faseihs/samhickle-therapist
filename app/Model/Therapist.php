@@ -2,6 +2,7 @@
 
 namespace App\Model;
 
+use Carbon\Carbon;
 use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -106,6 +107,16 @@ class Therapist extends Authenticatable
 
 
         return $stars;
+    }
+    public function subscriptions(){
+        return $this->hasMany('App\Model\Subscription');
+    }
+    
+    public function canUse(){
+        $sub=$this->subscriptions()->where('start','<=',Carbon::now()->toDateTimeString())
+            ->where('end','>=',Carbon::now()->toDateTimeString())
+            ->first();
+        return $sub?true:false;
     }
 
 

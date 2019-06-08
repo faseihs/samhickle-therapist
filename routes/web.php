@@ -48,9 +48,8 @@ Route::group(['prefix'=>'therapist'],function(){
     Route::get('/bookings','Therapist\BookingController@index');
     Route::post('/booking/{id}','Therapist\BookingController@update');
     Route::get('/reviews','Therapist\DashboardController@reviews');
-
-
-
+    Route::get('/subscription','Therapist\SubscriptionController@getSubscription');
+    Route::post('/subscription','Therapist\SubscriptionController@postSubscription');
 });
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/therapist-profile/{slug}','WelcomeController@therapistSearch');
@@ -73,6 +72,7 @@ Route::get('/social-login/{provider}', 'SocialController@redirect');
 Route::get('login/{provider}/callback','SocialController@Callback');
 Route::get('/t-social-login/{provider}', 'SocialController@therapistRedirect');
 Route::get('t-login/{provider}/callback','SocialController@therapistCallback');
+Route::get('/plans','WelcomeController@plans');
 
 
 

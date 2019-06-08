@@ -30,7 +30,7 @@
             @if(sizeof($bookings)<1)
                 <div class="col-md-12 pb-2">
                     <div class="alert alert-warning">
-                        No reviews yet
+                        No bookings yet
                     </div>
                 </div>
             @endif

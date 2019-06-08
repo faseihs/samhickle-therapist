@@ -83,10 +83,12 @@ class RegisterController extends Controller
     }
 
 
-    public function showTherapistRegister()
+    public function showTherapistRegister(Request $request)
     {
         $problems = Problem::all();
         $groups = Group::all();
+        if($request->has('id'))
+            $request->session()->put('planId',$request->id);
         return view('auth.therapist.register', ['url' => 'therapist','problems'=>$problems,'groups'=>$groups]);
     }
 
@@ -119,7 +121,7 @@ class RegisterController extends Controller
             $therapist->groups()->sync($request->groups);
             DB::commit();
             if (Auth::guard('therapist')->attempt(['email' => $therapist->email, 'password' => $request->password], false)) {
-                return redirect()->intended('/therapist/edit-profile');
+                return redirect()->intended('/plans');
             }
             return redirect('/therapist/edit-profile');
         }

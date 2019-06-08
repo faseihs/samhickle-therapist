@@ -15,6 +15,7 @@ class BookingController extends Controller
     public function __construct()
     {
         $this->middleware('auth:therapist');
+        $this->middleware('therapistCanUse');
     }
 
     public function index(Request $request){

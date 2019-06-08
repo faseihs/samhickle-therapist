@@ -14,6 +14,7 @@ class TherapistEducationController extends Controller
     public function __construct()
     {
         $this->middleware('auth:therapist');
+        $this->middleware('therapistCanUse');
     }
     /**
      * Display a listing of the resource.

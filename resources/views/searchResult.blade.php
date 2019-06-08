@@ -313,7 +313,7 @@
                         <div class="box_list wow fadeIn">
                             <a href="#0" class="wish_bt"></a>
                             <figure>
-                                <a href="detail-page.html"><img src="http://via.placeholder.com/565x565.jpg" class="img-fluid" alt="">
+                                <a href="/therapist-profile/{{$t->slug}}"><img style="width: 100%;" src="{{$t->profile->dp?'/'.$t->profile->dp:'http://via.placeholder.com/565x565.jpg'}}" class="img-fluid" alt="">
                                     <div class="preview"><span>Read more</span></div>
                                 </a>
                             </figure>
