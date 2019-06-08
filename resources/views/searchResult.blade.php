@@ -308,7 +308,7 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="row">
-                    @foreach($therapists as $i=>$t)
+                    @foreach($therapists as $index=>$t)
                     <div class="col-md-6">
                         <div class="box_list wow fadeIn">
                             <a href="#0" class="wish_bt"></a>
@@ -332,7 +332,7 @@
 --}}
                             </div>
                             <ul>
-                                <li><a  href="#" onclick="onHtmlClick('Doctors', {{$i}})"><i class="icon_pin_alt"></i>View on map</a></li>
+                                <li><a  href="#" onclick="onHtmlClick('Doctors', {{$index}})"><i class="icon_pin_alt"></i>View on map</a></li>
                                 <li><a href="http://maps.google.com/maps?z=12&t=m&q=loc:{{$t->profile->latitude}}+{{$t->profile->longitude}}" target="_blank"><i class="icon_pin_alt"></i>Directions</a></li>
                                 <li><a href="/therapist-profile/{{$t->slug}}">Book now</a></li>
                             </ul>

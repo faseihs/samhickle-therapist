@@ -48,8 +48,9 @@ class WelcomeController extends Controller
             ->get();
         $therapists=[];
         $positions=[];
+        //dd($result);
         foreach ($result as $item){
-           $therapist=Therapist::find($item->id);
+           $therapist=Therapist::find($item->therapist_id);
            $therapist->distance=$item->distance;
            $latlng=new \stdClass();
            $latlng->lat=$therapist->profile->latitude;
@@ -83,6 +84,7 @@ class WelcomeController extends Controller
             array_push($mapsData,$tempObj);
         }
         $mapsData=json_encode($mapsData);
+        //dd($therapists->all());
 
 
 
