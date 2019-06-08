@@ -43,12 +43,13 @@ class SocialController extends Controller
         if($type=='user')
             $users       =   User::where(['email' => $userSocial->getEmail()])->first();
         else $users       =   Therapist::where(['email' => $userSocial->getEmail()])->first();
-
+        //dd($users);
         if($users){
-            Auth::login($users);
-            return redirect('/');
+                Auth::guard($type)->login($users);
+                return redirect('/');
+
         }
-        else return redirect($type=='user'?'login':'/therapist/login')->with('deleted','User Not Present');
+        else return redirect($type=='user'?'/login':'/therapist/login')->with('deleted','User Not Present');
     }
     public function therapistCallback($provider)
     {
