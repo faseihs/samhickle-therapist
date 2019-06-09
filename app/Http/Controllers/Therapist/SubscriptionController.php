@@ -81,7 +81,7 @@ class SubscriptionController extends Controller
             $sub->end=$end;
             $sub->save();
             DB::commit();
-            return redirect('/therapist/dashboard');
+            return redirect('/therapist/edit-profile');
         }
         catch(\Exception $e){
             DB::rollback();

@@ -70,7 +70,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="row">
+                            <div style="display: none;" class="row">
                                 <div class="col-md-6">
                                     <div class="row">
                                         <div class="col-md-12">
@@ -303,14 +303,14 @@
             var lat = $('#address-latitude');
             var lng = $('#address-longitude');
             var validationFails = false;
-            if(problem.val()==null){
+            /*if(problem.val()==null){
                 validationFails=true;
                 $.notify("Select a problem to address",'error');
             }
             if(group.val()==null){
                 validationFails=true;
                 $.notify("Select a group to address",'error');
-            }
+            }*/
 
             if(lat.val()=="0" || lng.val()==0)
             {
