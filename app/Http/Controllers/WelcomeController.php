@@ -55,8 +55,11 @@ class WelcomeController extends Controller
            $latlng=new \stdClass();
            $latlng->lat=$therapist->profile->latitude;
             $latlng->lng=$therapist->profile->longitude;
-           array_push($therapists,$therapist);
-            array_push($positions,$latlng);
+            if($therapist->canUse()){
+                array_push($therapists,$therapist);
+                array_push($positions,$latlng);
+            }
+
         };
 
 
