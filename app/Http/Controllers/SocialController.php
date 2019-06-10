@@ -32,7 +32,7 @@ class SocialController extends Controller
 
     public function Callback(Request $request,$provider)
     {
-        $type='user';
+        $type='web';
         if($request->session()->has('type')){
             if($request->session()->get('type')=='therapist') {
                 $type = 'therapist';
@@ -40,7 +40,7 @@ class SocialController extends Controller
             }
         }
         $userSocial =   Socialite::driver($provider)->stateless()->user();
-        if($type=='user')
+        if($type=='web')
             $users       =   User::where(['email' => $userSocial->getEmail()])->first();
         else $users       =   Therapist::where(['email' => $userSocial->getEmail()])->first();
         //dd($users);

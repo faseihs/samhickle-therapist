@@ -97,27 +97,19 @@ class RegisterController extends Controller
     public function therapistRegister(Request $request){
         //dd($request->all());
         $this->validate($request,[
-            'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:therapists'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'contact'=>['required'],
             'problems'=>['array'],
             'groups'=>['array'],
-            'address_latitude'=>['required'],
-            'address_longitude'=>['required']
         ]);
         try{
             DB::beginTransaction();
             $therapist= new Therapist();
-            $therapist->name=$request->name;
             $therapist->email=$request->email;
             $therapist->password=bcrypt($request->password);
             $therapist->save();
             $profile = new  TherapistProfile();
             $profile->therapist_id=$therapist->id;
-            $profile->contact=$request->contact;
-            $profile->latitude=$request->address_latitude;
-            $profile->longitude=$request->address_longitude;
             $profile->save();
             $therapist->problems()->sync($request->problems);
             $therapist->groups()->sync($request->groups);

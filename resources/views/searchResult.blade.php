@@ -306,11 +306,11 @@
 
     <div class="container margin_60_35">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-7">
                 <div class="row">
                     @foreach($therapists as $index=>$t)
-                    <div class="col-md-6">
-                        <div class="box_list wow fadeIn">
+                    <div class="col-md-12">
+                        <div class="strip_list wow fadeIn">
                             <a href="#0" class="wish_bt"></a>
                             <figure>
                                 <a href="/therapist-profile/{{$t->slug}}"><img style="width: 100%;" src="{{$t->profile->dp?'/'.$t->profile->dp:'http://via.placeholder.com/565x565.jpg'}}" class="img-fluid" alt="">
@@ -321,11 +321,15 @@
                                 <small>Therapist</small>
                                 <h3>{{$t->name}}</h3>
 
-                                <p>{{$t->profile->professional_statement}}</p>
+                                <p>{{$t->profile->personal_statement}}</p>
                                 <span class="rating">
                                 @for($i=1;$i<=$t->getStars();$i++)
                                     <i class="icon_star voted"></i>
                                 @endfor
+                                @if(sizeof($t->reviews)>0)
+                                        ({{sizeof($t->reviews)}})
+                                @endif
+
                                     </span>
 {{--
                                 <a href="badges.html" data-toggle="tooltip" data-placement="top" data-original-title="Badge Level" class="badge_list_1"><img src="/theme/img/badges/badge_1.svg" width="15" height="15" alt=""></a>
@@ -371,7 +375,7 @@
             </div>
             <!-- /col -->
 
-            <aside class="col-lg-4" id="sidebar">
+            <aside class="col-lg-5" id="sidebar">
                 <div id="map_listing" class="normal_list">
                 </div>
             </aside>

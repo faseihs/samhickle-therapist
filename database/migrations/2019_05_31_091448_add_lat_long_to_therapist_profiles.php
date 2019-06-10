@@ -15,8 +15,8 @@ class AddLatLongToTherapistProfiles extends Migration
     {
         Schema::table('therapist_profiles', function (Blueprint $table) {
             //
-            $table->float('latitude');
-            $table->float('longitude');
+            $table->float('latitude')->nullable();
+            $table->float('longitude')->nullable();
             $table->string('location_name')->nullable();
         });
     }

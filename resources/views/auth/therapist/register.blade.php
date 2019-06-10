@@ -36,10 +36,10 @@
                 <!-- /col -->
                 <div class="col-lg-12 ml-auto">
                     <div class="box_form">
-                        <form onsubmit="return formValidate()" action="/therapist/register" method="post">
+                        <form  action="/therapist/register" method="post">
                             @csrf
                             <div class="row">
-                                <div class="col-md-4 ">
+                                {{--<div class="col-md-4 ">
                                     <div class="form-group">
                                         <input type="text"  class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Name">
                                         @error('name')
@@ -58,8 +58,8 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
-                                </div>
-                                <div class="col-md-4">
+                                </div>--}}
+                                <div class="col-md-12">
                                     <div class="form-group">
                                         <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email Address">
                                     </div>
@@ -120,8 +120,8 @@
                                 </style>
 
                             </div>
-                            <br>
-                            <div class="row">
+
+                            {{--<div class="row">
                                 <div class="col-md-12">
                                     <h6 >Address</h6>
                                     <input type="text" id="address-input" name="address_address" class="form-control map-input">
@@ -133,8 +133,8 @@
                             <br>
                             <div id="address-map-container" style="width:100%;height:400px; ">
                                 <div style="width: 100%; height: 100%" id="address-map"></div>
-                            </div>
-                            <br>
+                            </div>--}}
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <input placeholder="Password" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -152,7 +152,7 @@
                             <!-- /row -->
                             <p class="text-center add_top_30"><input type="submit" class="btn_1" value="Submit"></p>
                             <div class="text-center"><small>Ut nam graece accumsan cotidieque. Has voluptua vivendum accusamus cu. Ut per assueverit temporibus dissentiet.</small></div>
-                            @include('includes.errors')
+
                         </form>
                         <style>
                             .invalid-feedback{
@@ -184,7 +184,7 @@
             })
         })
     </script>
-    <script>
+    {{--<script>
         function initialize() {
 
             $('form').on('keyup keypress', function(e) {
@@ -320,5 +320,5 @@
 
             return !validationFails;
         }
-    </script>
+    </script>--}}
 @endsection

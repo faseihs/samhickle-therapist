@@ -37,6 +37,7 @@ class DashboardController extends Controller
     }
 
     public function updateProfile(Request $request){
+        //dd($request->all());
         $therapist=Auth::user();
         $profile=$therapist->profile;
         $this->validate($request,[
@@ -50,6 +51,9 @@ class DashboardController extends Controller
             'postal_code'=>'nullable|string',
             'problems'=>['array'],
             'groups'=>['array'],
+            'address_latitude'=>['required'],
+            'address_longitude'=>['required'],
+            'address_address'=>['required'],
         ]);
         try{
             DB::beginTransaction();
@@ -90,6 +94,9 @@ class DashboardController extends Controller
             $profile->state=$request->state;
             $profile->address=$request->address;
             $profile->postal_code=$request->postal_code;
+            $profile->latitude=$request->address_latitude;
+            $profile->longitude=$request->address_longitude;
+            $profile->location_name=$request->address_address;
             $therapist->problems()->sync($request->problems);
             $therapist->groups()->sync($request->groups);
             $therapist->save();
