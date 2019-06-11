@@ -14,20 +14,20 @@
                     </thead>
                     <tbody>
                     <tr v-for="index in this.maxTimes" :key="index">
-                        <td><button @click="instantRequest(dates[0],index)"  class="btn_1 btn-my-sm" v-if="dates[0].times[index-1]">{{dates[0].times[index-1]?dates[0].times[index-1]:'-'}}</button>
+                        <td><button @click="instantRequest(dates[0],index-1)"  class="btn_1 btn-my-sm" v-if="dates[0].times[index-1]">{{dates[0].times[index-1]?dates[0].times[index-1]:'-'}}</button>
 
                         <span v-else>-</span>
                         </td>
-                        <td><button @click="instantRequest(dates[1],index)" class="btn_1 btn-my-sm" v-if="dates[1].times[index-1]">{{dates[1].times[index-1]?dates[1].times[index-1]:'-'}}</button>
+                        <td><button @click="instantRequest(dates[1],index-1)" class="btn_1 btn-my-sm" v-if="dates[1].times[index-1]">{{dates[1].times[index-1]?dates[1].times[index-1]:'-'}}</button>
 
                             <span v-else>-</span></td>
-                        <td><button @click="instantRequest(dates[2],index)" class="btn_1 btn-my-sm" v-if="dates[2].times[index-1]">{{dates[2].times[index-1]?dates[2].times[index-1]:'-'}}</button>
+                        <td><button @click="instantRequest(dates[2],index-1)" class="btn_1 btn-my-sm" v-if="dates[2].times[index-1]">{{dates[2].times[index-1]?dates[2].times[index-1]:'-'}}</button>
 
                             <span v-else>-</span></td>
-                        <td><button @click="instantRequest(dates[3],index)" class="btn_1 btn-my-sm" v-if="dates[3].times[index-1]">{{dates[3].times[index-1]?dates[3].times[index-1]:'-'}}</button>
+                        <td><button @click="instantRequest(dates[3],index-1)" class="btn_1 btn-my-sm" v-if="dates[3].times[index-1]">{{dates[3].times[index-1]?dates[3].times[index-1]:'-'}}</button>
 
                             <span v-else>-</span></td>
-                        <td><button @click="instantRequest(dates[4],index)" class="btn_1 btn-my-sm" v-if="dates[4].times[index-1]">{{dates[4].times[index-1]?dates[4].times[index-1]:'-'}}</button>
+                        <td><button @click="instantRequest(dates[4],index-1)" class="btn_1 btn-my-sm" v-if="dates[4].times[index-1]">{{dates[4].times[index-1]?dates[4].times[index-1]:'-'}}</button>
 
                             <span v-else>-</span></td>
                     </tr>
