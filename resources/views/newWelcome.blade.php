@@ -417,7 +417,7 @@
         }
 
 
-        var geloactionUrl="https://www.googleapis.com/geolocation/v1/geolocate?key={{env('GOOGLE_MAPS_API')}}";
+
     </script>
     <div style="display: none;" id="map"></div>
     <script src="/js/notify.min.js"></script>
@@ -534,9 +534,7 @@
             return success;
         }
     </script>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_MAPS_API')}}">
-    </script>
+
     <script src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_MAPS_API')}}&libraries=places&callback=initAutocomplete"
             async defer></script>
 
