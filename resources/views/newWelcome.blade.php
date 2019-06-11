@@ -407,7 +407,9 @@
 
             // Create the search box and link it to the UI element.
             var input = document.getElementById('locationName');
-            var searchBox = new google.maps.places.SearchBox(input);
+            var searchBox = new google.maps.places.Autocomplete(input);
+            searchBox.setComponentRestrictions(
+                {'country': ['gb']});
             map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
             // Bias the SearchBox results towards current map's viewport.
@@ -513,7 +515,22 @@
     <script src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_MAPS_API')}}&libraries=places&callback=initAutocomplete"
             async defer></script>
 
+    <style>
+        #locationName:after{display:none !important;}
+        .pac-container:after {
+            /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */
 
+            background-image: none !important;
+            height: 0px;
+        }
+        .pac-container{
+            font-family: inherit;
+        }
+        .pac-item{
+            cursor: pointer;
+
+        }
+    </style>
 
 
 
