@@ -19,6 +19,16 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('schedule', require('./components/Schedule.vue').default);
+import VuejsDialog from 'vuejs-dialog';
+
+// include the default style
+import 'vuejs-dialog/dist/vuejs-dialog.min.css';
+
+// Tell Vue to install the plugin.
+Vue.use(VuejsDialog);
+import VModal from 'vue-js-modal'
+
+Vue.use(VModal)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

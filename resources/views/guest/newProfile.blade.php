@@ -11,7 +11,6 @@
 @endsection
 @section('scripts')
     <script src="/js/moment.min.js"></script>
-    <script src="/js/profile.js"></script>
     <script>
 
         var currentDate=null;
@@ -60,7 +59,10 @@
             }).error(function (xhr) {
                 console.log(xhr);
             });
+        window.auth = '{{Auth::user()?'true':'false'}}';
     </script>
+    <script src="/js/profile.js?v=1"></script>
+
 @endsection
 @section('content')
     <div id="breadcrumb">
@@ -74,11 +76,11 @@
     </div>
     <!-- /breadcrumb -->
 
-    <div class="container margin_60">
+    <div class="container margin_60" id="profile-schedule">
         @include('includes.errors')
         @include('includes.flash')
         <div class="row">
-            <div class="col-xl-8 col-lg-8">
+            <div class="col-xl-6 col-lg-6">
                 <nav id="secondary_nav">
                     <div class="container">
                         <ul class="clearfix">
@@ -152,9 +154,7 @@
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>--}}
-                        <div id="profile-schedule" class="row">
-                            <schedule></schedule>
-                        </div>
+
 
 
                         <hr>
@@ -359,7 +359,7 @@
                             @endforeach
 
 
-                            <hr>
+
                             @auth('web')
                                 @if(Auth::user()->canReview($therapist))
                                     <div class="text-right"><a href="/submit-review/{{$therapist->slug}}" class="btn_1 add_bottom_15">Submit review</a></div>
@@ -368,16 +368,22 @@
                             @endauth
                         </div>
                         <!-- End review-container -->
-                        <hr>
+
                         <div class="text-right"><a href="submit-review.html" class="btn_1">Submit review</a></div>
                     </div>
                 </div>
                 <!-- /section_2 -->
             </div>
             <!-- /col -->
-            <aside class="col-xl-4 col-lg-4" id="sidebar">
-                <div class="box_general_3 booking">
-                    <form method="POST"  action="/user/booking">
+            <aside class="col-xl-6 col-lg-6" id="sidebar">
+                <div style="padding-lefT:0px;padding-right: 0px;"  class="box_general_3 booking">
+                    <div class="title">
+                        <h3>Book a Visit</h3>
+                    </div>
+                    <div class="row">
+                    <schedule></schedule>
+                    </div>
+                    {{--<form method="POST"  action="/user/booking">
                         @csrf
                         <input name="slug" value="{{$therapist->slug}}" type="hidden">
                         <div class="title">
@@ -414,7 +420,7 @@
                             <a class="btn_1" href="/login?path={{\Illuminate\Support\Facades\URL::current()}}">Login to book an appointment</a>
                         @endauth
 
-                    </form>
+                    </form>--}}
                 </div>
                 <!-- /box_general -->
             </aside>

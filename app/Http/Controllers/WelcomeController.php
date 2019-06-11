@@ -207,13 +207,17 @@ class WelcomeController extends Controller
         for($i=1;$i<=$counter;$i++){
             $obj=new \stdClass();
             $date=$startDate->addDay(1);
+            /*if($date->eq(Carbon::now()))
+                $obj->date='Today';
+            else $obj->date=$date->format('D / d-m');*/
+            $obj->date=$date->format('d-m-Y');
             $s=$therapist->schedules()->where('date',$date->toDateString())->first();
             if($s){
-                $obj->date=$date->toDateString();
+
                 $obj->times=explode("|",$s->times);
             }
             else {
-                $obj->date=$date->toDateString();
+
                 $obj->times=[];
             }
             array_push($dates,$obj);

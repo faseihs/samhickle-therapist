@@ -85,22 +85,29 @@ class BookingController extends Controller
             'date'=>'required|date|after:yesterday',
             'slug'=>['required',new TherapistSlugPresent],
             'time'=>['required','string'],
-            'treatments'=>['nullable','array'],
         ]);
-
+        //dd($request->all());
 
         try{
             DB::beginTransaction();
             $user=Auth::user();
             $theapist=Therapist::findBySlug($request->slug);
-            $carbonTime=Carbon::createFromFormat("h:i a",$request->time);
-            $date = Carbon::createFromFormat("m/d/Y",$request->date);
+            if($request->has('request'))
+                $carbonTime=Carbon::createFromFormat("h:ia",$request->time);
+            else
+            $carbonTime=Carbon::createFromFormat("h.ia",$request->time);
+            if($request->has('request'))
+                $date = Carbon::parse($request->date);
+            else
+            $date = Carbon::createFromFormat("d-m-Y",$request->date);
             $booking = new Booking();
             $booking->user_id=$user->id;
             $booking->therapist_id=$theapist->id;
             $booking->date=$date;
             $booking->time=$carbonTime->toTimeString();
-            $booking->treatments=implode("|",$request->treatments);
+            //$booking->treatments=implode("|",$request->treatments);
+            if($request->has('description'))
+                $booking->description=$request->description;
             $booking->save();
             DB::commit();
             return Redirect::back()->with('success','Booking Done');
