@@ -445,17 +445,20 @@
             var markers = [];
             // Listen for the event fired when the user selects a prediction and retrieve
             // more details for that place.
-            searchBox.addListener('places_changed', function() {
-                var places = searchBox.getPlaces();
+            searchBox.addListener('place_changed', function() {
 
+                var places = searchBox.getPlace();
+                console.log(places);
 
-                if (places.length == 0) {
+                if (!places.geometry) {
+                    // User entered the name of a Place that was not suggested and
+                    // pressed the Enter key, or the Place Details request failed.
 
                     return;
                 }
                 else {
-                    $('#locationName').val(places[0].formatted_address);
-                    $('#locationLatLng').val(JSON.stringify(places[0].geometry.location));
+                    $('#locationName').val(places.formatted_address);
+                    $('#locationLatLng').val(JSON.stringify(places.geometry.location));
                 }
 
                 // Clear out the old markers.
@@ -463,7 +466,9 @@
                     marker.setMap(null);
                 });
                 markers = [];
-
+                place=places;
+                places=[];
+                places.push(place);
                 // For each place, get the icon, name and location.
                 var bounds = new google.maps.LatLngBounds();
                 places.forEach(function(place) {
