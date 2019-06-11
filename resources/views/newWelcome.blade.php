@@ -40,14 +40,35 @@
                                 <input type="text" class="form-control" placeholder="Enter Postcode ....">
 
                             </div>--}}
-                            <div id="locationDiv">
+                            <input id="locationLatLng" name="latLng" type="hidden">
+
+                            <div class="input-group" id="locationDiv">
                                 <input id="locationName" autocomplete="off" type="text" class="form-control" onfocus="initMap()" placeholder="Select Location">
-                                <input id="locationLatLng" name="latLng" type="hidden">
+                                <span class="input-group-addon input-group-addon-btn">
+            <button onclick="getLocation()" id="lBtn" class="px-2" type="button"><i class="fa fa-location-arrow" aria-hidden="true"></i></button>
+        </span>
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-2">
                             <input style="height:25px;"  type="submit" class="form-control" value="Search">
                         </div>
+                        <style>
+                            .input-group-addon-btn {
+                                padding: 0;
+                                background: transparent;
+                            }
+                            #lBtn{
+                                position: absolute;
+                                right: 0;
+                                background: white;
+                                border:none;
+                                top:10%;
+                                cursor: pointer;
+                                color:#74d1c6;
+                            }
+
+
+                        </style>
 
 
                     </div>
@@ -341,9 +362,7 @@
         // failed.", it means you probably did not give permission for the browser to
         // locate you.
         var position=null;
-        function initMap() {
-
-            // Try HTML5 geolocation.
+        function getLocation() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(pos) {
                     position = {
@@ -351,6 +370,7 @@
                         lng: pos.coords.longitude
                     };
                     console.log(position);
+                    geocodeLatLng();
 
                 },function errorHandler(){
                     console.log("Nooo");
@@ -361,6 +381,11 @@
                 locationErrorHandler();
 
             }
+        }
+        function initMap() {
+
+            // Try HTML5 geolocation.
+
         }
 
         function locationErrorHandler(){
