@@ -53,8 +53,11 @@
             <nav class="col-lg-9 col-6">
                 <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="#0"><span>Menu mobile</span></a>
                 <ul id="top_access">
+                    @auth('therapist')
+                        @else
                     <li><a data-toggle="tooltip" title="Therapist Login"  href="/therapist/login"><i class="pe-7s-user"></i></a></li>
                     <li><a data-toggle="tooltip" title="Therapist Register" href="/therapist/register"><i class="pe-7s-add-user"></i></a></li>
+                    @endauth
                     @auth('web')
                     <li><a data-toggle="tooltip" title="Logout" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();" href="#"><i

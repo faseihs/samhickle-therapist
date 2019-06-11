@@ -57,9 +57,16 @@
                                 </ul>
                             </div>
                             <!-- /pricing-body -->
+                            @auth('therapist')
+                                <footer class="pricing-footer">
+                                    <a class="select-plan" href="/therapist/subscription?id={{$plan->id}}">Choose Plan</a>
+                                </footer>
+                                @else
+
                             <footer class="pricing-footer">
                                 <a class="select-plan" href="/therapist/register?plan={{$plan->id}}">Register as Therapist</a>
                             </footer>
+                            @endauth
                             {{--@auth('therapist')
                             <footer class="pricing-footer">
                                 <a class="select-plan" href="/therapist/subscription?id={{$plan->id}}">Select</a>

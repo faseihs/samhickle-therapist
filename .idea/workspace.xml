@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7497c9c8-384b-4766-9260-d9fe2326679a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/therapist/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/therapist/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/plans.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/plans.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/therapist/subscribe.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/therapist/subscribe.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,17 +24,8 @@
       <file leaf-file-name="SocialController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SocialController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="43" column="74" lean-forward="true" selection-start-line="43" selection-start-column="74" selection-end-line="43" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="54" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="54" />
+            <state relative-caret-position="897">
+              <caret line="43" column="74" selection-start-line="43" selection-start-column="74" selection-end-line="43" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -38,11 +33,56 @@
       <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/auth/therapist/register.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+            <state relative-caret-position="460">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="subscribe.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/therapist/subscribe.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="80" column="98" selection-start-line="80" selection-start-column="98" selection-end-line="80" selection-end-column="98" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="79" column="33" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plans.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/plans.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="61" column="118" selection-start-line="61" selection-start-column="118" selection-end-line="61" selection-end-column="118" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SubscriptionController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Therapist/SubscriptionController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1426">
+              <caret line="83" column="52" selection-start-line="83" selection-start-column="52" selection-end-line="83" selection-end-column="52" />
               <folding>
-                <element signature="e#4211#4233#0#HTML" expanded="true" />
+                <element signature="e#50#77#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="31" column="47" lean-forward="true" selection-end-line="74" />
             </state>
           </provider>
         </entry>
@@ -50,50 +90,8 @@
       <file leaf-file-name="edit-profile.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/therapist/dashboard/edit-profile.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
+            <state relative-caret-position="3496">
               <caret line="152" column="45" selection-start-line="152" selection-start-column="45" selection-end-line="152" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WelcomeController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
-              <folding>
-                <element signature="e#40#60#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="searchResult.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/searchResult.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="325" column="53" selection-start-line="325" selection-start-column="53" selection-end-line="325" selection-end-column="53" />
-              <folding>
-                <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newWelcome.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/newWelcome.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="43" column="75" lean-forward="true" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DashboardController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Therapist/DashboardController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-966">
-              <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -101,8 +99,20 @@
       <file leaf-file-name="RegisterController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="112" column="29" lean-forward="true" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="29" />
+            <state relative-caret-position="299">
+              <caret line="88" column="33" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="88" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WelcomeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+              <folding>
+                <element signature="e#40#60#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,7 +128,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>onfocus</find>
       <find>form</find>
       <find>Logout</find>
       <find>Profe</find>
@@ -148,6 +157,7 @@
       <find>Logo</find>
       <find>View o</find>
       <find>Select</find>
+      <find>hidden</find>
     </findStrings>
     <replaceStrings>
       <replace>radio_time[]</replace>
@@ -167,7 +177,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/user/dashboard/index.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_06_03_195442_ad_city_to_user_profiles.php" />
@@ -196,7 +205,6 @@
         <option value="$PROJECT_DIR$/database/seeds/PlanSeeder.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_06_07_062207_create_subscriptions_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
-        <option value="$PROJECT_DIR$/resources/views/therapist/subscribe.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Therapist/BookingController.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/TherapistCanUse.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Therapist/TherapistEducationController.php" />
@@ -204,19 +212,21 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Therapist/TherapistServiceController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Therapist/TherapistSpecializationController.php" />
         <option value="$PROJECT_DIR$/app/Model/Therapist.php" />
-        <option value="$PROJECT_DIR$/resources/views/plans.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Therapist/SubscriptionController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SocialController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_06_10_134003_add_location_address_to_therapist_profiles.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_31_091448_add_lat_long_to_therapist_profiles.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Therapist/DashboardController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/therapist/register.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_31_083823_create_therapists_table.php" />
         <option value="$PROJECT_DIR$/resources/views/searchResult.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/therapist/dashboard/edit-profile.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/therapist/register.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/plans.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/therapist/subscribe.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
       </list>
     </option>
   </component>
@@ -341,6 +351,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -485,7 +496,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -529,12 +539,13 @@
       <workItem from="1560004061151" duration="10477000" />
       <workItem from="1560066800082" duration="59000" />
       <workItem from="1560088951834" duration="1839000" />
-      <workItem from="1560172384688" duration="3224000" />
+      <workItem from="1560172384688" duration="3421000" />
+      <workItem from="1560240802665" duration="1732000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107963000" />
+    <option name="totallyTimeSpent" value="109892000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -547,7 +558,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.26934984" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31164902" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3161876" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -623,13 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="47" column="5" selection-start-line="41" selection-start-column="4" selection-end-line="47" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/errors.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -641,13 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="38" selection-start-line="30" selection-start-column="32" selection-end-line="47" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -719,13 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/therapist/subscribe.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="161" column="50" selection-start-line="161" selection-start-column="50" selection-end-line="161" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/TherapistCanUse.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -779,9 +769,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-          <folding>
-            <element signature="e#29#47#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -796,23 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/plans.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="68" column="44" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Therapist/SubscriptionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="83" column="52" selection-start-line="83" selection-start-column="52" selection-end-line="83" selection-end-column="52" />
-          <folding>
-            <element signature="e#50#77#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -832,7 +802,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="483">
           <caret line="21" column="54" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="54" />
         </state>
       </provider>
@@ -840,13 +810,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_10_134003_add_location_address_to_therapist_profiles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="30" column="51" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_10_134003_add_location_address_to_therapist_profiles.php" />
     <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -866,15 +830,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Therapist/DashboardController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-966">
+        <state relative-caret-position="690">
           <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="112" column="29" lean-forward="true" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -885,44 +842,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/therapist/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
-          <folding>
-            <element signature="e#4211#4233#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/searchResult.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="7475">
           <caret line="325" column="53" selection-start-line="325" selection-start-column="53" selection-end-line="325" selection-end-column="53" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/newWelcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="43" column="75" lean-forward="true" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="75" />
+        <state relative-caret-position="966">
+          <caret line="43" column="75" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/therapist/dashboard/edit-profile.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
+        <state relative-caret-position="3496">
           <caret line="152" column="45" selection-start-line="152" selection-start-column="45" selection-end-line="152" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SocialController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="43" column="74" lean-forward="true" selection-start-line="43" selection-start-column="74" selection-end-line="43" selection-end-column="74" />
+        <state relative-caret-position="897">
+          <caret line="43" column="74" selection-start-line="43" selection-start-column="74" selection-end-line="43" selection-end-column="74" />
         </state>
       </provider>
     </entry>
@@ -933,6 +877,58 @@
           <folding>
             <element signature="e#40#60#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="31" column="47" lean-forward="true" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/therapist/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/plans.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="61" column="118" selection-start-line="61" selection-start-column="118" selection-end-line="61" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Therapist/SubscriptionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1426">
+          <caret line="83" column="52" selection-start-line="83" selection-start-column="52" selection-end-line="83" selection-end-column="52" />
+          <folding>
+            <element signature="e#50#77#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/therapist/subscribe.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="80" column="98" selection-start-line="80" selection-start-column="98" selection-end-line="80" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="88" column="33" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="88" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="79" column="33" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
         </state>
       </provider>
     </entry>

@@ -85,6 +85,8 @@ class RegisterController extends Controller
 
     public function showTherapistRegister(Request $request)
     {
+        if(Auth::guard('web')->check() || Auth::guard('therapist')->check())
+            return redirect('/');
 
         $problems = Problem::all();
         $groups = Group::all();

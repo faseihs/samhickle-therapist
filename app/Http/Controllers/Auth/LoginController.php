@@ -42,13 +42,12 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
-        $this->middleware('guest:admin')->except('logout');
-        $this->middleware('guest:web')->except('logout');
-        $this->middleware('guest:therapist')->except('logout');
     }
 
     public function showLoginForm(Request $request)
     {
+        if(Auth::guard('web')->check() || Auth::guard('therapist')->check())
+            return redirect('/');
         if($path=Input::get('path'))
             $request->session()->put('path',$path);
         return view('auth.login');
@@ -74,11 +73,14 @@ class LoginController extends Controller
     }
     public function showTherapistLogin()
     {
+        if(Auth::guard('web')->check() || Auth::guard('therapist')->check())
+            return redirect('/');
         return view('auth.therapist.login', ['url' => 'therapist']);
     }
 
     public function therapistLogin(Request $request)
     {
+
         $this->validate($request, [
             'email'   => 'required|email',
             'password' => 'required|min:6'
