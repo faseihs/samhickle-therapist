@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 
 class BookingController extends Controller
@@ -47,7 +48,7 @@ class BookingController extends Controller
     public function store(Request $request)
     {
         //
-        $validator = Validator::make($request->all(), [
+        /*$validator = Validator::make($request->all(), [
             'date'=>'required|date|after:yesterday',
             'slug'=>['required',new TherapistSlugPresent],
             'time'=>['required','string'],
@@ -78,6 +79,35 @@ class BookingController extends Controller
         catch(\Exception $e){
             DB::rollback();
             return response()->json($e->getMessage(),500);
+        }*/
+
+        $this->validate($request,[
+            'date'=>'required|date|after:yesterday',
+            'slug'=>['required',new TherapistSlugPresent],
+            'time'=>['required','string'],
+            'treatments'=>['nullable','array'],
+        ]);
+
+
+        try{
+            DB::beginTransaction();
+            $user=Auth::user();
+            $theapist=Therapist::findBySlug($request->slug);
+            $carbonTime=Carbon::createFromFormat("h:i a",$request->time);
+            $date = Carbon::createFromFormat("m/d/Y",$request->date);
+            $booking = new Booking();
+            $booking->user_id=$user->id;
+            $booking->therapist_id=$theapist->id;
+            $booking->date=$date;
+            $booking->time=$carbonTime->toTimeString();
+            $booking->treatments=implode("|",$request->treatments);
+            $booking->save();
+            DB::commit();
+            return Redirect::back()->with('success','Booking Done');
+        }
+        catch(\Exception $e){
+            DB::rollback();
+            dd($e);
         }
     }
 

@@ -33,14 +33,14 @@
                     <small>Therapist</small>
                     <h1>{{$therapist->name}}</h1>
                     <span class="rating">
-							<i class="icon_star voted"></i>
-							<i class="icon_star voted"></i>
-							<i class="icon_star voted"></i>
-							<i class="icon_star voted"></i>
-							<i class="icon_star"></i>
-							<small>(145)</small>
-							<a href="badges.html" data-toggle="tooltip" data-placement="top" data-original-title="Badge Level" class="badge_list_1"><img src="img/badges/badge_1.svg" width="15" height="15" alt=""></a>
-					{{--	</span>
+                        @for($i=1;$i<=$therapist->getStars();$i++)
+                            <i class="icon_star voted"></i>
+                        @endfor
+                        @if(sizeof($therapist->reviews)>0)
+                            ({{sizeof($therapist->reviews)}})
+                        @endif
+                    </span>
+							{{--	</span>
                     <ul class="statistic">
                         <li>854 Views</li>
                         <li>124 Patients</li>

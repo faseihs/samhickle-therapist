@@ -137,7 +137,7 @@ class WelcomeController extends Controller
         $starsP=$therapist->getStarPercentages();
 
 
-        return view('guest.therapist-profile',compact([
+        return view('guest.newProfile',compact([
             'therapist',
             'profile',
             'sp1',
@@ -187,5 +187,37 @@ class WelcomeController extends Controller
             $p->desc= explode("|",$p->description);
         }
         return view('plans',compact(['plans']));
+    }
+
+    public function newSchedule(Request $request){
+        $validator = Validator::make($request->all(), [
+            'date'=>'required|date',
+            'slug'=>['required',new TherapistSlugPresent],
+
+        ]);
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()], 401);
+        }
+
+        $therapist=Therapist::findBySlugOrFail($request->slug);
+        $counter=5;
+        $startDate=Carbon::parse($request->date);
+        $startDate=$startDate->subDay(1);
+        $dates=[];
+        for($i=1;$i<=$counter;$i++){
+            $obj=new \stdClass();
+            $date=$startDate->addDay(1);
+            $s=$therapist->schedules()->where('date',$date->toDateString())->first();
+            if($s){
+                $obj->date=$date->toDateString();
+                $obj->times=explode("|",$s->times);
+            }
+            else {
+                $obj->date=$date->toDateString();
+                $obj->times=[];
+            }
+            array_push($dates,$obj);
+        }
+        return response()->json($dates,200);
     }
 }

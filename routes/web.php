@@ -54,6 +54,7 @@ Route::group(['prefix'=>'therapist'],function(){
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/therapist-profile/{slug}','WelcomeController@therapistSearch');
 Route::post('/schedule-by-date-and-slug','WelcomeController@searchByDateAndSlug');
+Route::post('/new-schedule','WelcomeController@newSchedule');
 
 
 Route::group(['prefix'=>'user'],function(){
