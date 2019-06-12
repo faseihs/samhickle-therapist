@@ -371,7 +371,9 @@
                         </div>
                         <!-- End review-container -->
 
+{{--
                         <div class="text-right"><a href="submit-review.html" class="btn_1">Submit review</a></div>
+--}}
                     </div>
                 </div>
                 <!-- /section_2 -->
