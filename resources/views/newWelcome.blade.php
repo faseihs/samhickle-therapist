@@ -374,11 +374,12 @@
 
                 },function errorHandler(){
                     console.log("Nooo");
+                    alert("Enable location access to use location")
 
                 });
             } else {
                 alert("Browser doesn't support Geolocation");
-                locationErrorHandler();
+                //locationErrorHandler();
 
             }
         }
