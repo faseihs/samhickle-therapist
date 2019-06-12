@@ -29,6 +29,10 @@ Vue.use(VuejsDialog);
 import VModal from 'vue-js-modal'
 
 Vue.use(VModal)
+import Toasted from 'vue-toasted';
+
+Vue.use(Toasted)
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

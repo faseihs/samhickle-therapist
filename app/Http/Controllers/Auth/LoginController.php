@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
 {
@@ -96,4 +97,40 @@ class LoginController extends Controller
     {
         return $request->session()->has('path')?redirect($request->session()->get('path')):redirect('/user/dashboard');
     }
+
+
+    public function userApiLogin(Request $request){
+        $validator = Validator::make($request->all(), [
+            'email'   => 'required|email',
+            'password' => 'required|min:8'
+
+        ]);
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()], 401);
+        }
+
+        if (Auth::guard('web')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
+
+            return response()->json("Data",200);
+        }
+        else return response()->json("Error",500);
+    }
+    public function therapistApiLogin(Request $request){
+        $validator = Validator::make($request->all(), [
+            'email'   => 'required|email',
+            'password' => 'required|min:8'
+
+        ]);
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()], 401);
+        }
+
+        if (Auth::guard('therapist')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
+
+            return response()->json("Data",200);
+        }
+        else return response()->json("Error",500);
+    }
+
+
 }

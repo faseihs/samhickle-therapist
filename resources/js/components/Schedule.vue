@@ -6,7 +6,7 @@
                 <i @click="fetchPrevious" style="cursor: pointer" class="fa fa-arrow-left"></i>
             </div>
             <div class="col-md-10 table-responsive ">
-                <table class="table table-borderless">
+                <table class="table table-striped">
                     <thead>
                     <tr>
                         <th v-for="date in dates">{{date.Date}}</th>
@@ -14,20 +14,20 @@
                     </thead>
                     <tbody>
                     <tr v-for="index in this.maxTimes" :key="index">
-                        <td><button @click="instantRequest(dates[0],index-1)"  class="btn_1 btn-my-sm" v-if="dates[0].times[index-1]">{{dates[0].times[index-1]?dates[0].times[index-1]:'-'}}</button>
+                        <td><span @click="instantRequest(dates[0],index-1)"  style="cursor: pointer" v-if="dates[0].times[index-1]">{{dates[0].times[index-1]?dates[0].times[index-1]:'-'}}</span>
 
                         <span v-else>-</span>
                         </td>
-                        <td><button @click="instantRequest(dates[1],index-1)" class="btn_1 btn-my-sm" v-if="dates[1].times[index-1]">{{dates[1].times[index-1]?dates[1].times[index-1]:'-'}}</button>
+                        <td><span @click="instantRequest(dates[1],index-1)" style="cursor: pointer" v-if="dates[1].times[index-1]">{{dates[1].times[index-1]?dates[1].times[index-1]:'-'}}</span>
 
                             <span v-else>-</span></td>
-                        <td><button @click="instantRequest(dates[2],index-1)" class="btn_1 btn-my-sm" v-if="dates[2].times[index-1]">{{dates[2].times[index-1]?dates[2].times[index-1]:'-'}}</button>
+                        <td><span @click="instantRequest(dates[2],index-1)" style="cursor: pointer" v-if="dates[2].times[index-1]">{{dates[2].times[index-1]?dates[2].times[index-1]:'-'}}</span>
 
                             <span v-else>-</span></td>
-                        <td><button @click="instantRequest(dates[3],index-1)" class="btn_1 btn-my-sm" v-if="dates[3].times[index-1]">{{dates[3].times[index-1]?dates[3].times[index-1]:'-'}}</button>
+                        <td><button @click="instantRequest(dates[3],index-1)" style="cursor: pointer" v-if="dates[3].times[index-1]">{{dates[3].times[index-1]?dates[3].times[index-1]:'-'}}</button>
 
                             <span v-else>-</span></td>
-                        <td><button @click="instantRequest(dates[4],index-1)" class="btn_1 btn-my-sm" v-if="dates[4].times[index-1]">{{dates[4].times[index-1]?dates[4].times[index-1]:'-'}}</button>
+                        <td><span @click="instantRequest(dates[4],index-1)" style="cursor: pointer" v-if="dates[4].times[index-1]">{{dates[4].times[index-1]?dates[4].times[index-1]:'-'}}</span>
 
                             <span v-else>-</span></td>
                     </tr>
@@ -55,8 +55,28 @@
 
 
         <modal height="auto" name="loginModal">
-            <div class="text-center p-2">
-                <a class="btn_1" :href="'/login?path='+location">Login to Book</a>
+            <div class="container p-2">
+                <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
+                <div class="row">
+                    <div class="col-md-6 text-right">
+                        <button @click.prevent="showLogin" class="btn_1" >Login</button>
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <button @click.prevent="showRegister" class="btn_1" >Register</button>
+                    </div>
+                </div>
+            </div>
+        </modal>
+        <modal height="auto" name="LoginModal">
+            <div class="container p-2">
+                <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
+                <login></login>
+            </div>
+        </modal>
+        <modal height="auto" name="registerModal">
+            <div class="container p-2">
+                <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
+                <register></register>
             </div>
         </modal>
 
@@ -115,8 +135,14 @@
 <script>
     import axios from 'axios';
     import moment from 'moment';
+    import Login from './Login.vue';
+    import Register from './Register.vue';
     export default {
         name: "Schedule",
+        components:{
+          'login':Login,
+          'register':Register
+        },
         data(){
             return {
                 csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
@@ -128,10 +154,20 @@
                 instantToggle:false,
                 requestToggle:false,
                 location:window.location.href,
-                reason:null
+                reason:null,
+                login:false,
+                register:false
             }
         },
         methods:{
+            showLogin(){
+                this.$modal.hide('loginModal');
+                this.$modal.show('LoginModal');
+            },
+            showRegister(){
+                this.$modal.hide('loginModal');
+                this.$modal.show('registerModal');
+            },
             showTimePicker(){
                 $('#bookingTime').timeDropper({
                     setCurrentTime: true,

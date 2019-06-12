@@ -75,6 +75,10 @@ Route::get('/t-social-login/{provider}', 'SocialController@therapistRedirect');
 Route::get('t-login/{provider}/callback','SocialController@therapistCallback');
 Route::get('/plans','WelcomeController@plans');
 
+Route::post('/api/login','Auth\LoginController@userApiLogin');
+Route::post('/api/register','Auth\RegisterController@userApiRegister');
+Route::post('/api/therapist-login','Auth\LoginController@therapistApiLogin');
+
 
 
 

@@ -128,4 +128,35 @@ class RegisterController extends Controller
 
 
     }
+
+    public function userApiRegister(Request $request){
+        $validator = Validator::make($request->all(), [
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+
+        ]);
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()], 401);
+        }
+        try{
+            DB::beginTransaction();
+            $user= User::create([
+                'name' => $request['name'],
+                'email' => $request['email'],
+                'password' => Hash::make($request['password']),
+            ]);
+            $profile=new UserProfile();
+            $profile->user_id=$user->id;
+            $profile->save();
+            DB::commit();
+            Auth::guard('web')->login($user);
+            return response()->json("Data",200);
+        }
+        catch(\Exception $e){
+            DB::rollback();
+            return response()->json($e->getMessage(),500);
+        }
+
+    }
 }

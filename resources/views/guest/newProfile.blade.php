@@ -5,6 +5,8 @@
 @endsection
 @section('styles')
     <link href="/theme/css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
     <!-- SPECIFIC CSS -->
     <link href="/theme/css/date_picker.css" rel="stylesheet">
