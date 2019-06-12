@@ -136,7 +136,7 @@
         <div class="container">
             <div class="row justify-content-around">
                 <div class="col-md-5">
-                    <p><img src="img/app_img.svg" alt="" class="img-fluid" width="500" height="433"></p>
+                    <p><img src="/theme/img/app_img.svg" alt="" class="img-fluid" width="500" height="433"></p>
                 </div>
                 <div class="col-md-6">
                     <small>Application</small>
