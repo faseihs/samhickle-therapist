@@ -132,7 +132,7 @@
 
     <!-- /container -->
 
-    {{--<div id="app_section">
+    <div id="app_section">
         <div class="container">
             <div class="row justify-content-around">
                 <div class="col-md-5">
@@ -156,7 +156,7 @@
             <!-- /row -->
         </div>
         <!-- /container -->
-    </div>--}}
+    </div>
     <!-- /app_section -->
     <div style="display: none;" id="map"></div>
 
