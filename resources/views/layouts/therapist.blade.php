@@ -48,8 +48,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-6">
-                <div id="logo_home">
-                    <h1><a style="background: url('/theme/img/mainLogo.png') no-repeat 0 0;background-size: 163px 36px" href="/" title="Findoctor">Findoctor</a></h1>
+                <div id="logo_home" >
+                    <h1><a style="width:auto;background: url('/theme/img/mainLogo.png') no-repeat 0 0;background-size: 245px 36px" href="/" title="Therapist">Therapist</a></h1>
                 </div>
             </div>
             <nav class="col-lg-9 col-6">
