@@ -14,20 +14,20 @@
                     </thead>
                     <tbody>
                     <tr v-for="index in this.maxTimes" :key="index">
-                        <td><span @click="instantRequest(dates[0],index-1)"  style="cursor: pointer" v-if="dates[0].times[index-1]">{{dates[0].times[index-1]?dates[0].times[index-1]:'-'}}</span>
+                        <td><span class="timeClass" @click="instantRequest(dates[0],index-1)"  style="cursor: pointer" v-if="dates[0].times[index-1]">{{dates[0].times[index-1]?dates[0].times[index-1]:'-'}}</span>
 
                         <span v-else>-</span>
                         </td>
-                        <td><span @click="instantRequest(dates[1],index-1)" style="cursor: pointer" v-if="dates[1].times[index-1]">{{dates[1].times[index-1]?dates[1].times[index-1]:'-'}}</span>
+                        <td><span class="timeClass" @click="instantRequest(dates[1],index-1)" style="cursor: pointer" v-if="dates[1].times[index-1]">{{dates[1].times[index-1]?dates[1].times[index-1]:'-'}}</span>
 
                             <span v-else>-</span></td>
-                        <td><span @click="instantRequest(dates[2],index-1)" style="cursor: pointer" v-if="dates[2].times[index-1]">{{dates[2].times[index-1]?dates[2].times[index-1]:'-'}}</span>
+                        <td><span class="timeClass" @click="instantRequest(dates[2],index-1)" style="cursor: pointer" v-if="dates[2].times[index-1]">{{dates[2].times[index-1]?dates[2].times[index-1]:'-'}}</span>
 
                             <span v-else>-</span></td>
-                        <td><button @click="instantRequest(dates[3],index-1)" style="cursor: pointer" v-if="dates[3].times[index-1]">{{dates[3].times[index-1]?dates[3].times[index-1]:'-'}}</button>
+                        <td><span class="timeClass" @click="instantRequest(dates[3],index-1)" style="cursor: pointer" v-if="dates[3].times[index-1]">{{dates[3].times[index-1]?dates[3].times[index-1]:'-'}}</span>
 
                             <span v-else>-</span></td>
-                        <td><span @click="instantRequest(dates[4],index-1)" style="cursor: pointer" v-if="dates[4].times[index-1]">{{dates[4].times[index-1]?dates[4].times[index-1]:'-'}}</span>
+                        <td><span class="timeClass" @click="instantRequest(dates[4],index-1)" style="cursor: pointer" v-if="dates[4].times[index-1]">{{dates[4].times[index-1]?dates[4].times[index-1]:'-'}}</span>
 
                             <span v-else>-</span></td>
                     </tr>
@@ -212,7 +212,7 @@
                         this.dates.forEach(item=>{
                             if(this.maxTimes<item.times.length)
                                 this.maxTimes=item.times.length;
-                            item.Date=moment(item.date).format('ddd D/M')
+                            item.Date=moment(item.date,"DD-MM-YYYY").format('ddd D/M')
                         });
                     })
             },
@@ -230,7 +230,7 @@
                       this.dates.forEach(item=>{
                           if(this.maxTimes<item.times.length)
                               this.maxTimes=item.times.length;
-                          item.Date=moment(item.date).format('ddd D/M')
+                          item.Date=moment(item.date,"DD-MM-YYYY").format('ddd D/M')
                       });
                   })
           }
@@ -263,5 +263,10 @@
     .btn-my-sm{
         font-size:10px;
         padding: 3px;
+    }
+    .timeClass:hover{
+        background:#e74e84;
+        border-radius: 25px;
+        color:white;
     }
 </style>
