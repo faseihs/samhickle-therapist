@@ -121,7 +121,9 @@
             </div>
         </div>
         <!-- /row -->
+{{--
         <p class="text-center"><a href="#" class="btn_1 medium">Find Doctor</a></p>
+--}}
 
     </div>
     <!-- /container -->
