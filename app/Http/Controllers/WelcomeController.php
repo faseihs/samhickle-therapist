@@ -41,7 +41,7 @@ class WelcomeController extends Controller
         + sin(radians(" .$input['latlng']->lat. ")) 
         * sin(radians(latitude))) AS distance"))
 
-            ->having('distance',"<",500)
+            ->having('distance',"<",100)
             ->where('therapist_groups.group_id',$request->group_id)
             ->where('therapist_problems.problem_id',$request->problem_id)
             ->orderBy('distance')

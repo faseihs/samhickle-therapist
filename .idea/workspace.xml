@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7497c9c8-384b-4766-9260-d9fe2326679a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/newWelcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/newWelcome.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newWelcome.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="newWelcome.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/newWelcome.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="153" column="22" lean-forward="true" selection-start-line="153" selection-start-column="22" selection-end-line="153" selection-end-column="22" />
+            <state relative-caret-position="460">
+              <caret line="153" column="69" selection-start-line="153" selection-start-column="69" selection-end-line="153" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -79,6 +81,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="329">
               <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WelcomeController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+              <folding>
+                <element signature="e#40#60#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,15 +133,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookingController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/User/BookingController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -141,7 +146,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Back</find>
       <find>Auth</find>
       <find>checkbox</find>
       <find>saveB</find>
@@ -171,6 +175,7 @@
       <find>booking_time</find>
       <find>timeDropp</find>
       <find>submit-re</find>
+      <find>Most V</find>
     </findStrings>
     <replaceStrings>
       <replace>radio_time[]</replace>
@@ -228,7 +233,6 @@
         <option value="$PROJECT_DIR$/resources/views/auth/therapist/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/guest/therapist-profile.blade.php" />
         <option value="$PROJECT_DIR$/webpack.mix.js" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/therapist.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/User/BookingController.php" />
         <option value="$PROJECT_DIR$/resources/js/profile.js" />
@@ -240,6 +244,7 @@
         <option value="$PROJECT_DIR$/resources/js/components/Schedule.vue" />
         <option value="$PROJECT_DIR$/resources/views/guest/newProfile.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/newWelcome.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" />
       </list>
     </option>
   </component>
@@ -353,7 +358,7 @@
       <path value="$PROJECT_DIR$/vendor/nikolag/core" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1382" />
@@ -462,7 +467,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="newW&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/newWelcome.blade.php&#10;newWel&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/newWelcome.blade.php&#10;new&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/guest/newProfile.blade.php&#10;web&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/routes/web.php&#10;newP&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/guest/newProfile.blade.php&#10;profile.j&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/profile.js&#10;Sch&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/Schedule.vue&#10;Booki&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/Therapist/BookingController.php&#10;ther&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/layouts/therapist.blade.php&#10;the&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/layouts/therapist.blade.php&#10;thera&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/layouts/therapist.blade.php&#10;Sched&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/Schedule.vue&#10;Book&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/User/BookingController.php&#10;profile&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/profile.js&#10;newPro&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/guest/newProfile.blade.php&#10;Wel&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/WelcomeController.php&#10;Social&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/SocialController.php&#10;wel&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/newWelcome.blade.php&#10;searc&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;regis&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/auth/therapist/register.blade.php&#10;Regi&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/Auth/RegisterController.php&#10;add_lo&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/database/migrations/2019_06_10_134003_add_location_address_to_therapist_profiles.php&#10;Reg&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/Auth/RegisterController.php&#10;regi&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/auth/therapist/register.blade.php&#10;plan&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/plans.blade.php&#10;Ther&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Model/Therapist.php&#10;The&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Model/Therapist.php&#10;Therapist&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Model/Therapist.php&#10;web.p&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/routes/web.php&#10;searchR&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;sub&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/subscribe.blade.php&#10;subs&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/subscribe.blade.php&#10;Kernel.&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Console/Kernel.php&#10;TherapistCa&#9;null&#9;null&#10;Therapi&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Model/Therapist.php&#10;create&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/database/migrations/2019_06_07_062207_create_subscriptions_table.php&#10;Plan&#9;null&#9;null&#10;create_sub&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/database/migrations/2019_06_07_062157_create_subscription_plans_table.php&#10;we&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/routes/web.php&#10;env&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/.env&#10;search&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;login&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/auth/login.blade.php&#10;errors.&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/includes/errors.blade.php&#10;en&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/.env&#10;login.b&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/auth/login.blade.php&#10;servi&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/config/services.php&#10;.en&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/.env&#10;Revi&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Model/Review.php&#10;Use&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/User.php&#10;U&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/User.php" />
+    <property name="SearchEverywhereHistoryKey" value="wel&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/WelcomeController.php&#10;newW&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/newWelcome.blade.php&#10;newWel&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/newWelcome.blade.php&#10;new&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/guest/newProfile.blade.php&#10;web&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/routes/web.php&#10;newP&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/guest/newProfile.blade.php&#10;profile.j&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/profile.js&#10;Sch&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/Schedule.vue&#10;Booki&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/Therapist/BookingController.php&#10;ther&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/layouts/therapist.blade.php&#10;the&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/layouts/therapist.blade.php&#10;thera&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/layouts/therapist.blade.php&#10;Sched&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/Schedule.vue&#10;Book&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/User/BookingController.php&#10;profile&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/profile.js&#10;newPro&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/guest/newProfile.blade.php&#10;Wel&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/WelcomeController.php&#10;Social&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/SocialController.php&#10;searc&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;regis&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/auth/therapist/register.blade.php&#10;Regi&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/Auth/RegisterController.php&#10;add_lo&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/database/migrations/2019_06_10_134003_add_location_address_to_therapist_profiles.php&#10;Reg&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/Auth/RegisterController.php&#10;regi&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/auth/therapist/register.blade.php&#10;plan&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/plans.blade.php&#10;Ther&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Model/Therapist.php&#10;The&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Model/Therapist.php&#10;Therapist&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Model/Therapist.php&#10;web.p&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/routes/web.php&#10;searchR&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;sub&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/subscribe.blade.php&#10;subs&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/subscribe.blade.php&#10;Kernel.&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Console/Kernel.php&#10;TherapistCa&#9;null&#9;null&#10;Therapi&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Model/Therapist.php&#10;create&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/database/migrations/2019_06_07_062207_create_subscriptions_table.php&#10;Plan&#9;null&#9;null&#10;create_sub&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/database/migrations/2019_06_07_062157_create_subscription_plans_table.php&#10;we&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/routes/web.php&#10;env&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/.env&#10;search&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;login&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/auth/login.blade.php&#10;errors.&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/includes/errors.blade.php&#10;en&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/.env&#10;login.b&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/auth/login.blade.php&#10;servi&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/config/services.php&#10;.en&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/.env&#10;Revi&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Model/Review.php&#10;Use&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/User.php&#10;U&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/User.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -508,12 +513,12 @@
       <workItem from="1560249678366" duration="12545000" />
       <workItem from="1560265719027" duration="5002000" />
       <workItem from="1560290495765" duration="3915000" />
-      <workItem from="1560349409791" duration="6932000" />
+      <workItem from="1560349409791" duration="8248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141199000" />
+    <option name="totallyTimeSpent" value="142515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -782,16 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2970">
-          <caret line="212" column="46" selection-start-line="212" selection-start-column="46" selection-end-line="212" selection-end-column="46" />
-          <folding>
-            <element signature="e#40#60#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/theme/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
@@ -900,8 +895,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/newWelcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="153" column="22" lean-forward="true" selection-start-line="153" selection-start-column="22" selection-end-line="153" selection-end-column="22" />
+        <state relative-caret-position="460">
+          <caret line="153" column="69" selection-start-line="153" selection-start-column="69" selection-end-line="153" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+          <folding>
+            <element signature="e#40#60#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
