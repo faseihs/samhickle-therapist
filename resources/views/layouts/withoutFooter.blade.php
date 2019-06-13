@@ -238,7 +238,7 @@
 <!-- COMMON SCRIPTS -->
 <script src="/theme/js/jquery-2.2.4.min.js"></script>
 <script src="/theme/js/common_scripts.min.js"></script>
-<script src="/theme/js/functions.js?v=1"></script>
+<script src="/theme/js/functions.js?v=2"></script>
 @yield('scripts')
 
 </body>
