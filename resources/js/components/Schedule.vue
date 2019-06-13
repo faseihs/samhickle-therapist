@@ -1,135 +1,146 @@
 <template>
-    <div id="mainDiv" class="col-md-12">
-            <div class="row">
-
-            <div class="col-md-1">
-                <i @click="fetchPrevious" style="cursor: pointer" class="fa fa-arrow-left"></i>
-            </div>
-            <div class="col-md-10 table-responsive ">
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th v-for="date in dates">{{date.Date}}</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr v-for="index in this.maxTimes" :key="index">
-                        <td><span class="timeClass" @click="instantRequest(dates[0],index-1)"  style="cursor: pointer" v-if="dates[0].times[index-1]">{{dates[0].times[index-1]?dates[0].times[index-1]:'-'}}</span>
-
-                        <span v-else>-</span>
-                        </td>
-                        <td><span class="timeClass" @click="instantRequest(dates[1],index-1)" style="cursor: pointer" v-if="dates[1].times[index-1]">{{dates[1].times[index-1]?dates[1].times[index-1]:'-'}}</span>
-
-                            <span v-else>-</span></td>
-                        <td><span class="timeClass" @click="instantRequest(dates[2],index-1)" style="cursor: pointer" v-if="dates[2].times[index-1]">{{dates[2].times[index-1]?dates[2].times[index-1]:'-'}}</span>
-
-                            <span v-else>-</span></td>
-                        <td><span class="timeClass" @click="instantRequest(dates[3],index-1)" style="cursor: pointer" v-if="dates[3].times[index-1]">{{dates[3].times[index-1]?dates[3].times[index-1]:'-'}}</span>
-
-                            <span v-else>-</span></td>
-                        <td><span class="timeClass" @click="instantRequest(dates[4],index-1)" style="cursor: pointer" v-if="dates[4].times[index-1]">{{dates[4].times[index-1]?dates[4].times[index-1]:'-'}}</span>
-
-                            <span v-else>-</span></td>
-                    </tr>
-                    <tr v-if="maxTimes===0 && dates.length>0">
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-md-1">
-                <i @click="fetchNext" style="cursor: pointer" class="fa fa-arrow-right"></i>
-            </div>
-                <div class="col-md-12 text-center">
-                    <button @click="requestBooking" class="btn_1">Request Booking</button>
-                </div>
+    <aside class="col-xl-6 col-lg-6"  >
+    <div style="padding-lefT:0px;padding-right: 0px"  class="box_general_3 booking">
+        <div class="title">
+            <h3>Book a Visit</h3>
         </div>
-
-
-
-        <!-- Modal -->
-
-
-        <modal height="auto" name="loginModal">
-            <div class="container p-2">
-                <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
+        <div class="row">
+            <div id="mainDiv" class="col-md-12">
                 <div class="row">
-                    <div class="col-md-6 text-right">
-                        <button @click.prevent="showLogin" class="btn_1" >Login</button>
+
+                    <div  class="col-md-1">
+                        <i @click="fetchPrevious" style="cursor: pointer" class="fa fa-arrow-left"></i>
                     </div>
-                    <div class="col-md-6 text-left">
-                        <button @click.prevent="showRegister" class="btn_1" >Register</button>
+                    <div style="margin-left: -32px;" class="col-md-10 table-responsive ">
+                        <table class="table table-borderless">
+                            <thead>
+                            <tr>
+                                <th class="text-center" v-for="date in dates">{{getDate(date.Date)[0]}}<br>{{getDate(date.Date)[1]}}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr v-for="index in this.maxTimes" :key="index">
+                                <td class="text-center"><span class="timeClass" @click="instantRequest(dates[0],index-1)"  style="cursor: pointer" v-if="dates[0].times[index-1]">{{dates[0].times[index-1]?dates[0].times[index-1]:'-'}}</span>
+
+                                    <span v-else>-</span>
+                                </td>
+                                <td class="text-center" ><span class="timeClass" @click="instantRequest(dates[1],index-1)" style="cursor: pointer" v-if="dates[1].times[index-1]">{{dates[1].times[index-1]?dates[1].times[index-1]:'-'}}</span>
+
+                                    <span v-else>-</span></td>
+                                <td class="text-center"><span class="timeClass" @click="instantRequest(dates[2],index-1)" style="cursor: pointer" v-if="dates[2].times[index-1]">{{dates[2].times[index-1]?dates[2].times[index-1]:'-'}}</span>
+
+                                    <span v-else>-</span></td>
+                                <td class="text-center"><span class="timeClass" @click="instantRequest(dates[3],index-1)" style="cursor: pointer" v-if="dates[3].times[index-1]">{{dates[3].times[index-1]?dates[3].times[index-1]:'-'}}</span>
+
+                                    <span v-else>-</span></td>
+                                <td class="text-center"><span class="timeClass" @click="instantRequest(dates[4],index-1)" style="cursor: pointer" v-if="dates[4].times[index-1]">{{dates[4].times[index-1]?dates[4].times[index-1]:'-'}}</span>
+
+                                    <span v-else>-</span></td>
+                            </tr>
+                            <tr v-if="maxTimes===0 && dates.length>0">
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
+                    <div class="col-md-1">
+                        <i @click="fetchNext" style="cursor: pointer" class="fa fa-arrow-right"></i>
+                    </div>
+
                 </div>
-            </div>
-        </modal>
-        <modal height="auto" name="LoginModal">
-            <div class="container p-2">
-                <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
-                <login></login>
-            </div>
-        </modal>
-        <modal height="auto" name="registerModal">
-            <div class="container p-2">
-                <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
-                <register></register>
-            </div>
-        </modal>
 
-        <modal height="auto" name="instantModal">
-            <div class="container p-4">
-                <form method="POST" action="/user/booking">
-                    <input name="_token" v-model="csrf" type="hidden">
-                    <input name="slug" v-model="slug" type="hidden">
-                    <div class="row form-group">
-                        <label class="control-label">Date</label>
-                        <input class="form-control" name="date" readonly v-model="selectedDate" type="text">
-                    </div>
-                    <div class="row form-group">
-                        <label>Time</label>
-                        <input class="form-control" name="time" readonly v-model="selectedTime" type="text">
-                    </div>
-                    <div class="row form-group">
-                        <label>Reason (optional)</label>
-                        <input class="form-control" name="description"  v-model="reason" type="text">
-                    </div>
-                    <div class="row form-group">
-                        <button class="btn_1">Book!</button>
-                    </div>
-                </form>
-            </div>
-        </modal>
 
-        <modal  @opened="showTimePicker" height="auto" name="requestModal">
-            <div class="container p-4">
-                <form method="POST" action="/user/booking">
-                    <input name="_token" v-model="csrf" type="hidden">
-                    <input name="slug" v-model="slug" type="hidden">
-                    <input name="request" value="ss" type="hidden">
-                    <div class="row form-group">
-                        <label class="control-label">Date</label>
-                        <input class="form-control" name="date"  v-model="selectedDate" type="date">
-                    </div>
-                    <div class="row form-group">
-                        <label>Time</label>
-                        <input class="form-control" name="time" id="bookingTime"  type="text">
-                    </div>
-                    <div class="row form-group">
-                        <label>Reason (optional)</label>
-                        <input class="form-control" name="description"  v-model="reason" type="text">
-                    </div>
-                    <div class="row form-group">
-                        <button class="btn_1">Book!</button>
-                    </div>
-                </form>
-            </div>
-        </modal>
 
+                <!-- Modal -->
+
+
+                <modal height="auto" name="loginModal">
+                    <div class="container p-2">
+                        <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
+                        <div class="row">
+                            <div class="col-md-6 text-right">
+                                <button @click.prevent="showLogin" class="btn_1" >Login</button>
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <button @click.prevent="showRegister" class="btn_1" >Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </modal>
+                <modal height="auto" name="LoginModal">
+                    <div class="container p-2">
+                        <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
+                        <login></login>
+                    </div>
+                </modal>
+                <modal height="auto" name="registerModal">
+                    <div class="container p-2">
+                        <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
+                        <register></register>
+                    </div>
+                </modal>
+
+                <modal height="auto" name="instantModal">
+                    <div class="container p-4">
+                        <form method="POST" action="/user/booking">
+                            <input name="_token" v-model="csrf" type="hidden">
+                            <input name="slug" v-model="slug" type="hidden">
+                            <div class="row form-group">
+                                <label class="control-label">Date</label>
+                                <input class="form-control" name="date" readonly v-model="selectedDate" type="text">
+                            </div>
+                            <div class="row form-group">
+                                <label>Time</label>
+                                <input class="form-control" name="time" readonly v-model="selectedTime" type="text">
+                            </div>
+                            <div class="row form-group">
+                                <label>Reason (optional)</label>
+                                <input class="form-control" name="description"  v-model="reason" type="text">
+                            </div>
+                            <div class="row form-group">
+                                <button class="btn_1">Book!</button>
+                            </div>
+                        </form>
+                    </div>
+                </modal>
+
+                <modal  @opened="showTimePicker" height="auto" name="requestModal">
+                    <div class="container p-4">
+                        <form method="POST" action="/user/booking">
+                            <input name="_token" v-model="csrf" type="hidden">
+                            <input name="slug" v-model="slug" type="hidden">
+                            <input name="request" value="ss" type="hidden">
+                            <div class="row form-group">
+                                <label class="control-label">Date</label>
+                                <input class="form-control" name="date"  v-model="selectedDate" type="date">
+                            </div>
+                            <div class="row form-group">
+                                <label>Time</label>
+                                <input class="form-control" name="time" id="bookingTime"  type="text">
+                            </div>
+                            <div class="row form-group">
+                                <label>Reason (optional)</label>
+                                <input class="form-control" name="description"  v-model="reason" type="text">
+                            </div>
+                            <div class="row form-group">
+                                <button class="btn_1">Book!</button>
+                            </div>
+                        </form>
+                    </div>
+                </modal>
+
+            </div>
+        </div>
     </div>
+        <div class="col-md-12 text-center">
+            <button @click="requestBooking" class="btn_1">Request Booking</button>
+        </div>
+    </aside>
+
 </template>
 
 <script>
@@ -160,6 +171,9 @@
             }
         },
         methods:{
+            getDate(date){
+                return date.split(" ");
+            },
             showLogin(){
                 this.$modal.hide('loginModal');
                 this.$modal.show('LoginModal');
@@ -266,7 +280,17 @@
     }
     .timeClass:hover{
         background:#e74e84;
-        border-radius: 25px;
         color:white;
     }
+
+    .timeClass{
+        background-color: rgb(255, 240, 75);
+        padding: 4px;
+        color: rgb(0, 35, 75);
+        width: 52px;
+        display: inline-block;
+        font-weight: bold;
+        text-align: center;
+    }
+
 </style>

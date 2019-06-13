@@ -63,7 +63,7 @@
             });
         window.auth = '{{Auth::user()?'true':'false'}}';
     </script>
-    <script src="/js/profile.js?v=3"></script>
+    <script src="/js/profile.js?v=4"></script>
 
 @endsection
 @section('content')
@@ -390,16 +390,11 @@
                 </div>
                 <!-- /section_2 -->
             </div>
+            <schedule></schedule>
             <!-- /col -->
-            <aside class="col-xl-6 col-lg-6"  >
-                <div style="padding-lefT:0px;padding-right: 0px"  class="box_general_3 booking">
-                    <div class="title">
-                        <h3>Book a Visit</h3>
-                    </div>
-                    <div class="row">
-                    <schedule></schedule>
-                    </div>
-                    {{--<form method="POST"  action="/user/booking">
+            {{--<aside class="col-xl-6 col-lg-6"  >
+
+                    --}}{{--<form method="POST"  action="/user/booking">
                         @csrf
                         <input name="slug" value="{{$therapist->slug}}" type="hidden">
                         <div class="title">
@@ -436,10 +431,10 @@
                             <a class="btn_1" href="/login?path={{\Illuminate\Support\Facades\URL::current()}}">Login to book an appointment</a>
                         @endauth
 
-                    </form>--}}
+                    </form>--}}{{--
                 </div>
                 <!-- /box_general -->
-            </aside>
+            </aside>--}}
             <!-- /asdide -->
         </div>
         <!-- /row -->
