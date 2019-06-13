@@ -4,7 +4,7 @@
     <div class="bg_color_2">
         <div class="container margin_60_35">
             <div id="register">
-                <h1>Please register to Findoctor!</h1>
+                <h1>Join Therapist.co.uk today!</h1>
                 <div class="row justify-content-center">
                     <div class="col-md-5">
                         <form method="POST" action="/register">
@@ -57,7 +57,6 @@
                                     <input class="btn_1" type="submit" value="Submit">
                                 </div>
                             </div>
-                            <p class="text-center"><small>Has voluptua vivendum accusamus cu. Ut per assueverit temporibus dissentiet. Eum no atqui putant democritum, velit nusquam sententiae vis no.</small></p>
                         </form>
                     </div>
                 </div>

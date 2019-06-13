@@ -4,7 +4,7 @@
     <div class="bg_color_2">
         <div class="container margin_60_35">
             <div id="register">
-                <h1>Create your account</h1>
+                <h1>Join <strong>Therapist.co.uk</strong> today!</h1>
                 <div class="row justify-content-center">
                     <div class="col-md-5">
                         <form method="POST" action="/therapist/register">
