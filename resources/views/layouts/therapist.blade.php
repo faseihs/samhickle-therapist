@@ -49,7 +49,7 @@
         <div class="row">
             <div class="col-lg-5 col-6">
                 <div style="padding-bottom: 5px;" id="logo_home" >
-                    <h1><a class="pb-4" style="width:auto;background: url('/theme/img/mainLogo.png') no-repeat 0 0;background-size: 350px 44px" href="/" title="Therapist">Therapist</a></h1>
+                    <h1><a class="pb-4" style="height:40px;width:auto;background: url('/theme/img/mainLogo.png') no-repeat 0 0;background-size: 350px 40px" href="/" title="Therapist">Therapist</a></h1>
                 </div>
             </div>
             <nav class="col-lg-7 col-6">

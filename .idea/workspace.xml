@@ -80,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/therapist.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="51" column="140" selection-start-line="51" selection-start-column="140" selection-end-line="51" selection-end-column="140" />
+              <caret line="51" column="59" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -143,7 +143,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>therapist</find>
       <find>/ther</find>
       <find>Submit</find>
       <find>user</find>
@@ -173,6 +172,7 @@
       <find>theia</find>
       <find>tgeua</find>
       <find>aside</find>
+      <find>fixed</find>
     </findStrings>
     <replaceStrings>
       <replace>radio_time[]</replace>
@@ -558,12 +558,12 @@
       <workItem from="1560265719027" duration="5002000" />
       <workItem from="1560290495765" duration="3915000" />
       <workItem from="1560349409791" duration="17059000" />
-      <workItem from="1560429036391" duration="2801000" />
+      <workItem from="1560429036391" duration="3172000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154127000" />
+    <option name="totallyTimeSpent" value="154498000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -575,7 +575,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.47368422" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.47368422" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3343419" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
@@ -948,7 +948,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/therapist.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="51" column="140" selection-start-line="51" selection-start-column="140" selection-end-line="51" selection-end-column="140" />
+          <caret line="51" column="59" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
         </state>
       </provider>
     </entry>
