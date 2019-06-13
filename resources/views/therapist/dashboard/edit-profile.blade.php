@@ -33,6 +33,14 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h6>About</h6>
+            </div>
+            <div class="col-md-12">
+                <textarea name="about" rows="10" class="form-control" required  >{{$therapist->profile->about}}</textarea>
+            </div>
+        </div>
         <!-- /row-->
         <div class="row">
             <div class="col-md-6">

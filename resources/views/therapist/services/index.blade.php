@@ -25,6 +25,18 @@
                     <div class="col-md-12">
                         <textarea name="price_statement" class="form-control" required  >{{$therapist->profile->price_statement}}</textarea>
                     </div>
+                    <div class="col-md-12 mt-2">
+                        <h6>Types Of Therapy </h6>
+                    </div>
+                    <div class="col-md-12">
+                        <textarea placeholder="Seperated By Comma" name="types_of_therapy" class="form-control"   >{{$therapist->profile->types_of_therapy}}</textarea>
+                    </div>
+                    <div class="col-md-12 mt-2">
+                        <h6>How I deliver therapy</h6>
+                    </div>
+                    <div class="col-md-12">
+                        <textarea placeholder="Seperated By Comma" name="deliveries" class="form-control"   >{{$therapist->profile->deliveries}}</textarea>
+                    </div>
 
                     <div class="col-md-12 mt-2 mb-4">
                         <button class="btn_1">Save</button>

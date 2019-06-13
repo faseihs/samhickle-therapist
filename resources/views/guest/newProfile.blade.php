@@ -127,38 +127,6 @@
                                 </div>
                             </div>
                         </div>
-                        {{--<div data-interval="false" id="myCarousel" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                  <table class="table table-striped">
-                                      <thead>
-                                        <tr id="theadDiv">
-                                            <th>2019-05-06</th>
-                                            <th>2019-05-06</th>
-                                            <th>2019-05-06</th>
-                                            <th>2019-05-06</th>
-                                            <th>2019-05-06</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody id="tbodyDiv">
-
-                                      </tbody>
-                                  </table>
-                                </div>
-
-                            </div>
-                            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>--}}
-
-
-
                         <hr>
 
                         <!-- /profile -->
@@ -169,33 +137,16 @@
                                 <p>{{$profile->personal_statement}}</p>
                             </div>
                         @endif
-                        @if(sizeof($chunk)>0)
 
 
-                            <div class="wrapper_indent">
-                                <h6>Specializations</h6>
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <ul class="bullets">
-                                            @foreach($sp1 as $s)
-                                                <li>{{$s->specialization}}</li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <ul class="bullets">
-                                            @foreach($sp2 as $s)
-                                                <li>{{$s->specialization}}</li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- /row-->
+
+                        @if($profile->about)
+                            <div class="indent_title_in">
+                                <i class="pe-7s-user"></i>
+                                <h3>About</h3>
+                                <p>{{$profile->about}}</p>
                             </div>
                         @endif
-                    <!-- /wrapper indent -->
-
-                        <hr>
 
                         <div class="indent_title_in">
                             <i class="pe-7s-news-paper"></i>
@@ -218,6 +169,76 @@
                             @endif
 
                         </div>
+                        @if(sizeof($therapist->problems)>0)
+                            <div class="indent_title_in">
+                                <i class="pe-7s-user"></i>
+                                <h3>What I can help with
+                                </h3>
+                                <p>@foreach($therapist->problems as $p)
+                                        {{$p->name}},
+                                    @endforeach</p>
+                            </div>
+                        @endif
+
+
+                        @if($profile->types_of_therapy)
+                            <div class="indent_title_in">
+                                <i class="pe-7s-user"></i>
+                                <h3>Types of therapy
+                                </h3>
+                                <p>{{$profile->types_of_therapy}}</p>
+                            </div>
+                        @endif
+                        @if(sizeof($therapist->groups)>0)
+                            <div class="indent_title_in">
+                                <i class="pe-7s-user"></i>
+                                <h3>Clients I work with
+                                </h3>
+                                <p>@foreach($therapist->groups as $p)
+                                        {{$p->name}},
+                                    @endforeach</p>
+                            </div>
+                        @endif
+                        @if($profile->deliveries)
+                            <div class="indent_title_in">
+                                <i class="pe-7s-user"></i>
+                                <h3>How I deliver therapy
+                                </h3>
+                                <p>{{$profile->deliveries}}</p>
+                            </div>
+                        @endif
+
+                        @if(sizeof($chunk)>0)
+
+                            <div class="indent_title_in">
+                                <i class="pe-7s-user"></i>
+                                <h3>Specializations</h3>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <ul class="bullets">
+                                            @foreach($sp1 as $s)
+                                                <li>{{$s->specialization}}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <ul class="bullets">
+                                            @foreach($sp2 as $s)
+                                                <li>{{$s->specialization}}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- /row-->
+
+                            </div>
+                        @endif
+                    <!-- /wrapper indent -->
+
+                        <hr>
+
+
                         <!--  End wrapper indent -->
 
                         <hr>

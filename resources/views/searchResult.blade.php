@@ -309,9 +309,11 @@
             <div class="col-lg-7">
                 <div class="row">
                     @foreach($therapists as $index=>$t)
-                    <div class="col-md-12">
+                    <div onmouseenter="onHtmlClick('Doctors', {{$index}})" class="col-md-12">
                         <div class="strip_list wow fadeIn">
+{{--
                             <a href="#0" class="wish_bt"></a>
+--}}
                             <figure>
                                 <a href="/therapist-profile/{{$t->slug}}"><img style="width: 100%;" src="{{$t->profile->dp?'/'.$t->profile->dp:'http://via.placeholder.com/565x565.jpg'}}" class="img-fluid" alt="">
                                     <div class="preview"><span>Read more</span></div>
@@ -320,6 +322,7 @@
                             <div class="wrapper">
                                 <small>Therapist</small>
                                 <h3>{{$t->name}}</h3>
+                                <p><i class="fa fa-location-arrow"></i> Distance : {{number_format($t->distance,'0')}} kms</p>
 
                                 <p>{{$t->profile->personal_statement}}</p>
                                 <span class="rating">
@@ -331,15 +334,26 @@
                                 @endif
 
                                     </span>
-{{--
-                                <a href="badges.html" data-toggle="tooltip" data-placement="top" data-original-title="Badge Level" class="badge_list_1"><img src="/theme/img/badges/badge_1.svg" width="15" height="15" alt=""></a>
---}}
+                                <div class="row">
+                                    <div class="col-md-12 text-right">
+                                        <a href="/therapist-profile/{{$t->slug}}">Book now</a>
+
+                                    </div>
+                                </div>
+
+                                {{--
+                                                                <a href="badges.html" data-toggle="tooltip" data-placement="top" data-original-title="Badge Level" class="badge_list_1"><img src="/theme/img/badges/badge_1.svg" width="15" height="15" alt=""></a>
+                                --}}
                             </div>
-                            <ul>
+                           {{-- <ul>
+--}}{{--
                                 <li><a  href="#" onclick="onHtmlClick('Doctors', {{$index}})"><i class="icon_pin_alt"></i>View on map</a></li>
+--}}{{--
+--}}{{--
                                 <li><a href="http://maps.google.com/maps?z=12&t=m&q=loc:{{$t->profile->latitude}}+{{$t->profile->longitude}}" target="_blank"><i class="icon_pin_alt"></i>Directions</a></li>
+--}}{{--
                                 <li><a href="/therapist-profile/{{$t->slug}}">Book now</a></li>
-                            </ul>
+                            </ul>--}}
                         </div>
                     </div>
                     @endforeach

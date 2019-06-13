@@ -20,7 +20,7 @@
                     @csrf
                     <div class="row">
                         <div class="col-md-12">
-                            <h6>Personal  Statement</h6>
+                            <h6>Main Speciality</h6>
                         </div>
                         <div class="col-md-12">
                             <textarea name="personal_statement" class="form-control"   >{{$therapist->profile->personal_statement}}</textarea>

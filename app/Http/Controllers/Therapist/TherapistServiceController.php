@@ -149,15 +149,10 @@ class TherapistServiceController extends Controller
     public function editAnyProfileDetail(Request $request){
         try{
             DB::beginTransaction();
-
-            if($request->has('redirectPath'))
-                $redirectPath=$request->redirectPath;
             $therapist=Auth::user();
             $therapist->profile->update($request->except('redirectPath'));
             DB::commit();
-            if(isset($redirectPath))
-                return redirect($redirectPath)->with('success','Updated');
-            else Redirect::back()->with('success','Updated');
+            return Redirect::back()->with('success','Updated');
         }
         catch(\Exception $e){
             DB::rollback();

@@ -77,7 +77,7 @@ class WelcomeController extends Controller
             $tempObj->name=$therapist->name;
             $tempObj->location_latitude=$therapist->profile->latitude;
             $tempObj->location_longitude=$therapist->profile->longitude;
-            $tempObj->map_image_url= '/theme/img/doctor_listing_1.jpg';
+            $tempObj->map_image_url= $therapist->profile->dp?'/'.$therapist->profile->dp:'/theme/img/doctor_listing_1.jpg';
             $tempObj->type= 'therapist';
             $tempObj->url_detail= '/therapist-profile/'.$therapist->slug;
             $tempObj->name_point=$therapist->name;

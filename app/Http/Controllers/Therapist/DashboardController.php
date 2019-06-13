@@ -97,6 +97,7 @@ class DashboardController extends Controller
             $profile->latitude=$request->address_latitude;
             $profile->longitude=$request->address_longitude;
             $profile->location_name=$request->address_address;
+            $profile->about=$request->about;
             $therapist->problems()->sync($request->problems);
             $therapist->groups()->sync($request->groups);
             $therapist->save();
