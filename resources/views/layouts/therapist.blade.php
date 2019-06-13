@@ -171,10 +171,10 @@
 <footer>
     <div class="container margin_60_35">
         <div class="row">
-            <div class="col-lg-3 col-md-12">
+            <div class="col-lg-6 col-md-12">
                 <p>
-                    <a href="index.html" title="Findoctor">
-                        <img src="/theme/img/mainLogo.png" data-retina="true" alt="" width="163" height="36" class="img-fluid">
+                    <a href="/" title="Therapist.co.uk">
+                        <img style="width: 350px;height: 40px;" src="/theme/img/mainLogo.png" data-retina="true" alt=""  class="img-fluid">
                     </a>
                 </p>
             </div>
@@ -189,16 +189,6 @@
                     <li><a href="/therapist/register">Therapist Register</a></li>
                     <li><a href="/therapist/login">Therapist Login</a></li>
                 </ul>
-            </div>
-            <div class="col-lg-3 col-md-4">
-                {{--<h5>Useful links</h5>
-                <ul class="links">
-                    <li><a href="#0">Doctors</a></li>
-                    <li><a href="#0">Clinics</a></li>
-                    <li><a href="#0">Specialization</a></li>
-                    <li><a href="#0">Join as a Doctor</a></li>
-                    <li><a href="#0">Download App</a></li>
-                </ul>--}}
             </div>
             <div class="col-lg-3 col-md-4">
                 <h5>Contact with Us</h5>
