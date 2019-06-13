@@ -1,4 +1,4 @@
-@extends('layouts.therapist')
+@extends('layouts.withoutFooter')
 
 @section('title')
     | {{$therapist->name}}
@@ -392,7 +392,7 @@
             </div>
             <!-- /col -->
             <aside class="col-xl-6 col-lg-6"  >
-                <div style="padding-lefT:0px;padding-right: 0px;"  class="box_general_3 booking">
+                <div style="padding-lefT:0px;padding-right: 0px;position: fixed;"  class="box_general_3 booking">
                     <div class="title">
                         <h3>Book a Visit</h3>
                     </div>
