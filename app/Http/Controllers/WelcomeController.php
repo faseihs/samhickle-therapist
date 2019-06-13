@@ -29,6 +29,11 @@ class WelcomeController extends Controller
     }
 
     public function search(Request $request){
+        $this->validate($request,[
+           'latLng'=>'required|string',
+           'problem_id'=>'required|string',
+            'group_id'=>'required|string'
+        ]);
         $input = $request->all();
         $input["latlng"]=json_decode($input["latLng"]);
         $result=DB::table("therapist_profiles")
