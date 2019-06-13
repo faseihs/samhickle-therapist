@@ -7,7 +7,7 @@
 
 
 @section('content')
-    <div id="breadcrumb">
+    {{--<div id="breadcrumb">
         <div class="container">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -15,7 +15,7 @@
                 <li>Page active</li>
             </ul>
         </div>
-    </div>
+    </div>--}}
     <!-- /breadcrumb -->
 
     <div class="container margin_60 ">

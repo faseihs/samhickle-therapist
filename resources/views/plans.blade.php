@@ -17,7 +17,7 @@
 @endsection
 
 @section('content')
-    <div id="breadcrumb">
+    {{--<div id="breadcrumb">
         <div class="container">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -25,7 +25,7 @@
                 <li>Page active</li>
             </ul>
         </div>
-    </div>
+    </div>--}}
 
     <div class="margin_60_35">
         <div class="container">
