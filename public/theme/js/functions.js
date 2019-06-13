@@ -23,9 +23,9 @@
 	var $toTop = $('#toTop');
 	$(window).on("scroll", function () {
 		if ($(this).scrollTop() > 1) {
-			$headerStick.addClass("sticky");
+			$headerStick.addClass("stickyy");
 		} else {
-			$headerStick.removeClass("sticky");
+			$headerStick.removeClass("stickyy");
 		};
 		if ($(this).scrollTop() != 0) {
 			$toTop.fadeIn();

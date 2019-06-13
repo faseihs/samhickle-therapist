@@ -23,7 +23,7 @@
 
     <!-- BASE CSS -->
     <link href="/theme/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/theme/css/style.css" rel="stylesheet">
+    <link href="/theme/css/style.css?v=1" rel="stylesheet">
     <link href="/theme/css/menu.css" rel="stylesheet">
     <link href="/theme/css/vendors.css" rel="stylesheet">
     <link href="/theme/css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
@@ -238,7 +238,7 @@
 <!-- COMMON SCRIPTS -->
 <script src="/theme/js/jquery-2.2.4.min.js"></script>
 <script src="/theme/js/common_scripts.min.js"></script>
-<script src="/theme/js/functions.js"></script>
+<script src="/theme/js/functions.js?v=1"></script>
 @yield('scripts')
 
 </body>

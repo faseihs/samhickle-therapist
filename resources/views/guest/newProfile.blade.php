@@ -67,7 +67,7 @@
 
 @endsection
 @section('content')
-    <div id="breadcrumb">
+    {{--<div id="breadcrumb">
         <div class="container">
             <ul>
                 <li><a href="/">Home</a></li>
@@ -75,16 +75,17 @@
                 <li>{{$therapist->name}}</li>
             </ul>
         </div>
-    </div>
+    </div>--}}
     <!-- /breadcrumb -->
 
-    <div class="container margin_60" id="profile-schedule">
+    <div class="container-fluid margin_60" style="padding-top: 20px;" id="profile-schedule">
         @include('includes.errors')
         @include('includes.flash')
         <div class="row">
             <div class="col-xl-6 col-lg-6">
                 <nav id="secondary_nav">
                     <div class="container">
+                        <ul class="clearfix">
                         <ul class="clearfix">
                             <li><a href="#section_1" class="active">General info</a></li>
                             <li><a href="#section_2">Reviews</a></li>
@@ -115,6 +116,7 @@
                                             ({{sizeof($therapist->reviews)}})
                                         @endif
                                     </span>
+                                    <p>{{$therapist->profile->personal_statement}}</p>
 
                                     <ul class="contacts">
 
@@ -130,13 +132,13 @@
                         <hr>
 
                         <!-- /profile -->
-                        @if($profile->personal_statement)
+                        {{--@if($profile->personal_statement)
                             <div class="indent_title_in">
                                 <i class="pe-7s-user"></i>
                                 <h3>Professional statement</h3>
                                 <p>{{$profile->personal_statement}}</p>
                             </div>
-                        @endif
+                        @endif--}}
 
 
 
@@ -150,7 +152,7 @@
 
                         <div class="indent_title_in">
                             <i class="pe-7s-news-paper"></i>
-                            <h3>Education</h3>
+                            <h3>Qualifications</h3>
                             @if($profile->education_statement)
                                 <p>{{$profile->education_statement}}</p>
                             @endif
@@ -160,7 +162,7 @@
                             @if(sizeof($educations)>0)
 
 
-                                <h6>Curriculum</h6>
+
                                 <ul class="list_edu">
                                     @foreach($educations as $e)
                                         <li><strong>{{$e->college}}</strong> - {{$e->description}}</li>
@@ -212,7 +214,7 @@
 
                             <div class="indent_title_in">
                                 <i class="pe-7s-user"></i>
-                                <h3>Specializations</h3>
+                                <h3>Practice</h3>
 
                                 <div class="row">
                                     <div class="col-lg-6">
@@ -245,10 +247,7 @@
 
                         <div class="indent_title_in">
                             <i class="pe-7s-cash"></i>
-                            <h3>Prices &amp; Payments</h3>
-                            @if($profile->price_statement)
-                                <p>{{$profile->price_statement}}</p>
-                            @endif
+                            <h3>Prices</h3>
                         </div>
                         @if(sizeof($services)>0)
 
@@ -257,20 +256,12 @@
                                 <div class="table-responsive">
                                     <table class="table table-striped">
                                         <thead>
-                                        <tr>
-                                            <th>Service - Visit</th>
-                                            <th>Price</th>
-                                        </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>New patient visit</td>
-                                            <td>$34</td>
-                                        </tr>
                                         @foreach($services as $s)
                                             <tr>
                                                 <td>{{$s->service}}</td>
-                                                <td>${{$s->price}}</td>
+                                                <td>&pound;{{$s->price}}</td>
                                             </tr>
                                         @endforeach
                                         </tbody>
@@ -309,48 +300,48 @@
                                 <div class="col-lg-9">
 
                                     <div class="row">
-                                        <div class="col-lg-10 col-9">
+                                        <div class="col-lg-9 col-9">
                                             <div class="progress">
                                                 <div class="progress-bar" role="progressbar" style="width: {{$starsP[5]}}%" aria-valuenow="{{$starsP[5]}}" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-2 col-3"><small><strong>5 stars</strong></small></div>
+                                        <div class="col-lg-3 col-3"><small><strong>5 stars</strong></small></div>
                                     </div>
                                     <!-- /row -->
                                     <div class="row">
-                                        <div class="col-lg-10 col-9">
+                                        <div class="col-lg-9 col-9">
                                             <div class="progress">
                                                 <div class="progress-bar" role="progressbar" style="width: {{$starsP[4]}}%" aria-valuenow="{{$starsP[4]}}" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-2 col-3"><small><strong>4 stars</strong></small></div>
+                                        <div class="col-lg-3 col-3"><small><strong>4 stars</strong></small></div>
                                     </div>
                                     <!-- /row -->
                                     <div class="row">
-                                        <div class="col-lg-10 col-9">
+                                        <div class="col-lg-9 col-9">
                                             <div class="progress">
                                                 <div class="progress-bar" role="progressbar" style="width: {{$starsP[3]}}%" aria-valuenow="{{$starsP[3]}}" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-2 col-3"><small><strong>3 stars</strong></small></div>
+                                        <div class="col-lg-3 col-3"><small><strong>3 stars</strong></small></div>
                                     </div>
                                     <!-- /row -->
                                     <div class="row">
-                                        <div class="col-lg-10 col-9">
+                                        <div class="col-lg-9 col-9">
                                             <div class="progress">
                                                 <div class="progress-bar" role="progressbar" style="width: {{$starsP[2]}}%" aria-valuenow="{{$starsP[2]}}" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-2 col-3"><small><strong>2 stars</strong></small></div>
+                                        <div class="col-lg-3 col-3"><small><strong>2 stars</strong></small></div>
                                     </div>
                                     <!-- /row -->
                                     <div class="row">
-                                        <div class="col-lg-10 col-9">
+                                        <div class="col-lg-9 col-9">
                                             <div class="progress">
                                                 <div class="progress-bar" role="progressbar" style="width: {{$starsP[1]}}%" aria-valuenow="{{$starsP[1]}}" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-2 col-3"><small><strong>1 stars</strong></small></div>
+                                        <div class="col-lg-3 col-3"><small><strong>1 stars</strong></small></div>
                                     </div>
                                     <!-- /row -->
                                 </div>
@@ -400,7 +391,7 @@
                 <!-- /section_2 -->
             </div>
             <!-- /col -->
-            <aside class="col-xl-6 col-lg-6" id="sidebar">
+            <aside class="col-xl-6 col-lg-6"  >
                 <div style="padding-lefT:0px;padding-right: 0px;"  class="box_general_3 booking">
                     <div class="title">
                         <h3>Book a Visit</h3>
