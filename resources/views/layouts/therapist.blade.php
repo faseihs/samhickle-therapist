@@ -200,7 +200,7 @@
                 <h5>Contact with Us</h5>
                 <ul class="contacts">
                     <li><a href="tel://61280932400"><i class="icon_mobile"></i> + 61 23 8093 3400</a></li>
-                    <li><a href="mailto:info@findoctor.com"><i class="icon_mail_alt"></i> help@therapist.co.uk</a></li>
+                    <li><a href="mailto:help@therapist.co.uk"><i class="icon_mail_alt"></i> help@therapist.co.uk</a></li>
                 </ul>
                 <div class="follow_us">
                     <h5>Follow us</h5>
