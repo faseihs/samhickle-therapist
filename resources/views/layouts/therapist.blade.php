@@ -184,8 +184,10 @@
 --}}
                 <ul class="links">
                     <li><a href="#0">About us</a></li>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/register">Register</a></li>
+                    <li><a href="/register">Patient Register</a></li>
+                    <li><a href="/login">Patient Login</a></li>
+                    <li><a href="/therapist/register">Therapist Register</a></li>
+                    <li><a href="/therapist/login">Therapist Login</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-4">
