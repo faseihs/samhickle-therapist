@@ -47,12 +47,12 @@
 <header class="header_sticky">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-6">
+            <div class="col-lg-5 col-6">
                 <div style="padding-bottom: 5px;" id="logo_home" >
-                    <h1><a class="pb-2" style="width:auto;background: url('/theme/img/mainLogo.png') no-repeat 0 0;background-size: 255px 36px" href="/" title="Therapist">Therapist</a></h1>
+                    <h1><a class="pb-4" style="width:auto;background: url('/theme/img/mainLogo.png') no-repeat 0 0;background-size: 350px 44px" href="/" title="Therapist">Therapist</a></h1>
                 </div>
             </div>
-            <nav class="col-lg-9 col-6">
+            <nav class="col-lg-7 col-6">
                 <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="#0"><span>Menu mobile</span></a>
                 <ul id="top_access">
                     @auth('therapist')
