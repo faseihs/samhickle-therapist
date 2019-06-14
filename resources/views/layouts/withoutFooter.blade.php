@@ -24,7 +24,7 @@
     <!-- BASE CSS -->
     <link href="/theme/css/bootstrap.min.css" rel="stylesheet">
     <link href="/theme/css/style.css?v=1" rel="stylesheet">
-    <link href="/theme/css/menu.css" rel="stylesheet">
+    <link href="/theme/css/menu.css?v=1" rel="stylesheet">
     <link href="/theme/css/vendors.css" rel="stylesheet">
     <link href="/theme/css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
 
@@ -55,11 +55,11 @@
             <nav class="col-lg-7 col-6">
                 <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="#0"><span>Menu mobile</span></a>
                 <ul id="top_access">
-                    @auth('therapist')
-                    @else
-                        <li><a data-toggle="tooltip" title="Therapist Login"  href="/therapist/login"><i class="pe-7s-user"></i></a></li>
-                        <li><a data-toggle="tooltip" title="Therapist Register" href="/therapist/register"><i class="pe-7s-add-user"></i></a></li>
-                    @endauth
+                    {{--@auth('therapist')
+                        @else
+                    <li><a data-toggle="tooltip" title="Therapist Login"  href="/therapist/login"><i class="pe-7s-user"></i></a></li>
+                    <li><a data-toggle="tooltip" title="Therapist Register" href="/therapist/register"><i class="pe-7s-add-user"></i></a></li>
+                    @endauth--}}
                     @auth('web')
                         <li><a data-toggle="tooltip" title="Logout" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();" href="#"><i
@@ -79,24 +79,66 @@
                 </ul>
                 <div class="main-menu">
                     <ul>
-                        <li class="submenu">
+                        {{--<li class="submenu">
                             <a href="#0" class="show-submenu">Patient<i class="icon-down-open-mini"></i></a>
                             <ul>
                                 @auth('web')
                                     <li><a href="/user/dashboard">Dashboard</a></li>
                                 @else
-                                    <li><a href="/login">Login</a></li>
-                                    <li><a href="/register">Register</a></li>
+                                <li><a href="/login">Login</a></li>
+                                <li><a href="/register">Register</a></li>
                                 @endauth
 
 
                             </ul>
+                        </li>--}}
+                        <li><a href="/therapist/register">List your practice on <span class="text-main">therapist.co.uk</span></a></li>
+                        <li class="submenu">
+                            <a href="#0" class="show-submenu">Login/Signup<i class="icon-down-open-mini"></i></a>
+                            <ul>
+                                @guest('web')
+                                    <li><span class="menu-s">Patients </span> <a class="d-inline-block menu-a" href="/login">Login</a><a class="d-inline-block menu-a" href="/register">Register</a></li>
+
+                                @endguest
+                                @guest('therapist')
+                                    <li><span class="menu-s">Therapist  </span> <a class="d-inline-block menu-a" href="/therapist/login">Login</a><a class="d-inline-block menu-a" href="/plans">Register</a></li>
+                                @endguest
+
+
+                            </ul>
                         </li>
+                        <style>
+                            .menu-a{
+
+                                color:#e74e84 !important;
+                                display: inline-block !important;
+                            }
+
+                            .menu-s{
+
+                                font-size: 14px;
+                                display: inline-block;
+                                min-width: 72px;
+                                padding-left: 6px;
+                            }
+
+                            .menu-a:hover{
+                                font-weight: bold;
+                            }
+                        </style>
                         @auth('therapist')
                             <li class="submenu">
                                 <a href="#0" class="show-submenu">Therapist<i class="icon-down-open-mini"></i></a>
                                 <ul>
                                     <li><a href="/therapist/dashboard">Dashboard</a></li>
+                                </ul>
+                            </li>
+                        @endauth
+                        @auth('web')
+                            <li class="submenu">
+                                <a href="#0" class="show-submenu">Patients<i class="icon-down-open-mini"></i></a>
+                                <ul>
+                                    <li><a href="/user/dashboard">Dashboard</a></li>
                                 </ul>
                             </li>
                         @endauth
