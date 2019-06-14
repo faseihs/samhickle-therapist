@@ -94,30 +94,39 @@
     <!-- /Hero -->
 
     <div class="container margin_120_95">
-        <div class="main_title">
-            <h2>Discover the <strong>online</strong> appointment!</h2>
-            <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel.</p>
+        <div class="main_title text-uppercase">
+            <h2>Discover the <strong>online</strong> appointments WITH A THERAPIST TODAY</h2>
         </div>
         <div class="row add_bottom_30">
             <div class="col-lg-4">
                 <div class="box_feat" id="icon_1">
                     <span></span>
-                    <h3>Find a Doctor</h3>
-                    <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie.</p>
+                    <h3>FIND A THERAPIST
+                    </h3>
+                <p>
+                    Simply enter what you need help with, who the therapy is for and your postcode. We will then search nearby therapists.
+                </p>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="box_feat" id="icon_2">
                     <span></span>
-                    <h3>View profile</h3>
-                    <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie.</p>
-                </div>
+                    <h3>VIEW PROFILE
+                    </h3>
+                <p>
+                    Browse and compare therapists profiles. See their specialities, availability and read their reviews.
+
+                </p><br></div>
             </div>
             <div class="col-lg-4">
                 <div class="box_feat" id="icon_3">
-                    <h3>Book a visit</h3>
-                    <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie.</p>
-                </div>
+                    <h3>BOOK A VISIT
+                    </h3>
+                <p>
+                    Booking a therapist couldn’t be easier. Simply click on their availability and book on online or request an appointment.
+
+
+                </p></div>
             </div>
         </div>
         <!-- /row -->
@@ -142,8 +151,20 @@
                 </div>
                 <div class="col-md-6">
                     <small>Application</small>
-                    <h3>Download <strong>Findoctor App</strong> Now!</h3>
-                    <p class="lead">Tota omittantur necessitatibus mei ei. Quo paulo perfecto eu, errem percipit ponderum no eos. Has eu mazim sensibus. Ad nonumes dissentiunt qui, ei menandri electram eos. Nam iisque consequuntur cu.</p>
+                    <h3>Download <strong>THERAPIST.CO.UK APP</strong></h3>
+
+                        <ul style="list-style-type: disc;list-style-position:inside">
+                        <li>Find nearby therapists
+                        </li>
+                        <li>
+                            Browse therapist profiles and reviews
+                        </li>
+                        <li>
+                            Book therapist appointments with a tap
+
+                        </li>
+                    </ul>
+
                     <div class="app_buttons wow" data-wow-offset="100">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 43.1 85.9" style="enable-background:new 0 0 43.1 85.9;" xml:space="preserve">
 							<path stroke-linecap="round" stroke-linejoin="round" class="st0 draw-arrow" d="M11.3,2.5c-5.8,5-8.7,12.7-9,20.3s2,15.1,5.3,22c6.7,14,18,25.8,31.7,33.1" />
