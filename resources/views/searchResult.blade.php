@@ -11,12 +11,16 @@
 
 
 @section('scripts')
+    <script>
+        window.auth = '{{Auth::user()?'true':'false'}}';
+    </script>
     <script src="/js/profile.js?v=8"></script>
     <script
             src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_MAPS_API')}}">
     </script>
     <script src="/theme/js/markerclusterer.js"></script>
     <script>
+
         var
             mapObject,
             markers = [],

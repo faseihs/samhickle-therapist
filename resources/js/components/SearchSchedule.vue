@@ -54,8 +54,15 @@
                     <!-- Modal -->
 
 
-                    <modal height="auto" name="loginModal">
+                    <modal pivotX="0.2" height="auto" name="loginModal">
                         <div class="container p-2">
+                            <div class="row">
+                                <div class="col-md-12 text-right">
+                                    <button  class="btn btn-danger btn-sm" @click="$modal.hide('loginModal')">
+                                        <i class="fa fa-close"></i>
+                                    </button>
+                                </div>
+                            </div>
                             <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
                             <div class="row">
                                 <div class="col-md-6 text-right">
@@ -80,8 +87,15 @@
                         </div>
                     </modal>
 
-                    <modal height="auto" name="instantModal">
+                    <modal pivotX="0.2" height="auto" name="instantModal">
                         <div class="container p-4">
+                            <div class="row">
+                                <div class="col-md-12 text-right">
+                                    <button  class="btn btn-danger btn-sm" @click="$modal.hide('instantModal')">
+                                        <i class="fa fa-close"></i>
+                                    </button>
+                                </div>
+                            </div>
                             <form method="POST" action="/user/booking">
                                 <input name="_token" v-model="csrf" type="hidden">
                                 <input name="slug" v-model="slug" type="hidden">
@@ -104,8 +118,15 @@
                         </div>
                     </modal>
 
-                    <modal  @opened="showTimePicker" height="auto" name="requestModal">
+                    <modal pivotX="0.2"  @opened="showTimePicker" height="auto" name="requestModal">
                         <div class="container p-4">
+                            <div class="row">
+                                <div class="col-md-12 text-right">
+                                    <button  class="btn btn-danger btn-sm" @click="$modal.hide('requestModal')">
+                                        <i class="fa fa-close"></i>
+                                    </button>
+                                </div>
+                            </div>
                             <form method="POST" action="/user/booking">
                                 <input name="_token" v-model="csrf" type="hidden">
                                 <input name="slug" v-model="slug" type="hidden">
@@ -126,6 +147,7 @@
                                     <button class="btn_1">Book!</button>
                                 </div>
                             </form>
+
                         </div>
                     </modal>
 
