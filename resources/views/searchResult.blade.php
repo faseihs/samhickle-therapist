@@ -258,7 +258,7 @@
             <div class="col-lg-8">
                 <div class="row">
                     @foreach($therapists as $index=>$t)
-                    <div onmouseenter="onHtmlClick('Doctors', {{$index}})" class="col-md-12">
+                    <div  class="col-md-12">
 
                         <div class="strip_list wow fadeIn row">
 
@@ -286,8 +286,11 @@
                                     </span>
                                         <div class="row">
                                             <div class="col-md-12 text-left">
-                                                <a href="/therapist-profile/{{$t->slug}}">Book now</a>
+                                                <a href="/therapist-profile/{{$t->slug}}"><i class="fa fa-user"></i> View Profile</a>
 
+                                            </div>
+                                            <div class="col-md-12 text-left">
+                                                <a onclick="onHtmlClick('Doctors', {{$index}})" href="#"><i class="fa fa-location-arrow"></i> View On Map</a>
                                             </div>
                                         </div>
                                     </div>
