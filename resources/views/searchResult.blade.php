@@ -11,12 +11,11 @@
 
 
 @section('scripts')
-
+    <script src="/js/profile.js?v=8"></script>
     <script
             src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_MAPS_API')}}">
     </script>
     <script src="/theme/js/markerclusterer.js"></script>
-   {{-- <script src="/theme/js/map_listing.js"></script>--}}
     <script>
         var
             mapObject,
@@ -241,6 +240,8 @@
 
         function onHtmlClick(location_type, key) {
             google.maps.event.trigger(markers[location_type][key], "click");
+            console.log("Hovered");
+            console.log($('#map_listing'));
         }
     </script>
     <script src="/theme/js/infobox.js"></script>
@@ -248,114 +249,52 @@
 @endsection
 
 @section('content')
-    {{--<div id="results">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h4><strong>Showing {{sizeof($therapists)<$perPage?sizeof($therapists):$perPage}}</strong> of {{$total}} results</h4>
-                </div>
-                --}}{{--<div class="col-md-6">
-                    <div class="search_bar_list">
-                        <input type="text" class="form-control" placeholder="Ex. Specialist, Name, Doctor...">
-                        <input type="submit" value="Search">
-                    </div>
-                </div>--}}{{--
-            </div>
-            <!-- /row -->
-        </div>
-        <!-- /container -->
-    </div>--}}
-    <!-- /results -->
-
-    {{--<div class="filters_listing">
-        <div class="container">
-            <ul class="clearfix">
-                <li>
-                    <h6>Type</h6>
-                    <div class="switch-field">
-                        <input type="radio" id="all" name="type_patient" value="all" checked>
-                        <label for="all">All</label>
-                        <input type="radio" id="doctors" name="type_patient" value="doctors">
-                        <label for="doctors">Doctors</label>
-                        <input type="radio" id="clinics" name="type_patient" value="clinics">
-                        <label for="clinics">Clinics</label>
-                    </div>
-                </li>
-                <li>
-                    <h6>Layout</h6>
-                    <div class="layout_view">
-                        <a href="#0" class="active"><i class="icon-th"></i></a>
-                        <a href="list.html"><i class="icon-th-list"></i></a>
-                        <a href="list-map.html"><i class="icon-map-1"></i></a>
-                    </div>
-                </li>
-                <li>
-                    <h6>Sort by</h6>
-                    <select name="orderby" class="selectbox">
-                        <option value="Closest">Closest</option>
-                        <option value="Best rated">Best rated</option>
-                        <option value="Men">Men</option>
-                        <option value="Women">Women</option>
-                    </select>
-                </li>
-            </ul>
-        </div>
-        <!-- /container -->
-    </div>--}}
-    <!-- /filters -->
-
-    <div class="container margin_60_35">
+    <div id="profile-schedule" class="container-fluid margin_60_35">
         <div class="row">
-            <div class="col-lg-7">
+            <div class="col-lg-8">
                 <div class="row">
                     @foreach($therapists as $index=>$t)
                     <div onmouseenter="onHtmlClick('Doctors', {{$index}})" class="col-md-12">
-                        <div class="strip_list wow fadeIn">
-{{--
-                            <a href="#0" class="wish_bt"></a>
---}}
-                            <figure>
-                                <a href="/therapist-profile/{{$t->slug}}"><img style="width: 100%;" src="{{$t->profile->dp?'/'.$t->profile->dp:'http://via.placeholder.com/565x565.jpg'}}" class="img-fluid" alt="">
-                                    <div class="preview"><span>Read more</span></div>
-                                </a>
-                            </figure>
-                            <div class="wrapper">
-                                <small>Therapist</small>
-                                <h3>{{$t->name}}</h3>
-                                <p><i class="fa fa-location-arrow"></i> Distance : {{number_format($t->distance,'0')}} kms</p>
 
-                                <p>{{$t->profile->personal_statement}}</p>
-                                <span class="rating">
+                        <div class="strip_list wow fadeIn row">
+
+                                <figure>
+                                    <a href="/therapist-profile/{{$t->slug}}"><img style="width: 100%;" src="{{$t->profile->dp?'/'.$t->profile->dp:'http://via.placeholder.com/565x565.jpg'}}" class="img-fluid" alt="">
+                                        <div class="preview"><span>Read more</span></div>
+                                    </a>
+                                </figure>
+
+
+                                    <div class="wrapper col-md-4">
+                                        <small>Therapist</small>
+                                        <h3>{{$t->name}}</h3>
+                                        <p><i class="fa fa-location-arrow"></i> Distance : {{number_format($t->distance,'0')}} kms</p>
+
+                                        <p>{{$t->profile->personal_statement}}</p>
+                                        <span class="rating">
                                 @for($i=1;$i<=$t->getStars();$i++)
-                                    <i class="icon_star voted"></i>
-                                @endfor
-                                @if(sizeof($t->reviews)>0)
-                                        ({{sizeof($t->reviews)}})
-                                @endif
+                                                <i class="icon_star voted"></i>
+                                            @endfor
+                                            @if(sizeof($t->reviews)>0)
+                                                ({{sizeof($t->reviews)}})
+                                            @endif
 
                                     </span>
-                                <div class="row">
-                                    <div class="col-md-12 text-right">
-                                        <a href="/therapist-profile/{{$t->slug}}">Book now</a>
+                                        <div class="row">
+                                            <div class="col-md-12 text-left">
+                                                <a href="/therapist-profile/{{$t->slug}}">Book now</a>
 
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
 
-                                {{--
-                                                                <a href="badges.html" data-toggle="tooltip" data-placement="top" data-original-title="Badge Level" class="badge_list_1"><img src="/theme/img/badges/badge_1.svg" width="15" height="15" alt=""></a>
-                                --}}
-                            </div>
-                           {{-- <ul>
---}}{{--
-                                <li><a  href="#" onclick="onHtmlClick('Doctors', {{$index}})"><i class="icon_pin_alt"></i>View on map</a></li>
---}}{{--
---}}{{--
-                                <li><a href="http://maps.google.com/maps?z=12&t=m&q=loc:{{$t->profile->latitude}}+{{$t->profile->longitude}}" target="_blank"><i class="icon_pin_alt"></i>Directions</a></li>
---}}{{--
-                                <li><a href="/therapist-profile/{{$t->slug}}">Book now</a></li>
-                            </ul>--}}
+                                <search-schedule slug="{{$t->slug}}">
+
+                                </search-schedule>
+
                         </div>
                     </div>
+
                     @endforeach
                     @if($total<1)
                         <div class="col-md-12 alert alert-warning">
@@ -389,7 +328,7 @@
             </div>
             <!-- /col -->
 
-            <aside class="col-lg-5" id="sidebar">
+            <aside class="col-lg-4" id="sidebar">
                 <div id="map_listing" class="normal_list">
                 </div>
             </aside>

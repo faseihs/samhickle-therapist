@@ -19,6 +19,8 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('schedule', require('./components/Schedule.vue').default);
+Vue.component('search-schedule', require('./components/SearchSchedule.vue').default);
+
 import VuejsDialog from 'vuejs-dialog';
 
 // include the default style

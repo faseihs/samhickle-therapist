@@ -95,7 +95,7 @@
 
     <div class="container margin_120_95">
         <div class="main_title text-uppercase">
-            <h2>Discover the <strong>online</strong> appointments WITH A THERAPIST TODAY</h2>
+            <h2>Book an <strong>online</strong> appointment WITH A THERAPIST TODAY</h2>
         </div>
         <div class="row add_bottom_30">
             <div class="col-lg-4">
