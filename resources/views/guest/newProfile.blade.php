@@ -94,7 +94,7 @@
                     </div>
                 </nav>
                 <div id="section_1">
-                    <div class="box_general_3">
+                    <div style="background-color: #f5f8fa;;" class="box_general_3">
                         <div class="profile">
                             <div class="row">
                                 <div class="col-lg-5 col-md-4">
@@ -276,7 +276,7 @@
                 <!-- /box_general -->
 
                 <div id="section_2">
-                    <div class="box_general_3">
+                    <div  class="box_general_3">
                         <div class="reviews-container">
                             <div class="row">
                                 <div class="col-md-12">
