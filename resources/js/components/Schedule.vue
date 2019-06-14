@@ -25,20 +25,20 @@
                             <tr v-for="index in this.maxTimes" :key="index">
                                 <td class="text-center"><span class="timeClass" @click="instantRequest(dates[0],index-1)"  style="cursor: pointer" v-if="dates[0].times[index-1]">{{dates[0].times[index-1]?dates[0].times[index-1]:'-'}}</span>
 
-                                    <span style="width: 100%;" v-else>-</span>
+                                    <span  v-else>-</span>
                                 </td>
                                 <td class="text-center" ><span class="timeClass" @click="instantRequest(dates[1],index-1)" style="cursor: pointer" v-if="dates[1].times[index-1]">{{dates[1].times[index-1]?dates[1].times[index-1]:'-'}}</span>
 
-                                    <span style="width: 100%;" v-else>-</span></td>
+                                    <span  v-else>-</span></td>
                                 <td class="text-center"><span class="timeClass" @click="instantRequest(dates[2],index-1)" style="cursor: pointer" v-if="dates[2].times[index-1]">{{dates[2].times[index-1]?dates[2].times[index-1]:'-'}}</span>
 
-                                    <span style="width: 100%;" v-else>-</span></td>
+                                    <span  v-else>-</span></td>
                                 <td class="text-center"><span class="timeClass" @click="instantRequest(dates[3],index-1)" style="cursor: pointer" v-if="dates[3].times[index-1]">{{dates[3].times[index-1]?dates[3].times[index-1]:'-'}}</span>
 
-                                    <span style="width: 100%;" v-else>-</span></td>
+                                    <span  v-else>-</span></td>
                                 <td class="text-center"><span class="timeClass" @click="instantRequest(dates[4],index-1)" style="cursor: pointer" v-if="dates[4].times[index-1]">{{dates[4].times[index-1]?dates[4].times[index-1]:'-'}}</span>
 
-                                    <span style="width: 100%;" v-else></span></td>
+                                    <span  v-else></span></td>
                             </tr>
                             <tr v-if="maxTimes===0 && dates.length>0">
                                 <td>-</td>
