@@ -1,41 +1,44 @@
 <template>
-    <aside class="col-xl-6 col-lg-6"  >
+    <aside class="col-xl-5 col-lg-5"  >
     <div style="padding-lefT:0px;padding-right: 0px"  class="box_general_3 booking">
         <div class="title">
             <h3>Book a Visit</h3>
         </div>
-        <div class="row">
-            <div id="mainDiv" class="col-md-12">
-                <div class="row">
 
-                    <div  class="col-md-1">
-                        <i @click="fetchPrevious" style="cursor: pointer" class="fa fa-arrow-left"></i>
+        <div class="row">
+
+            <div id="mainDiv" class="col-md-12">
+
+                <div class="row">
+                    <div style="margin-top:15px;" class="col-md-1">
+                        <i @click="fetchPrevious" style="cursor: pointer" class="fa fa-angle-left fa-2x"></i>
                     </div>
-                    <div style="margin-left: -32px;" class="col-md-10 table-responsive ">
+                    <div style="border-top:1px solid #e1e8ed;margin-left: -10px;
+    padding-left: 0px;margin-top:4px;padding-top: 8px;" class="col-md-10 table-responsive ">
                         <table class="table table-borderless">
                             <thead>
                             <tr>
-                                <th class="text-center" v-for="date in dates">{{getDate(date.Date)[0]}}<br>{{getDate(date.Date)[1]}}</th>
+                                <th class="text-center" v-for="date in dates">{{getDate(date.Date)[0]}}<br><strong >{{getDate(date.Date)[1]}}   {{getDate(date.Date)[2]}}</strong></th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr v-for="index in this.maxTimes" :key="index">
                                 <td class="text-center"><span class="timeClass" @click="instantRequest(dates[0],index-1)"  style="cursor: pointer" v-if="dates[0].times[index-1]">{{dates[0].times[index-1]?dates[0].times[index-1]:'-'}}</span>
 
-                                    <span v-else>-</span>
+                                    <span style="width: 100%;" v-else>-</span>
                                 </td>
                                 <td class="text-center" ><span class="timeClass" @click="instantRequest(dates[1],index-1)" style="cursor: pointer" v-if="dates[1].times[index-1]">{{dates[1].times[index-1]?dates[1].times[index-1]:'-'}}</span>
 
-                                    <span v-else>-</span></td>
+                                    <span style="width: 100%;" v-else>-</span></td>
                                 <td class="text-center"><span class="timeClass" @click="instantRequest(dates[2],index-1)" style="cursor: pointer" v-if="dates[2].times[index-1]">{{dates[2].times[index-1]?dates[2].times[index-1]:'-'}}</span>
 
-                                    <span v-else>-</span></td>
+                                    <span style="width: 100%;" v-else>-</span></td>
                                 <td class="text-center"><span class="timeClass" @click="instantRequest(dates[3],index-1)" style="cursor: pointer" v-if="dates[3].times[index-1]">{{dates[3].times[index-1]?dates[3].times[index-1]:'-'}}</span>
 
-                                    <span v-else>-</span></td>
+                                    <span style="width: 100%;" v-else>-</span></td>
                                 <td class="text-center"><span class="timeClass" @click="instantRequest(dates[4],index-1)" style="cursor: pointer" v-if="dates[4].times[index-1]">{{dates[4].times[index-1]?dates[4].times[index-1]:'-'}}</span>
 
-                                    <span v-else>-</span></td>
+                                    <span style="width: 100%;" v-else></span></td>
                             </tr>
                             <tr v-if="maxTimes===0 && dates.length>0">
                                 <td>-</td>
@@ -47,8 +50,8 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="col-md-1">
-                        <i @click="fetchNext" style="cursor: pointer" class="fa fa-arrow-right"></i>
+                    <div style="margin-top:15px;" class="col-md-1">
+                        <i @click="fetchNext" style="cursor: pointer" class="fa fa-angle-right fa-2x"></i>
                     </div>
 
                 </div>
@@ -226,7 +229,7 @@
                         this.dates.forEach(item=>{
                             if(this.maxTimes<item.times.length)
                                 this.maxTimes=item.times.length;
-                            item.Date=moment(item.date,"DD-MM-YYYY").format('ddd D/M')
+                            item.Date=moment(item.date,"DD-MM-YYYY").format('ddd MMM D')
                         });
                     })
             },
@@ -244,7 +247,7 @@
                       this.dates.forEach(item=>{
                           if(this.maxTimes<item.times.length)
                               this.maxTimes=item.times.length;
-                          item.Date=moment(item.date,"DD-MM-YYYY").format('ddd D/M')
+                          item.Date=moment(item.date,"DD-MM-YYYY").format('ddd MMM D')
                       });
                   })
           }
@@ -261,7 +264,7 @@
                     this.dates.forEach(item=>{
                        if(this.maxTimes<item.times.length)
                            this.maxTimes=item.times.length;
-                       item.Date=moment(item.date,"DD-MM-YYYY").format('ddd D/M')
+                       item.Date=moment(item.date,"DD-MM-YYYY").format('ddd MMM D')
                     });
                 })
             console.log(this.maxTimes);
@@ -279,18 +282,26 @@
         padding: 3px;
     }
     .timeClass:hover{
-        background:#e74e84;
-        color:white;
+        background-color: rgb(0, 35, 75);
+        color: rgb(255, 255, 255);
+        border-color: rgb(0, 35, 75);
     }
 
     .timeClass{
         background-color: rgb(255, 240, 75);
-        padding: 4px;
+        padding: 6px;
         color: rgb(0, 35, 75);
-        width: 52px;
+        width: 70px;
         display: inline-block;
-        font-weight: bold;
         text-align: center;
+        font-size: 11px;
     }
+.table td, .table th {
+    padding: 0.25rem;
+}
+.table th {
+    font-size: 12px;
+    font-weight: normal;
+}
 
 </style>

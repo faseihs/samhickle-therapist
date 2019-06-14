@@ -152,6 +152,7 @@ class TherapistScheduleController extends Controller
             $repeatDay = TherapistSchedule::where('day_number',$day)->where('therapist_id',Auth::user()->id)
                 ->where('repeat',1)
                 ->first();
+            $repeatDay=null;
             if($repeatDay) {
                 $repeatDay->time=explode('|',$repeatDay->times);
                 return response()->json($repeatDay, 200);

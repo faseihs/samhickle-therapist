@@ -82,7 +82,7 @@
         @include('includes.errors')
         @include('includes.flash')
         <div class="row">
-            <div class="col-xl-6 col-lg-6">
+            <div class="col-xl-7 col-lg-7">
                 <nav id="secondary_nav">
                     <div class="container">
                         <ul class="clearfix">
