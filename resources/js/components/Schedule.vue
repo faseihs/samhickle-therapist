@@ -38,14 +38,14 @@
                                     <span  v-else>-</span></td>
                                 <td class="text-center"><span class="timeClass" @click="instantRequest(dates[4],index-1)" style="cursor: pointer" v-if="dates[4].times[index-1]">{{dates[4].times[index-1]?dates[4].times[index-1]:'-'}}</span>
 
-                                    <span  v-else></span></td>
+                                    <span v-else>-</span></td>
                             </tr>
                             <tr v-if="maxTimes===0 && dates.length>0">
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
+                                <td class="text-center">-</td>
+                                <td class="text-center">-</td>
+                                <td class="text-center">-</td>
+                                <td class="text-center">-</td>
+                                <td class="text-center">-</td>
                             </tr>
                             </tbody>
                         </table>

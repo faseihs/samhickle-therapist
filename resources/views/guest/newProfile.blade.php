@@ -63,7 +63,7 @@
             });
         window.auth = '{{Auth::user()?'true':'false'}}';
     </script>
-    <script src="/js/profile.js?v=6"></script>
+    <script src="/js/profile.js?v=7"></script>
 
 @endsection
 @section('content')
@@ -94,7 +94,7 @@
                     </div>
                 </nav>
                 <div id="section_1">
-                    <div style="background-color: #f5f8fa;;" class="box_general_3">
+                    <div  class="box_general_3">
                         <div class="profile">
                             <div class="row">
                                 <div class="col-lg-5 col-md-4">
