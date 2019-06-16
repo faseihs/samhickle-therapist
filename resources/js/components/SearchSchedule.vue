@@ -76,12 +76,26 @@
                     </modal>
                     <modal pivotX="0.2" height="auto" name="LoginModal">
                         <div class="container p-2">
+                            <div class="row">
+                                <div class="col-md-12 text-right">
+                                    <button  class="btn btn-danger btn-sm" @click="$modal.hide('LoginModal')">
+                                        <i class="fa fa-close"></i>
+                                    </button>
+                                </div>
+                            </div>
                             <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
                             <login></login>
                         </div>
                     </modal>
                     <modal pivotX="0.2" height="auto" name="registerModal">
                         <div class="container p-2">
+                            <div class="row">
+                                <div class="col-md-12 text-right">
+                                    <button  class="btn btn-danger btn-sm" @click="$modal.hide('registerModal')">
+                                        <i class="fa fa-close"></i>
+                                    </button>
+                                </div>
+                            </div>
                             <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
                             <register></register>
                         </div>
