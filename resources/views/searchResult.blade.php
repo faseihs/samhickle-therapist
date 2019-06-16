@@ -254,7 +254,7 @@
 
 @section('content')
     <div id="profile-schedule" class="container-fluid margin_60_35">
-        <div class="row">
+        <div style="margin-left: 10px;" class="row">
             <div class="col-lg-8">
                 <div class="row">
                     @foreach($therapists as $index=>$t)
