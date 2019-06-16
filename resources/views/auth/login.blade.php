@@ -13,12 +13,12 @@
                 <form action="/login" method="post">
                     @csrf
                     <div class="box_form clearfix">
-                        <div class="box_login">
+                        {{--<div class="box_login">
                             <a href="/social-login/facebook" class="social_bt facebook">Login with Facebook</a>
                             <a href="/social-login/google" class="social_bt google">Login with Google</a>
                             <a href="/social-login/linkedin" class="social_bt linkedin">Login with Linkedin</a>
-                        </div>
-                        <div class="box_login last">
+                        </div>--}}
+                        <div style="width:100%;" class="box_login last">
                             @include('includes.flash')
                             <div class="form-group">
                                 <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Your email address">

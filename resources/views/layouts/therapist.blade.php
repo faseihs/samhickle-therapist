@@ -44,8 +44,8 @@
 </div>
 <!-- End Preload -->
 
-<header class="header_sticky">
-    <div class="container">
+<header  class="header_sticky">
+    <div  class="container">
         <div class="row">
             <div class="col-lg-5 col-6">
                 <div style="padding-bottom: 5px;" id="logo_home" >
@@ -77,7 +77,7 @@
                         </form>
                     @endauth
                 </ul>
-                <div class="main-menu">
+                <div id="navbar-auth-div" class="main-menu">
                     <ul>
                         {{--<li class="submenu">
                             <a href="#0" class="show-submenu">Patient<i class="icon-down-open-mini"></i></a>
@@ -93,11 +93,14 @@
                             </ul>
                         </li>--}}
                         <li><a href="/therapist/register">List your practice on <span class="text-main">therapist.co.uk</span></a></li>
-                        <li class="submenu">
+                        {{--<li class="submenu">
                             <a href="#0" class="show-submenu">Login/Signup<i class="icon-down-open-mini"></i></a>
                             <ul>
                                @guest('web')
+--}}{{--
                                     <li><span class="menu-s">Patients </span> <a class="d-inline-block menu-a" href="/login">Login</a><a class="d-inline-block menu-a" href="/register">Register</a></li>
+--}}{{--
+                                   <navbar-auth name="patients"></navbar-auth>
 
                                 @endguest
                                 @guest('therapist')
@@ -106,26 +109,13 @@
 
 
                             </ul>
-                        </li>
-                        <style>
-                            .menu-a{
+                        </li>--}}
+                        @if(!Auth::user() && !Auth::guard('therapist')->check())
 
-                                color:#e74e84 !important;
-                                display: inline-block !important;
-                            }
+                            <navbar-auth name="patients"></navbar-auth>
 
-                            .menu-s{
+                        @endif
 
-                                font-size: 14px;
-                                display: inline-block;
-                                min-width: 72px;
-                                padding-left: 6px;
-                            }
-
-                            .menu-a:hover{
-                                font-weight: bold;
-                            }
-                        </style>
                         @auth('therapist')
                             <li class="submenu">
                                 <a href="#0" class="show-submenu">Therapist<i class="icon-down-open-mini"></i></a>
@@ -197,6 +187,25 @@
                         <li><a href="#0">Buy this template</a></li>--}}
                     </ul>
                 </div>
+                <style>
+                    .menu-a{
+
+                        color:#e74e84 !important;
+                        display: inline-block !important;
+                    }
+
+                    .menu-s{
+
+                        font-size: 14px;
+                        display: inline-block;
+                        min-width: 72px;
+                        padding-left: 6px;
+                    }
+
+                    .menu-a:hover{
+                        font-weight: bold;
+                    }
+                </style>
                 <!-- /main-menu -->
             </nav>
         </div>
@@ -275,6 +284,10 @@
 <script src="/theme/js/jquery-2.2.4.min.js"></script>
 <script src="/theme/js/common_scripts.min.js"></script>
 <script src="/theme/js/functions.js?v=1"></script>
+<script>
+    window.auth = '{{Auth::user()?'true':'false'}}';
+</script>
+<script src="/js/navbar.js"></script>
 @yield('scripts')
 
 </body>

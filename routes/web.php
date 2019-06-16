@@ -77,7 +77,8 @@ Route::get('/plans','WelcomeController@plans');
 
 Route::post('/api/login','Auth\LoginController@userApiLogin');
 Route::post('/api/register','Auth\RegisterController@userApiRegister');
-Route::post('/api/therapist-login','Auth\LoginController@therapistApiLogin');
+Route::post('/api/t-login','Auth\LoginController@therapistApiLogin');
+Route::post('/api/t-register','Auth\RegisterController@therapistApiRegister');
 
 
 

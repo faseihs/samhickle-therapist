@@ -25,6 +25,7 @@ class WelcomeController extends Controller
         $problems=Problem::pluck('name','id')->all();
         $groups=Group::pluck('name','id')->all();
 
+
         return view('newWelcome',compact(['problems','groups']));
     }
 

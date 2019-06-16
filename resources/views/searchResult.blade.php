@@ -267,11 +267,9 @@
                                         <div class="preview"><span>Read more</span></div>
                                     </a>
                                 </figure>
-
-
-                                    <div class="wrapper col-md-4">
+                                    <div class="wrapper col-md-3">
                                         <small>Therapist</small>
-                                        <h3>{{$t->name}}</h3>
+                                        <h5>{{$t->name}}</h5>
                                         <p><i class="fa fa-location-arrow"></i> Distance : {{number_format($t->distance,'0')}} kms</p>
 
                                         <p>{{$t->profile->personal_statement}}</p>
@@ -316,19 +314,7 @@
                 <!-- /row -->
 
                 <nav aria-label="" class="add_top_20">
-                   {{-- <ul class="pagination pagination-sm">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1">Previous</a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
-                    </ul>--}}
                     {{$therapists->links()}}
-                    {{--{{$users->appends(request()->query())->links()}}--}}
                 </nav>
 
                 <!-- /pagination -->

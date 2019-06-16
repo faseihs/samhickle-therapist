@@ -1,5 +1,5 @@
 <template>
-    <div class="col-xl-8 col-lg-8"  >
+    <div class="col-xl-9 col-lg-9"  >
 
             <div class="row">
 
@@ -74,13 +74,13 @@
                             </div>
                         </div>
                     </modal>
-                    <modal height="auto" name="LoginModal">
+                    <modal pivotX="0.2" height="auto" name="LoginModal">
                         <div class="container p-2">
                             <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
                             <login></login>
                         </div>
                     </modal>
-                    <modal height="auto" name="registerModal">
+                    <modal pivotX="0.2" height="auto" name="registerModal">
                         <div class="container p-2">
                             <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
                             <register></register>

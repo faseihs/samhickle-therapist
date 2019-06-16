@@ -34,7 +34,25 @@ class LoginController extends Controller
     public function redirectTo(){
         return  url()->previous();
     }
+    public function getGuard(){
+        if(Auth::guard('admin')->check())
+        {return "admin";}
+        elseif(Auth::guard('web')->check())
+        {return "web";}
+        elseif(Auth::guard('therapist')->check())
+        {return "therapist";}
+    }
 
+    public function logout(Request $request)
+    {
+
+        Auth::guard($this->getGuard())->logout();
+
+        $request->session()->flush();
+
+        $request->session()->regenerate();
+        return redirect('/');
+    }
     /**
      * Create a new controller instance.
      *

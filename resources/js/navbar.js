@@ -18,8 +18,7 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('schedule', require('./components/Schedule.vue').default);
-Vue.component('search-schedule', require('./components/SearchSchedule.vue').default);
+Vue.component('navbar-auth', require('./components/NavbarAuth.vue').default);
 
 
 import VuejsDialog from 'vuejs-dialog';
@@ -44,5 +43,6 @@ Vue.use(Toasted)
  */
 
 const app = new Vue({
-    el: '#profile-schedule',
+    el: '#navbar-auth-div',
 });
+VModal.rootInstance=app;
