@@ -162,4 +162,44 @@ class BookingController extends Controller
     {
         //
     }
+
+    public function apiBooking(Request $request){
+        $validator = Validator::make($request->all(), [
+            'date'=>'required|date|after:yesterday',
+            'slug'=>['required',new TherapistSlugPresent],
+            'time'=>['required','string'],
+
+        ]);
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()], 401);
+        }
+        try{
+            DB::beginTransaction();
+            $user=Auth::user();
+            $theapist=Therapist::findBySlug($request->slug);
+            if($request->has('request'))
+                $carbonTime=Carbon::createFromFormat("h:ia",$request->time);
+            else
+                $carbonTime=Carbon::createFromFormat("h.ia",$request->time);
+            if($request->has('request'))
+                $date = Carbon::parse($request->date);
+            else
+                $date = Carbon::createFromFormat("d-m-Y",$request->date);
+            $booking = new Booking();
+            $booking->user_id=$user->id;
+            $booking->therapist_id=$theapist->id;
+            $booking->date=$date;
+            $booking->time=$carbonTime->toTimeString();
+            //$booking->treatments=implode("|",$request->treatments);
+            if($request->has('description'))
+                $booking->description=$request->description;
+            $booking->save();
+            DB::commit();
+            return response()->json($booking,201);
+        }
+        catch(\Exception $e){
+            DB::rollback();
+            return response()->json($e->getMessage(),500);
+        }
+    }
 }

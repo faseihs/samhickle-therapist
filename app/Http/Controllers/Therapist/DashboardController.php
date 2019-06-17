@@ -53,7 +53,7 @@ class DashboardController extends Controller
             'groups'=>['array'],
             'address_latitude'=>['required'],
             'address_longitude'=>['required'],
-            'address_address'=>['required'],
+            'address_address'=>['nullable','string'],
         ]);
         try{
             DB::beginTransaction();

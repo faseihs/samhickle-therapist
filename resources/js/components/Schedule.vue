@@ -63,6 +63,12 @@
 
                 <modal height="auto" name="loginModal">
                     <div class="container p-2">
+                        <div class="row">
+                            <div class="col-md-12 text-right">
+                                <i @click="$modal.hide('loginModal')" style="cursor: pointer;" class="fa fa-close fa-2x"></i>
+
+                            </div>
+                        </div>
                         <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
                         <div class="row">
                             <div class="col-md-6 text-right">
@@ -76,19 +82,60 @@
                 </modal>
                 <modal height="auto" name="LoginModal">
                     <div class="container p-2">
+                        <div class="row">
+                            <div class="col-md-12 text-right">
+                                <i @click="$modal.hide('LoginModal')" style="cursor: pointer;" class="fa fa-close fa-2x"></i>
+
+                            </div>
+                        </div>
                         <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
-                        <login></login>
+                        <login :callbackFunction="callbackFunction"></login>
                     </div>
                 </modal>
                 <modal height="auto" name="registerModal">
                     <div class="container p-2">
+                        <div class="row">
+                            <div class="col-md-12 text-right">
+                                <i @click="$modal.hide('registerModal')" style="cursor: pointer;" class="fa fa-close fa-2x"></i>
+
+                            </div>
+                        </div>
                         <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
-                        <register></register>
+                        <register :callbackFunction="callbackFunction"></register>
                     </div>
                 </modal>
 
                 <modal height="auto" name="instantModal">
                     <div class="container p-4">
+                        <div class="row">
+                            <div class="col-md-12 text-right">
+                                <i @click="$modal.hide('instantModal')" style="cursor: pointer;" class="fa fa-close fa-2x"></i>
+
+                            </div>
+                        </div>
+                        <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
+                        <div style="font-size:14px;" class="row">
+                            <div class="col-md-12">
+                                <h6>Appointment</h6>
+                            </div>
+                            <div class="col-md-12">
+                                Specialist : <strong>{{name}}</strong>
+                            </div>
+                            <div class="col-md-12">
+                                For : <strong>{{selectedDate}} {{selectedTime}}</strong>
+                            </div>
+                            <hr>
+                            <div class="col-md-12">
+                                <label>Reason for Visit</label>
+                            </div>
+                            <div class="col-md-12">
+                                <textarea class="form-control" placeholder="Optional" v-model="reason"></textarea>
+                            </div>
+                            <div class="text-center col-md-12 mt-4">
+                                <button @click="bookInstant" class="btn_1">Book!</button>
+                            </div>
+                        </div>
+                        <!--</div>
                         <form method="POST" action="/user/booking">
                             <input name="_token" v-model="csrf" type="hidden">
                             <input name="slug" v-model="slug" type="hidden">
@@ -107,32 +154,97 @@
                             <div class="row form-group">
                                 <button class="btn_1">Book!</button>
                             </div>
-                        </form>
+                        </form>-->
                     </div>
                 </modal>
 
                 <modal  @opened="showTimePicker" height="auto" name="requestModal">
                     <div class="container p-4">
-                        <form method="POST" action="/user/booking">
-                            <input name="_token" v-model="csrf" type="hidden">
-                            <input name="slug" v-model="slug" type="hidden">
-                            <input name="request" value="ss" type="hidden">
-                            <div class="row form-group">
-                                <label class="control-label">Date</label>
-                                <input class="form-control" name="date"  v-model="selectedDate" type="date">
+                        <div class="row">
+                            <div class="col-md-12 text-right">
+                                <i @click="$modal.hide('requestModal')" style="cursor: pointer;" class="fa fa-close fa-2x"></i>
+
                             </div>
-                            <div class="row form-group">
-                                <label>Time</label>
-                                <input class="form-control" name="time" id="bookingTime"  type="text">
+                        </div>
+                        <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
+                        <div style="font-size:14px;" >
+                            <h6>Appointment</h6>
+                            <p>
+
+                            </p>
+                            <form class="col-md-12" method="POST" action="/user/booking">
+                                <input name="_token" v-model="csrf" type="hidden">
+                                <input name="slug" v-model="slug" type="hidden">
+                                <input name="request" value="ss" type="hidden">
+
+                                    <div class="row form-group">
+                                        <label class="control-label">Specialist</label>
+                                            <input readonly class="form-control" :value="name" type="text">
+
+                                    </div>
+
+
+                                <div class="row form-group">
+                                    <label class="control-label">Date</label>
+                                    <input class="form-control" name="date"  v-model="selectedDate" type="date">
+                                </div>
+                                <div class="row form-group">
+                                    <label>Time</label>
+                                    <input class="form-control"  name="time"  id="bookingTime"  type="text">
+                                </div>
+                                <div class="row form-group">
+                                    <label>Reason For Visit (optional)</label>
+                                    <textarea class="form-control" name="description"  v-model="reason">
+                                </textarea>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-6 text-right">
+                                        <button type="button" @click="bookRequest" class="btn_1">Book!</button>
+
+                                    </div>
+                                    <div class="col-md-6 text-left">
+                                        <button @click="$modal.hide('requestModal')" type="button" class="btn_1 bg-dark">Cancel</button>
+
+                                    </div>
+                                </div>
+                            </form>
+                            <p>
+                                By submitting this contact form, {{name}} will be informed about your request for an appointment. To enable the specialist to reach out to you we will share your contact details as per your Therapist profile.
+                            </p>
+                    </div>
+
+                    </div>
+                </modal>
+                <modal height="auto" name="thankyouModal">
+                    <div class="container p-2">
+                        <div class="text-center">
+                            <h2>Thank You</h2>
+                            <br>
+                            <p style="font-size: 16px;">
+                                You have successfully placed a booking
+                            </p>
+                        </div>
+                       <div class="row">
+                           <div class="col-md-12 text-center">
+                               <button  @click="$modal.hide('thankyouModal')" class="btn_1">Continue</button>
+                           </div>
+                       </div>
+                    </div>
+                </modal>
+                <modal height="auto" name="thankyouModal2">
+                    <div class="container p-2">
+                        <div class="text-center">
+                            <h2 style="color:#74d1c6;"><i class="fa fa-check-circle-o"></i> Thank You</h2>
+                            <br>
+                            <p style="font-size: 16px;">
+                                Your enquiry has been sent
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <button  @click="$modal.hide('thankyouModal2')" class="btn_1">Continue</button>
                             </div>
-                            <div class="row form-group">
-                                <label>Reason (optional)</label>
-                                <input class="form-control" name="description"  v-model="reason" type="text">
-                            </div>
-                            <div class="row form-group">
-                                <button class="btn_1">Book!</button>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </modal>
 
@@ -153,6 +265,7 @@
     import Register from './Register.vue';
     export default {
         name: "Schedule",
+        props:['name','slug'],
         components:{
           'login':Login,
           'register':Register
@@ -170,7 +283,8 @@
                 location:window.location.href,
                 reason:null,
                 login:false,
-                register:false
+                register:false,
+                showPrevious:null
             }
         },
         methods:{
@@ -195,6 +309,7 @@
                 });
             },
             requestBooking(){
+
                 if(window.auth==='true'){
 
                     this.$modal.show('requestModal');
@@ -202,7 +317,10 @@
 
 
                 }
-                else this.$modal.show('loginModal');
+                else {
+                    this.showPrevious='request';
+                    this.$modal.show('loginModal');
+                }
             },
             instantRequest(dateObj,index){
                 if(window.auth==='true'){
@@ -212,7 +330,12 @@
                     console.log(dateObj);
 
                 }
-                else this.$modal.show('loginModal');
+                else {
+                    this.selectedDate=dateObj.date;
+                    this.selectedTime=dateObj.times[index];
+                    this.showPrevious='instant';
+                    this.$modal.show('loginModal');
+                }
 
             },
             fetchPrevious(){
@@ -250,13 +373,77 @@
                           item.Date=moment(item.date,"DD-MM-YYYY").format('ddd MMM D')
                       });
                   })
-          }
+          },
+            bookInstant(){
+                let data = new FormData();
+                data.append('slug',this.slug);
+                data.append('time',this.selectedTime);
+                data.append('date',this.selectedDate);
+                data.append('reason',this.reason);
+                axios.post('/user/api/booking',data)
+                    .then(r=>{
+                        this.$modal.hide('instantModal');
+                        this.$modal.show('thankyouModal');
+                    }).catch(e=>{
+                    for(let i in e.response.data.error){
+
+                        this.$toasted.error(e.response.data.error[i][0],{
+                            icon:"error",
+                            onClick : (e, toastObject) => {
+                                toastObject.goAway(0);
+                            },
+                            duration:2000,
+
+
+                        });
+                    }
+                });
+            },
+            bookRequest(){
+                let data = new FormData();
+                data.append('slug',this.slug);
+                data.append('time',$('#bookingTime').val());
+                data.append('date',this.selectedDate);
+                data.append('reason',this.reason);
+                data.append('request','request');
+                axios.post('/user/api/booking',data)
+                    .then(r=>{
+                        this.$modal.hide('requestModal');
+                        this.$modal.show('thankyouModal2');
+                    }).catch(e=>{
+                    for(let i in e.response.data.error){
+
+                        this.$toasted.error(e.response.data.error[i][0],{
+                            icon:"error",
+                            onClick : (e, toastObject) => {
+                                toastObject.goAway(0);
+                            },
+                            duration:2000,
+
+
+                        });
+                    }
+                });
+            },
+            callbackFunction(){
+                window.auth='true';
+                if(this.showPrevious==='request')
+                {
+                    this.$modal.hide('LoginModal')
+                    this.$modal.show('requestModal')
+                }
+                else if(this.showPrevious==='instant')
+                {
+                    this.$modal.hide('LoginModal');
+                    this.$modal.show('instantModal')
+                }
+            }
         },
         created(){
-            this.slug = window.location.href.split('/').pop();
+            //this.slug = window.location.href.split('/').pop();
             axios.post('/new-schedule',{
                 date:this.currentDate.format('YYYY-MM-DD'),
-                slug:slug
+                slug:this.slug
             })
                 .then(r=>{
                     console.log(r);
@@ -269,6 +456,7 @@
                 })
             console.log(this.maxTimes);
             console.log(window.auth);
+
         }
     }
 </script>
@@ -303,5 +491,8 @@
     font-size: 12px;
     font-weight: normal;
 }
+    .form-control[readonly]{
+        background: white;
+    }
 
 </style>

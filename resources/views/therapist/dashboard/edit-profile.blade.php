@@ -13,6 +13,7 @@
         <li class="breadcrumb-item active">Edit Profile</li>
     </ol>
     @include('includes.flash')
+    @include('includes.errors')
     <form onsubmit="return formValidate()" id="formID" action="/therapist/edit-profile" method="post" enctype="multipart/form-data">
         @csrf
     <div class="box_general padding_bottom">

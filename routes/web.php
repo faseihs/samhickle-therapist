@@ -65,6 +65,7 @@ Route::group(['prefix'=>'user'],function(){
     Route::get('/bookings','User\DashboardController@reviews');
     Route::get('/bookings','User\DashboardController@bookings');
     Route::get('/reviews','User\DashboardController@reviews');
+    Route::post('/api/booking','User\BookingController@apiBooking');
 
 });
 Route::get('/submit-review/{slug}', 'User\ReviewController@create');

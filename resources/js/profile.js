@@ -46,3 +46,5 @@ Vue.use(Toasted)
 const app = new Vue({
     el: '#profile-schedule',
 });
+VModal.rootInstance = app
+

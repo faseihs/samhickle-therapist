@@ -1,4 +1,4 @@
-@extends('layouts.withoutFooter')
+@extends('layouts.therapist')
 
 @section('title')
     | {{$therapist->name}}
@@ -63,7 +63,7 @@
             });
         window.auth = '{{Auth::user()?'true':'false'}}';
     </script>
-    <script src="/js/profile.js?v=8"></script>
+    <script src="/js/profile.js?v=11"></script>
 
 @endsection
 @section('content')
@@ -390,7 +390,7 @@
                 </div>
                 <!-- /section_2 -->
             </div>
-            <schedule></schedule>
+            <schedule name="{{$therapist->name}}" slug="{{$therapist->slug}}"></schedule>
             <!-- /col -->
             {{--<aside class="col-xl-6 col-lg-6"  >
 

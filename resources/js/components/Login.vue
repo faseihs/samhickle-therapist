@@ -30,6 +30,7 @@
     import axios from 'axios';
     export default {
         name: "Login",
+        props:['callbackFunction'],
         data(){
             return{
                 email:null,
@@ -47,7 +48,9 @@
                 data.append('remember',this.remember);
                 axios.post('/api/login',data)
                     .then(r=>{
-                       window.location.reload();
+                        if(this.callbackFunction!=undefined)
+                            this.callbackFunction();
+                       else window.location.reload();
                     })
                     .catch(e=>{
                          this.$toasted.error('Wrong Credentials',{

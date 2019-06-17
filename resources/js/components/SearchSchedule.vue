@@ -35,11 +35,30 @@
 
                                         <span v-else>-</span></td>
                                 </tr>
-                                <tr v-if="maxTimes===0 && dates.length>0">
-                                    <td colspan="5" class="text-center">
-                                        <button @click="requestBooking" class="btn_1">Request Booking</button>
-                                    </td>
-                                </tr>
+                                <template v-if="maxTimes===0 && dates.length>0">
+                                    <tr >
+                                        <td colspan="5" class="text-center">
+                                        </td>
+                                    </tr>
+                                    <tr >
+                                        <td colspan="5" class="text-center">
+                                        </td>
+                                    </tr>
+                                    <tr >
+                                        <td colspan="5" class="text-center">
+                                        </td>
+                                    </tr>
+                                    <tr >
+                                        <td colspan="5" class="text-center">
+                                        </td>
+                                    </tr>
+                                    <tr >
+                                        <td colspan="5" class="text-center">
+                                            <button @click="requestBooking" class="btn_1">Request Booking</button>
+                                        </td>
+                                    </tr>
+                                </template>
+
                                 </tbody>
                             </table>
                         </div>
@@ -58,9 +77,8 @@
                         <div class="container p-2">
                             <div class="row">
                                 <div class="col-md-12 text-right">
-                                    <button  class="btn btn-danger btn-sm" @click="$modal.hide('loginModal')">
-                                        <i class="fa fa-close"></i>
-                                    </button>
+                                    <i @click="$modal.hide('loginModal')" style="cursor: pointer;" class="fa fa-close fa-2x"></i>
+
                                 </div>
                             </div>
                             <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
@@ -74,26 +92,37 @@
                             </div>
                         </div>
                     </modal>
-                    <modal pivotX="0.2" height="auto" name="LoginModal">
+                    <modal pivotX="0.2"  height="auto" name="LoginModal">
                         <div class="container p-2">
                             <div class="row">
                                 <div class="col-md-12 text-right">
-                                    <button  class="btn btn-danger btn-sm" @click="$modal.hide('LoginModal')">
-                                        <i class="fa fa-close"></i>
-                                    </button>
+                                    <i @click="$modal.hide('LoginModal')" style="cursor: pointer;" class="fa fa-close fa-2x"></i>
                                 </div>
                             </div>
                             <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
-                            <login></login>
+                            <login :callbackFunction="loginCallbackFunction"></login>
+                        </div>
+                    </modal>
+
+                    <modal pivotX="0.2" height="auto" name="thankyouModal">
+                        <div class="container p-2">
+                            <div class="row">
+                                <div class="col-md-12 text-right">
+                                    <i @click="$modal.hide('thankyouModal')" style="cursor: pointer;" class="fa fa-close fa-2x"></i>
+                                </div>
+                            </div>
+<!--
+                            <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
+-->
+                            <p class="text-center">Thank you for booking an appointment</p>
                         </div>
                     </modal>
                     <modal pivotX="0.2" height="auto" name="registerModal">
                         <div class="container p-2">
                             <div class="row">
                                 <div class="col-md-12 text-right">
-                                    <button  class="btn btn-danger btn-sm" @click="$modal.hide('registerModal')">
-                                        <i class="fa fa-close"></i>
-                                    </button>
+                                    <i @click="$modal.hide('registerModal')" style="cursor: pointer;" class="fa fa-close fa-2x"></i>
+
                                 </div>
                             </div>
                             <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
@@ -101,16 +130,37 @@
                         </div>
                     </modal>
 
-                    <modal pivotX="0.2" height="auto" name="instantModal">
+                    <modal :pivotX="0.2" :pivotY="0.2" height="auto" :name="'instantModal'+token">
                         <div class="container p-4">
                             <div class="row">
                                 <div class="col-md-12 text-right">
-                                    <button  class="btn btn-danger btn-sm" @click="$modal.hide('instantModal')">
-                                        <i class="fa fa-close"></i>
-                                    </button>
+                                    <i @click="$modal.hide('instantModal'+token)" style="cursor: pointer;" class="fa fa-close fa-2x"></i>
+
                                 </div>
                             </div>
-                            <form method="POST" action="/user/booking">
+                            <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
+                            <div style="font-size:14px;" class="row">
+                                <div class="col-md-12">
+                                <h6>Appointment</h6>
+                            </div>
+                                <div class="col-md-12">
+                                    Specialist : <strong>{{name}}</strong>
+                                </div>
+                                <div class="col-md-12">
+                                    For : <strong>{{selectedDate}} {{selectedTime}}</strong>
+                                </div>
+                                <hr>
+                                <div class="col-md-12">
+                                    <label>Reason for Visit</label>
+                                </div>
+                                <div class="col-md-12">
+                                    <textarea class="form-control" placeholder="Optional" v-model="reason"></textarea>
+                                </div>
+                                <div class="text-center col-md-12 mt-4">
+                                    <button  class="btn_1">Book!</button>
+                                </div>
+                            </div>
+                            <!--<form method="POST" action="/user/booking">
                                 <input name="_token" v-model="csrf" type="hidden">
                                 <input name="slug" v-model="slug" type="hidden">
                                 <div class="row form-group">
@@ -128,17 +178,16 @@
                                 <div class="row form-group">
                                     <button class="btn_1">Book!</button>
                                 </div>
-                            </form>
+                            </form>-->
                         </div>
                     </modal>
 
-                    <modal pivotX="0.2"  @opened="showTimePicker" height="auto" name="requestModal">
+                    <modal pivotX="0.2"  pivotY="0.2" @opened="showTimePicker" height="auto" :name="'requestModal'+token">
                         <div class="container p-4">
                             <div class="row">
                                 <div class="col-md-12 text-right">
-                                    <button  class="btn btn-danger btn-sm" @click="$modal.hide('requestModal')">
-                                        <i class="fa fa-close"></i>
-                                    </button>
+                                    <i @click="$modal.hide('requestModal'+token)" style="cursor: pointer;" class="fa fa-close fa-2x"></i>
+
                                 </div>
                             </div>
                             <form method="POST" action="/user/booking">
@@ -179,7 +228,7 @@
     import Login from './Login.vue';
     import Register from './Register.vue';
     export default {
-        props:['slug'],
+        props:['slug','name','token'],
         name: "SearchSchedule",
         components:{
             'login':Login,
@@ -199,6 +248,7 @@
                 reason:null,
                 login:false,
                 register:false,
+                showPrevious:null
             }
         },
         methods:{
@@ -214,6 +264,7 @@
                 this.$modal.show('registerModal');
             },
             showTimePicker(){
+
                 $('#bookingTime').timeDropper({
                     setCurrentTime: true,
                     meridians: true,
@@ -221,25 +272,44 @@
                     borderColor: "#e74e84",
                     minutesInterval: '15'
                 });
+                console.log($('#bookingTime'));
             },
             requestBooking(){
+                window.location.href=`/therapist-profile/${this.slug}`;
+                return;
                 if(window.auth==='true'){
 
-                    this.$modal.show('requestModal');
+                    this.$modal.show('requestModal'+this.token);
+                    //window.location.href=`/therapist-profile/${this.slug}`;
 
 
 
                 }
-                else this.$modal.show('loginModal');
+                else{
+                    this.showPrevious='request';
+                    this.$modal.show('loginModal');
+                }
+
             },
             instantRequest(dateObj,index){
+                window.location.href=`/therapist-profile/${this.slug}`;
+                return;
                 if(window.auth==='true'){
                     this.selectedDate=dateObj.date;
                     this.selectedTime=dateObj.times[index];
-                    this.$modal.show('instantModal');
+                    console.log(this.selectedDate,this.selectedTime);
+                    this.$modal.show('instantModal'+this.token);
+/*
+                    window.location.href=`/therapist-profile/${this.slug}`;
+*/
 
                 }
-                else this.$modal.show('loginModal');
+                else{
+                    this.selectedDate=dateObj.date;
+                    this.selectedTime=dateObj.times[index];
+                    this.showPrevious='instant';
+                    this.$modal.show('loginModal');
+                }
 
             },
             fetchPrevious(){
@@ -276,6 +346,12 @@
                             item.Date=moment(item.date,"DD-MM-YYYY").format('ddd MMM D')
                         });
                     })
+            },
+            loginCallbackFunction(){
+                if(this.showPrevious==='request')
+                    this.$modal.show('requestModal'+this.token)
+                else if(this.showPrevious==='instant')
+                    this.$modal.show('instantModal'+this.token)
             }
         },
         created(){

@@ -49,6 +49,7 @@
     import axios from 'axios';
     export default {
         name: "Register",
+        props:['callbackFunction'],
         data(){
             return{
                 email:null,
@@ -69,7 +70,9 @@
                 data.append('password_confirmation',this.password_confirmation);
                 axios.post('/api/register',data)
                     .then(r=>{
-                        window.location.reload();
+                        if(this.callbackFunction!=undefined)
+                            this.callbackFunction();
+                        else window.location.reload();
                     })
                     .catch(e=>{
                         for(let i in e.response.data.error){
