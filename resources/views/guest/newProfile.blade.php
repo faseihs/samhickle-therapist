@@ -63,7 +63,7 @@
             });
         window.auth = '{{Auth::user()?'true':'false'}}';
     </script>
-    <script src="/js/profile.js?v=11"></script>
+    <script src="/js/profile.js?v=12"></script>
 
 @endsection
 @section('content')

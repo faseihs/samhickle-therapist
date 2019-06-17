@@ -14,7 +14,7 @@
     <script>
         window.auth = '{{Auth::user()?'true':'false'}}';
     </script>
-    <script src="/js/profile.js?v=11"></script>
+    <script src="/js/profile.js?v=12"></script>
     <script
             src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_MAPS_API')}}">
     </script>

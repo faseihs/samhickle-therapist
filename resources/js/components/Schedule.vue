@@ -186,7 +186,7 @@
 
                                 <div class="row form-group">
                                     <label class="control-label">Date</label>
-                                    <input class="form-control" name="date"  v-model="selectedDate" type="date">
+                                    <input class="form-control" id="bookingDate" name="date"  v-model="selectedDate" type="date">
                                 </div>
                                 <div class="row form-group">
                                     <label>Time</label>
@@ -307,6 +307,7 @@
                     borderColor: "#e74e84",
                     minutesInterval: '15'
                 });
+                $('#bookingDate').dateDropper();
             },
             requestBooking(){
 
@@ -403,7 +404,7 @@
                 let data = new FormData();
                 data.append('slug',this.slug);
                 data.append('time',$('#bookingTime').val());
-                data.append('date',this.selectedDate);
+                data.append('date',$('#bookingDate').val());
                 data.append('reason',this.reason);
                 data.append('request','request');
                 axios.post('/user/api/booking',data)
