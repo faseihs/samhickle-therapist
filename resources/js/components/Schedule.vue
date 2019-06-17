@@ -186,7 +186,7 @@
 
                                 <div class="row form-group">
                                     <label class="control-label">Date</label>
-                                    <input class="form-control" id="bookingDate" name="date"  v-model="selectedDate" type="date">
+                                    <input class="form-control" autocomplete="off" id="bookingDate" name="date"  v-model="selectedDate" type="text">
                                 </div>
                                 <div class="row form-group">
                                     <label>Time</label>
@@ -307,7 +307,7 @@
                     borderColor: "#e74e84",
                     minutesInterval: '15'
                 });
-                $('#bookingDate').dateDropper();
+                $('#bookingDate').datepicker();
             },
             requestBooking(){
 

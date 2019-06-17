@@ -10,6 +10,7 @@
 
     <!-- SPECIFIC CSS -->
     <link href="/theme/css/date_picker.css" rel="stylesheet">
+    <link rel="stylesheet" href="/js/jquery-ui/jquery-ui.css">
 @endsection
 @section('scripts')
     <script src="/js/moment.min.js"></script>
@@ -63,7 +64,8 @@
             });
         window.auth = '{{Auth::user()?'true':'false'}}';
     </script>
-    <script src="/js/profile.js?v=12"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/js/profile.js?v=13"></script>
 
 @endsection
 @section('content')
