@@ -242,7 +242,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <button  @click="$modal.hide('thankyouModal2')" class="btn_1">Continue</button>
+                                <button  @click="$modal.hide('thankyouModal2')" class="btn_1">Close</button>
                             </div>
                         </div>
                     </div>
