@@ -135,7 +135,7 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12">
-                            <h6>What do I need help with</h6>
+                            <h6>What can I help with</h6>
                         </div>
                         <div class="col-md-12">
                             <select  name="problems[]" id="select" multiple="multiple">
@@ -150,7 +150,7 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12">
-                            <h6>Who is the therapy for?</h6>
+                            <h6>Clients I work with</h6>
                         </div>
                         <div class="col-md-12">
                             <select   name="groups[]" id="selectGroup" multiple="multiple">
