@@ -45,7 +45,7 @@
                 <h6>About</h6>
             </div>
             <div class="col-md-12">
-                <textarea name="about" rows="10" class="form-control" required  >{{$therapist->profile->about}}</textarea>
+                <textarea name="about" rows="10" class="form-control"   >{{$therapist->profile->about}}</textarea>
             </div>
         </div>
         <!-- /row-->
@@ -191,7 +191,7 @@
                                 <h6>Price Statement</h6>
                             </div>
                             <div class="col-md-12">
-                                <textarea name="price_statement" class="form-control" required  >{{$therapist->profile->price_statement}}</textarea>
+                                <textarea name="price_statement" class="form-control"   >{{$therapist->profile->price_statement}}</textarea>
                             </div>
 
                         </div>
@@ -328,8 +328,8 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label>Zip code</label>
-                        <input type="text" name="postal_code" value="{{$profile->postal_code}}" class="form-control" placeholder="Your zip code">
+                        <label>Post code</label>
+                        <input type="text" name="postal_code" value="{{$profile->postal_code}}" class="form-control" placeholder="Your Post Code">
                     </div>
                 </div>
             </div>
@@ -343,7 +343,7 @@
                 </div>
             </div>
 
-            <div class="row mt-2">
+            <div style="display: none;" class="row mt-2">
                 <div id="address-map-container" style="width:100%;height:400px; ">
                     <div style="width: 100%; height: 100%" id="address-map"></div>
                 </div>
@@ -470,6 +470,8 @@
                 marker.setVisible(isEdit);
 
                 const autocomplete = new google.maps.places.Autocomplete(input);
+                autocomplete.setComponentRestrictions(
+                    {'country': ['gb']});
                 autocomplete.key = fieldKey;
                 autocompletes.push({input: input, map: map, marker: marker, autocomplete: autocomplete});
             }
@@ -526,11 +528,12 @@
 
             var lat = $('#address-latitude');
             var lng = $('#address-longitude');
+            var address=$('#address-input');
             var validationFails = false;
-            if(lat.val()=="0" || lng.val()==0)
+            if(address.val().length>0 && (lat.val()=="0" || lng.val()==0))
             {
                 validationFails=true;
-                $.notify("Select your location",'error');
+                $.notify("Please Select a Valid Location from search",'error');
             }
 
             return !validationFails;

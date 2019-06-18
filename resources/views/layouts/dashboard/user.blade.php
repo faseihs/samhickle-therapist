@@ -66,8 +66,8 @@
 
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Profile">
                 <a class="nav-link" href="/user/edit-profile">
-                    <i class="fa fa-fw fa-wrench"></i>
-                    <span class="nav-link-text">Profile Settings</span>
+                    <i class="fa fa-fw fa-user-circle-o"></i>
+                    <span class="nav-link-text">Profile</span>
                 </a>
             </li>
 

@@ -55,8 +55,8 @@ class DashboardController extends Controller
             'postal_code'=>'nullable|string',
             'problems'=>['array'],
             'groups'=>['array'],
-            'address_latitude'=>['required'],
-            'address_longitude'=>['required'],
+            'address_latitude'=>['nullable'],
+            'address_longitude'=>['nullable'],
             'address_address'=>['nullable','string'],
         ]);
         try{
