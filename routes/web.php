@@ -20,6 +20,12 @@ Route::get('/clear-cache', function() {
     Artisan::call('route:cache');
     // return what you want
 });
+Route::get('/clear-config', function() {
+
+    $exitCode = Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    // return what you want
+});
 
 Route::get('/search','WelcomeController@search');
 
