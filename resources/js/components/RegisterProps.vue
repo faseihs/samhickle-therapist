@@ -36,9 +36,9 @@
             <div class="col-md-12">
                 <p>
                     <i class="fa fa-lock"></i>
-                    By submitting this form you agree to Doctify's Terms of Service
+                    By submitting this form you agree to Therapist.co.uk Terms of Service
 
-                    We will never display your information publicly. Your information is protected using SSL encryption (same encryption used by banks).
+                    We will never display your information publicly. Your information is protected using SSL encryption.
                 </p>
             </div>
         </div>
