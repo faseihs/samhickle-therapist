@@ -329,7 +329,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Post code</label>
-                        <input type="text" id="postCode" name="postal_code" value="{{$profile->postal_code}}" class="form-control" placeholder="Your Post Code">
+                        <input type="text" id="postCode" name="postal_code" value="{{$profile->location_name}}" class="form-control" placeholder="Your Post Code">
                     </div>
                 </div>
             </div>
