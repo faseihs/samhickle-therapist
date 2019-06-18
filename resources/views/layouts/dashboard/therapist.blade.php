@@ -71,7 +71,13 @@
                     <span class="nav-link-text">Schedule</span>
                 </a>
             </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My profile">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Schedule">
+                <a class="nav-link" href="/therapist/edit-profile">
+                    <i class="fa fa-fw fa-user-circle"></i>
+                    <span class="nav-link-text">Profile</span>
+                </a>
+            </li>
+            {{--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="My profile">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseProfile" data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-wrench"></i>
                     <span class="nav-link-text">My profile</span>
@@ -87,7 +93,7 @@
                         <a href="/therapist/education">Qualifications</a>
                     </li>
                 </ul>
-            </li>
+            </li>--}}
         </ul>
         <ul class="navbar-nav sidenav-toggler">
             <li class="nav-item">
