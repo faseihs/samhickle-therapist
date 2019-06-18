@@ -357,7 +357,7 @@
             </div>
             <div class="form-group">
                 <label>Password</label>
-                <input type="password"  id="password1" class="form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}"  placeholder="Your password">
+                <input type="password"  autocomplete="off" id="password1" class="form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}"  placeholder="Your password">
                 @error('password')
                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('password') }}</strong>
@@ -464,6 +464,7 @@
                             $('#address-input').val(place.name);
                         }
                         else {
+                            console.log(place);
                             $('#address-input').val(e.latLng.lat()+" , "+e.latLng.lng());
                         }
                     });
@@ -491,11 +492,14 @@
                 google.maps.event.addListener(autocomplete, 'place_changed', function () {
                     marker.setVisible(false);
                     const place = autocomplete.getPlace();
-
+                    console.log(place);
+                    $('#postCode').val(place.name);
+                    $('#address-input').val(place.name);
                     geocoder.geocode({'placeId': place.place_id}, function (results, status) {
                         if (status === google.maps.GeocoderStatus.OK) {
                             const lat = results[0].geometry.location.lat();
                             const lng = results[0].geometry.location.lng();
+
                             setLocationCoordinates(autocomplete.key, lat, lng);
                         }
                     });
