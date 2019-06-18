@@ -178,7 +178,7 @@
             </div>
         </div>
 
-        {{--<div class="box_general padding_bottom">
+        <div class="box_general padding_bottom">
             <div class="header_box version_2">
                 <h2><i class="fa fa-folder"></i>Services</h2>
             </div>
@@ -216,8 +216,8 @@
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <button onclick="delSevice({{$s->id}})" class="btn btn-sm btn-danger btn-circle"><i class="fa fa-fw fa-remove"></i></button>
-                                                <button onclick="updateService({{$s->id}})" class="btn btn-sm btn-info btn-circle" href="#"><i class="fa fa-fw fa-edit"></i></button>
+                                                <button type="button" onclick="delSevice({{$s->id}})" class="btn btn-sm btn-danger btn-circle"><i class="fa fa-fw fa-remove"></i></button>
+                                                <button type="button" onclick="updateService({{$s->id}})" class="btn btn-sm btn-info btn-circle" href="#"><i class="fa fa-fw fa-edit"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -234,7 +234,70 @@
                 </div>
             </div>
             <!-- /row-->
-        </div>--}}
+        </div>
+
+        <div class="box_general padding_bottom">
+            <div class="header_box version_2">
+                <h2><i class="fa fa-folder"></i>Education</h2>
+            </div>
+            <div class="row">
+
+                <div class="col-md-12">
+
+                        @csrf
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h6>Main Speciality</h6>
+                            </div>
+                            <div class="col-md-12">
+                                <textarea name="personal_statement" class="form-control"   >{{$therapist->profile->personal_statement}}</textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <h6>Education  Statement</h6>
+                            </div>
+                            <div class="col-md-12">
+                                <textarea name="education_statement" class="form-control"   >{{$therapist->profile->education_statement}}</textarea>
+                            </div>
+                            <input name="redirectPath" value="/therapist/education" type="hidden">
+                        </div>
+
+
+                    <h6>Curriculum</h6>
+                    <table id="pricing-list-container-2" style="width:100%;">
+                        @foreach($educations as $e)
+                            <tr id="education{{$e->id}}" class="pricing-list-item">
+                                <td>
+
+                                    <div  class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" value="{{$e->college}}" name="educations[]" class="form-control e-title" placeholder="College">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <input type="text" value="{{$e->description}}" class="form-control e-price"  placeholder="Degree">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <button type="button" onclick="delEducation({{$e->id}})" class="btn btn-sm btn-danger btn-circle"><i class="fa fa-fw fa-remove"></i></button>
+                                                <button type="button" onclick="updateEducation({{$e->id}})" class="btn btn-sm btn-info btn-circle" href="#"><i class="fa fa-fw fa-edit"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                            </tr>
+                        @endforeach
+                    </table>
+                    <button  type="button" class="btn_1 gray add-education"><i class="fa fa-fw fa-plus-circle"></i>Add Item</button>
+
+
+                </div>
+            </div>
+            <!-- /row-->
+        </div>
 
         <div class="box_general padding_bottom">
             <div class="header_box version_2">
@@ -456,6 +519,8 @@
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API') }}&libraries=places&callback=initialize" async defer></script>
+    <script src="/js/notify.min.js"></script>
+
     <script>
         function formValidate(){
 
@@ -470,5 +535,8 @@
 
             return !validationFails;
         }
+        var csrf='{{csrf_token()}}'
     </script>
+    <script src="/js/edit-profile.js?v=1"></script>
+
 @endsection
