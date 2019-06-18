@@ -175,13 +175,13 @@
         </div>
         <div class="box_general padding_bottom">
             <div class="header_box version_2">
-                <h2><i class="fa fa-map-marker"></i>Groups and Problems</h2>
+                <h2><i class="fa fa-map-marker"></i>Therapy Information</h2>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12">
-                            <h6>Problems Can Address</h6>
+                            <h6>What do I need help with</h6>
                         </div>
                         <div class="col-md-12">
                             <select  name="problems[]" id="select" multiple="multiple">
@@ -196,7 +196,7 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12">
-                            <h6>Groups Can Address</h6>
+                            <h6>Who is the therapy for?</h6>
                         </div>
                         <div class="col-md-12">
                             <select   name="groups[]" id="selectGroup" multiple="multiple">
@@ -207,6 +207,18 @@
                             </select>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-12 mt-2">
+                    <h6>Types of therapy</h6>
+                </div>
+                <div class="col-md-12">
+                    <textarea placeholder="Seperated By Comma" name="types_of_therapy" class="form-control"   >{{$therapist->profile->types_of_therapy}}</textarea>
+                </div>
+                <div class="col-md-12 mt-2">
+                    <h6>How I deliver therapy</h6>
+                </div>
+                <div class="col-md-12">
+                    <textarea placeholder="Seperated By Comma" name="deliveries" class="form-control"   >{{$therapist->profile->deliveries}}</textarea>
                 </div>
 
         </div>

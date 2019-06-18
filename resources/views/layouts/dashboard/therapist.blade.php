@@ -39,7 +39,7 @@
 <body class="fixed-nav sticky-footer" id="page-top">
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top" id="mainNav">
-    <a  class="navbar-brand" href="/"><img src="/images/therapist.png" data-retina="true" alt="" width="163" height="36"></a>
+    <a  class="navbar-brand" href="/"><img src="/images/whiteTherapist.png" data-retina="true" alt="" width="163" height="36"></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -78,13 +78,13 @@
                 </a>
                 <ul class="sidenav-second-level collapse" id="collapseProfile">
                     <li>
-                        <a href="/therapist/edit-profile">Doctor profile</a>
+                        <a href="/therapist/edit-profile">Profile</a>
                     </li>
                     <li>
                         <a href="/therapist/service">Services</a>
                     </li>
                     <li>
-                        <a href="/therapist/education">Education</a>
+                        <a href="/therapist/education">Qualifications</a>
                     </li>
                 </ul>
             </li>
