@@ -119,5 +119,10 @@ class Therapist extends Authenticatable
         return $sub?true:false;
     }
 
+    public function getLink(){
+        $domain= env('APP_URL');
+        return $domain.'/therapist-profile/'.$this->slug;
+    }
+
 
 }

@@ -21,6 +21,12 @@
             <h2><i class="fa fa-file"></i>Basic info</h2>
         </div>
         <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Profile Link</label>
+                    <input style="background: white;" type="text" name="name" value="{{$therapist->getLink()}}" class="form-control" readonly>
+                </div>
+            </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Name</label>
@@ -121,6 +127,114 @@
 
     <!-- /box_general-->
     <!-- /box_general-->
+        <div class="box_general padding_bottom">
+            <div class="header_box version_2">
+                <h2><i class="fa fa-map-marker"></i>Therapy Information</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h6>What do I need help with</h6>
+                        </div>
+                        <div class="col-md-12">
+                            <select  name="problems[]" id="select" multiple="multiple">
+                                @foreach($problems as $p)
+                                    <option {{$therapist->problems()->where('problems.id',$p->id)->first()?'selected':''}} value="{{$p->id}}">{{$p->name}}</option>
+                                @endforeach
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h6>Who is the therapy for?</h6>
+                        </div>
+                        <div class="col-md-12">
+                            <select   name="groups[]" id="selectGroup" multiple="multiple">
+                                @foreach($groups as $p)
+                                    <option {{$therapist->groups()->where('groups.id',$p->id)->first()?'selected':''}} value="{{$p->id}}">{{$p->name}}</option>
+                                @endforeach
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mt-2">
+                    <h6>Types of therapy</h6>
+                </div>
+                <div class="col-md-12">
+                    <textarea placeholder="Seperated By Comma" name="types_of_therapy" class="form-control"   >{{$therapist->profile->types_of_therapy}}</textarea>
+                </div>
+                <div class="col-md-12 mt-2">
+                    <h6>How I deliver therapy</h6>
+                </div>
+                <div class="col-md-12">
+                    <textarea placeholder="Seperated By Comma" name="deliveries" class="form-control"   >{{$therapist->profile->deliveries}}</textarea>
+                </div>
+
+            </div>
+        </div>
+
+        {{--<div class="box_general padding_bottom">
+            <div class="header_box version_2">
+                <h2><i class="fa fa-folder"></i>Services</h2>
+            </div>
+            <div class="row">
+
+                <div class="col-md-12">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h6>Price Statement</h6>
+                            </div>
+                            <div class="col-md-12">
+                                <textarea name="price_statement" class="form-control" required  >{{$therapist->profile->price_statement}}</textarea>
+                            </div>
+
+                        </div>
+
+
+                    <h6>Treatments</h6>
+                    <table id="pricing-list-container" style="width:100%;">
+                        @foreach($services as $s)
+                            <tr id="service{{$s->id}}" class="pricing-list-item">
+                                <td>
+
+                                    <div  class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" value="{{$s->service}}" name="services[]" class="form-control s-title" placeholder="Title">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <input type="text" value="{{$s->price}}" class="form-control s-price"  placeholder="Price">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <button onclick="delSevice({{$s->id}})" class="btn btn-sm btn-danger btn-circle"><i class="fa fa-fw fa-remove"></i></button>
+                                                <button onclick="updateService({{$s->id}})" class="btn btn-sm btn-info btn-circle" href="#"><i class="fa fa-fw fa-edit"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                            </tr>
+                        @endforeach
+                    </table>
+                    <a href="#0" class="btn_1 gray add-service"><i class="fa fa-fw fa-plus-circle"></i>Add Item</a>
+
+
+
+
+                </div>
+            </div>
+            <!-- /row-->
+        </div>--}}
 
         <div class="box_general padding_bottom">
             <div class="header_box version_2">
@@ -173,56 +287,7 @@
             </div>
             <!-- /row-->
         </div>
-        <div class="box_general padding_bottom">
-            <div class="header_box version_2">
-                <h2><i class="fa fa-map-marker"></i>Therapy Information</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h6>What do I need help with</h6>
-                        </div>
-                        <div class="col-md-12">
-                            <select  name="problems[]" id="select" multiple="multiple">
-                                @foreach($problems as $p)
-                                    <option {{$therapist->problems()->where('problems.id',$p->id)->first()?'selected':''}} value="{{$p->id}}">{{$p->name}}</option>
-                                @endforeach
 
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h6>Who is the therapy for?</h6>
-                        </div>
-                        <div class="col-md-12">
-                            <select   name="groups[]" id="selectGroup" multiple="multiple">
-                                @foreach($groups as $p)
-                                    <option {{$therapist->groups()->where('groups.id',$p->id)->first()?'selected':''}} value="{{$p->id}}">{{$p->name}}</option>
-                                @endforeach
-
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 mt-2">
-                    <h6>Types of therapy</h6>
-                </div>
-                <div class="col-md-12">
-                    <textarea placeholder="Seperated By Comma" name="types_of_therapy" class="form-control"   >{{$therapist->profile->types_of_therapy}}</textarea>
-                </div>
-                <div class="col-md-12 mt-2">
-                    <h6>How I deliver therapy</h6>
-                </div>
-                <div class="col-md-12">
-                    <textarea placeholder="Seperated By Comma" name="deliveries" class="form-control"   >{{$therapist->profile->deliveries}}</textarea>
-                </div>
-
-        </div>
-        </div>
         <div class="box_general padding_bottom">
             <div class="header_box version_2">
                 <h2><i class="fa fa-map-marker"></i>Change Password</h2>

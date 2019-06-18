@@ -79,8 +79,8 @@
                     <li><strong></strong>Available</li>
                     <li><strong></strong>Not available</li>
                 </ul>--}}
-                <input id="repeat" name="repeat" type="checkbox">
-                <label for="repeat">Repeat Schedule</label>
+                <input style="visibility: hidden" id="repeat" name="repeat" type="checkbox">
+                <label style="visibility: hidden" for="repeat">Repeat Schedule</label>
             </div>
         </div>
             <div class="row">

@@ -33,7 +33,9 @@ class DashboardController extends Controller
         $profile=$therapist->profile;
         $problems = Problem::all();
         $groups = Group::all();
-        return view('therapist.dashboard.edit-profile',compact(['therapist','profile','problems','groups']));
+        $services=$therapist->services;
+        $specializations = $therapist->specializations;
+        return view('therapist.dashboard.edit-profile',compact(['therapist','profile','problems','groups','services','specializations']));
     }
 
     public function updateProfile(Request $request){
@@ -100,6 +102,7 @@ class DashboardController extends Controller
             $profile->about=$request->about;
             $profile->types_of_therapy=$request->types_of_therapy;
             $profile->deliveries=$request->deliveries;
+            $profile->price_statement=$request->price_statement;
             $therapist->problems()->sync($request->problems);
             $therapist->groups()->sync($request->groups);
             $therapist->save();
