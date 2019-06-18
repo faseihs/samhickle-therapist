@@ -304,7 +304,7 @@
                 <h2><i class="fa fa-map-marker"></i>Address</h2>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div style="display: none;" class="col-md-6">
                     <div class="form-group">
                         <label>City</label>
                         <input type="text" name="city" value="{{$profile->city}}" class="form-control" placeholder="Your address">
@@ -313,13 +313,13 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label>Address</label>
-                        <input type="text" name="address" value="{{$profile->address}}" class="form-control" placeholder="Your address">
+                        <label>Property Number</label>
+                        <input type="text" name="address" value="{{$profile->address}}" class="form-control" placeholder="Your property number">
                     </div>
                 </div>
             </div>
             <!-- /row-->
-            <div class="row">
+            <div style="display: none;" class="row">
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>State</label>
@@ -329,14 +329,14 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Post code</label>
-                        <input type="text" name="postal_code" value="{{$profile->postal_code}}" class="form-control" placeholder="Your Post Code">
+                        <input type="text" id="postCode" name="postal_code" value="{{$profile->postal_code}}" class="form-control" placeholder="Your Post Code">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <h6 >Location</h6>
-                    <input autocomplete="nope" autofill="nope" value="{{$profile->location_name}}" type="text" id="address-input" name="address_address" class="form-control map-input">
+                    <h6>Post Code</h6>
+                    <input onkeyup="adjustPostCode" autocomplete="nope" autofill="nope" value="{{$profile->postal_code}}" type="text" id="address-input" name="address_address" class="form-control map-input">
                     <input value="{{$profile->latitude}}" type="hidden" name="address_latitude" id="address-latitude" value="0" />
                     <input value="{{$profile->longitude}}" type="hidden" name="address_longitude" id="address-longitude" value="0" />
 
@@ -408,6 +408,10 @@
         });
     </script>
     <script>
+        function adjustPostCode() {
+            var postCode=$('#address-input').val();
+            $('#postCode').val(postCode);
+        }
         function initialize() {
 
             $('form').on('keyup keypress', function(e) {
