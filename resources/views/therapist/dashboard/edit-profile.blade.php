@@ -541,5 +541,19 @@
         var csrf='{{csrf_token()}}'
     </script>
     <script src="/js/edit-profile.js?v=1"></script>
+    <style>
+        .pac-container:after {
+
+            background-image: none !important;
+            height: 0px;
+        }
+        .pac-container{
+            font-family: inherit;
+        }
+        .pac-item{
+            cursor: pointer;
+
+        }
+    </style>
 
 @endsection
