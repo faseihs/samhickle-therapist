@@ -271,7 +271,7 @@
                                 </figure>
                                     <div class="wrapper col-md-3">
                                         <small>Therapist</small>
-                                        <h5>{{$t->name}}</h5>
+                                        <h5><a style="color: #333;" href="/therapist-profile/{{$t->slug}}">{{$t->name}}</a></h5>
                                         <p><i class="fa fa-location-arrow"></i> Distance : {{number_format($t->distance,'0')}} kms</p>
 
                                         <p>{{$t->profile->personal_statement}}</p>
