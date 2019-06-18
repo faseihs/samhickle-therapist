@@ -349,8 +349,8 @@
                 $('.bookingDate').datepicker().datepicker('setDate',new Date());
             },
             requestBooking(){
-                window.location.href=`/therapist-profile/${this.slug}`;
-                return;
+                /*window.location.href=`/therapist-profile/${this.slug}`;
+                return;*/
                 if(window.auth==='true'){
 
                     this.$modal.show('requestModal',{
@@ -365,17 +365,25 @@
                 else{
                     this.showPrevious='request';
                     this.$modal.show('loginModal',{
-                        showPrevious:this.showPrevious
+                        showPrevious:this.showPrevious,
+                        slug:this.slug,
+                        name:this.name
                     });
                 }
 
             },
             beforeLogin(event){
-                this.showPrevious=event.params.showPrevious
+                this.showPrevious=event.params.showPrevious;
+                this.tempSlug=event.params.slug;
+                this.tempName=event.params.name;
+                if(event.params.selectedDate!=undefined)
+                    this.selectedDate=event.params.selectedDate
+                if(event.params.selectedTime!=undefined)
+                    this.selectedTime=event.params.selectedTime
             },
             instantRequest(dateObj,index){
-                window.location.href=`/therapist-profile/${this.slug}`;
-                return;
+               /* window.location.href=`/therapist-profile/${this.slug}`;
+                return;*/
                 if(window.auth==='true'){
                     this.selectedDate=dateObj.date;
                     this.selectedTime=dateObj.times[index];
@@ -395,7 +403,13 @@
                     this.selectedDate=dateObj.date;
                     this.selectedTime=dateObj.times[index];
                     this.showPrevious='instant';
-                    this.$modal.show('loginModal');
+                    this.$modal.show('loginModal',{
+                        showPrevious:this.showPrevious,
+                        slug:this.slug,
+                        name:this.name,
+                        selectedDate:this.selectedDate,
+                        selectedTime:this.selectedTime
+                    });
                 }
 
             },
@@ -440,18 +454,23 @@
                 this.$modal.hide('loginModal');
                 this.$modal.hide('registerModal');
                 window.auth='true';
+                console.log()
                 if(this.showPrevious==='request')
                     this.$modal.show('requestModal',{
-                        slug:this.slug,
-                        name:this.name
+                        slug:this.tempSlug?this.tempSlug:this.slug,
+                        name:this.tempName?this.tempName:this.name,
                     })
-                else if(this.showPrevious==='instant')
-                    this.$modal.show('instantModal',{
-                        slug:this.slug,
-                        name:this.name,
+                else if(this.showPrevious==='instant'){
+                    let data ={
+                        slug:this.tempSlug?this.tempSlug:this.slug,
+                        name:this.tempName?this.tempName:this.name,
                         selectedDate:this.selectedDate,
                         selectedTime:this.selectedTime
-                    })
+                    };
+                    console.log(data);
+                    this.$modal.show('instantModal',data)
+                }
+
             },
             bookRequest(){
                 let data = new FormData();
