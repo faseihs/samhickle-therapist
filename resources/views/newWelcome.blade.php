@@ -265,7 +265,9 @@
 
             // Create the search box and link it to the UI element.
             var input = document.getElementById('locationName');
-            var searchBox = new google.maps.places.Autocomplete(input);
+            var searchBox = new google.maps.places.Autocomplete(input,{
+                types: ['(regions)']
+            });
             searchBox.setComponentRestrictions(
                 {'country': ['gb']});
             map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);

@@ -469,7 +469,9 @@
 
                 marker.setVisible(isEdit);
 
-                const autocomplete = new google.maps.places.Autocomplete(input);
+                const autocomplete = new google.maps.places.Autocomplete(input,{
+                    types: ['(regions)']
+                });
                 autocomplete.setComponentRestrictions(
                     {'country': ['gb']});
                 autocomplete.key = fieldKey;
