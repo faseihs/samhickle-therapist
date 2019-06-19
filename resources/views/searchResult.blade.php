@@ -228,6 +228,7 @@
                 '<small>'+ item.type +'</small>' +
                 '<h3><a href='+ item.url_detail +'>'+ item.name_point +'</a></h3>' +
                 '<span>'+ item.description_point +'</span>' +
+                    '<span>'+item.postCode+'</span>'+
                 '<div class="marker_tools">' +
                 '<form action="http://maps.google.com/maps" method="get" target="_blank" style="display:inline-block""><input name="saddr" value="'+ item.get_directions_start_address +'" type="hidden"><input type="hidden" name="daddr" value="'+ item.location_latitude +',' +item.location_longitude +'"><button type="submit" value="Get directions" class="btn_infobox_get_directions">Directions</button></form>' +
                 '<a href="tel://'+ item.phone +'" class="btn_infobox_phone">'+ item.phone +'</a>' +
