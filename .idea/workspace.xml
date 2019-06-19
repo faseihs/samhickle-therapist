@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7497c9c8-384b-4766-9260-d9fe2326679a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/therapist/dashboard/edit-profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/therapist/dashboard/edit-profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,20 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Therapist.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Model/Therapist.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="133" column="25" selection-start-line="133" selection-start-column="25" selection-end-line="133" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit-profile.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="edit-profile.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/therapist/dashboard/edit-profile.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="558" column="40" selection-start-line="558" selection-start-column="40" selection-end-line="558" selection-end-column="40" />
+            <state relative-caret-position="152">
+              <caret line="553" lean-forward="true" selection-start-line="553" selection-end-line="553" />
               <folding>
                 <element signature="e#945#971#0#HTML" expanded="true" />
                 <element signature="e#5243#5265#0#HTML" expanded="true" />
@@ -68,20 +60,173 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/components/Login.vue">
+      <file leaf-file-name="terms.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/terms.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="18" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="5" selection-end-column="18" />
+            <state relative-caret-position="120">
+              <caret line="8" column="18" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="8" selection-end-column="18" />
+              <folding>
+                <element signature="e#1092#1098#0#HTML" expanded="true" />
+                <element signature="e#1449#1455#0#HTML" expanded="true" />
+                <element signature="e#1458#1464#0#HTML" expanded="true" />
+                <element signature="e#1467#1473#0#HTML" expanded="true" />
+                <element signature="e#1484#1490#0#HTML" expanded="true" />
+                <element signature="e#1779#1785#0#HTML" expanded="true" />
+                <element signature="e#1787#1793#0#HTML" expanded="true" />
+                <element signature="e#1998#2005#0#HTML" expanded="true" />
+                <element signature="e#2159#2165#0#HTML" expanded="true" />
+                <element signature="e#2258#2264#0#HTML" expanded="true" />
+                <element signature="e#2404#2410#0#HTML" expanded="true" />
+                <element signature="e#2561#2567#0#HTML" expanded="true" />
+                <element signature="e#2699#2705#0#HTML" expanded="true" />
+                <element signature="e#3036#3042#0#HTML" expanded="true" />
+                <element signature="e#3393#3399#0#HTML" expanded="true" />
+                <element signature="e#3615#3621#0#HTML" expanded="true" />
+                <element signature="e#3886#3892#0#HTML" expanded="true" />
+                <element signature="e#4100#4106#0#HTML" expanded="true" />
+                <element signature="e#4328#4334#0#HTML" expanded="true" />
+                <element signature="e#4867#4873#0#HTML" expanded="true" />
+                <element signature="e#5177#5183#0#HTML" expanded="true" />
+                <element signature="e#5353#5359#0#HTML" expanded="true" />
+                <element signature="e#5818#5824#0#HTML" expanded="true" />
+                <element signature="e#5959#5965#0#HTML" expanded="true" />
+                <element signature="e#6256#6262#0#HTML" expanded="true" />
+                <element signature="e#6716#6722#0#HTML" expanded="true" />
+                <element signature="e#7105#7111#0#HTML" expanded="true" />
+                <element signature="e#7555#7561#0#HTML" expanded="true" />
+                <element signature="e#7953#7959#0#HTML" expanded="true" />
+                <element signature="e#8424#8430#0#HTML" expanded="true" />
+                <element signature="e#8672#8679#0#HTML" expanded="true" />
+                <element signature="e#9177#9183#0#HTML" expanded="true" />
+                <element signature="e#9357#9363#0#HTML" expanded="true" />
+                <element signature="e#9856#9863#0#HTML" expanded="true" />
+                <element signature="e#10012#10018#0#HTML" expanded="true" />
+                <element signature="e#10840#10846#0#HTML" expanded="true" />
+                <element signature="e#11863#11869#0#HTML" expanded="true" />
+                <element signature="e#12347#12353#0#HTML" expanded="true" />
+                <element signature="e#12868#12874#0#HTML" expanded="true" />
+                <element signature="e#13618#13624#0#HTML" expanded="true" />
+                <element signature="e#13955#13961#0#HTML" expanded="true" />
+                <element signature="e#14378#14384#0#HTML" expanded="true" />
+                <element signature="e#14690#14696#0#HTML" expanded="true" />
+                <element signature="e#15357#15363#0#HTML" expanded="true" />
+                <element signature="e#16168#16174#0#HTML" expanded="true" />
+                <element signature="e#16840#16846#0#HTML" expanded="true" />
+                <element signature="e#17263#17269#0#HTML" expanded="true" />
+                <element signature="e#17569#17575#0#HTML" expanded="true" />
+                <element signature="e#17822#17828#0#HTML" expanded="true" />
+                <element signature="e#17946#17952#0#HTML" expanded="true" />
+                <element signature="e#18281#18287#0#HTML" expanded="true" />
+                <element signature="e#18752#18758#0#HTML" expanded="true" />
+                <element signature="e#19019#19025#0#HTML" expanded="true" />
+                <element signature="e#19385#19391#0#HTML" expanded="true" />
+                <element signature="e#19520#19526#0#HTML" expanded="true" />
+                <element signature="e#19711#19718#0#HTML" expanded="true" />
+                <element signature="e#19782#19789#0#HTML" expanded="true" />
+                <element signature="e#20023#20030#0#HTML" expanded="true" />
+                <element signature="e#20276#20282#0#HTML" expanded="true" />
+                <element signature="e#20309#20316#0#HTML" expanded="true" />
+                <element signature="e#20420#20427#0#HTML" expanded="true" />
+                <element signature="e#20705#20712#0#HTML" expanded="true" />
+                <element signature="e#20832#20839#0#HTML" expanded="true" />
+                <element signature="e#21086#21093#0#HTML" expanded="true" />
+                <element signature="e#21197#21203#0#HTML" expanded="true" />
+                <element signature="e#21369#21376#0#HTML" expanded="true" />
+                <element signature="e#21394#21401#0#HTML" expanded="true" />
+                <element signature="e#21411#21418#0#HTML" expanded="true" />
+                <element signature="e#21504#21511#0#HTML" expanded="true" />
+                <element signature="e#21748#21755#0#HTML" expanded="true" />
+                <element signature="e#21765#21772#0#HTML" expanded="true" />
+                <element signature="e#21948#21955#0#HTML" expanded="true" />
+                <element signature="e#22046#22052#0#HTML" expanded="true" />
+                <element signature="e#22083#22090#0#HTML" expanded="true" />
+                <element signature="e#22586#22593#0#HTML" expanded="true" />
+                <element signature="e#22736#22743#0#HTML" expanded="true" />
+                <element signature="e#22796#22802#0#HTML" expanded="true" />
+                <element signature="e#22835#22842#0#HTML" expanded="true" />
+                <element signature="e#22945#22952#0#HTML" expanded="true" />
+                <element signature="e#23082#23089#0#HTML" expanded="true" />
+                <element signature="e#23175#23182#0#HTML" expanded="true" />
+                <element signature="e#23255#23261#0#HTML" expanded="true" />
+                <element signature="e#23476#23483#0#HTML" expanded="true" />
+                <element signature="e#23614#23621#0#HTML" expanded="true" />
+                <element signature="e#24118#24124#0#HTML" expanded="true" />
+                <element signature="e#24386#24392#0#HTML" expanded="true" />
+                <element signature="e#24621#24627#0#HTML" expanded="true" />
+                <element signature="e#24892#24898#0#HTML" expanded="true" />
+                <element signature="e#25041#25047#0#HTML" expanded="true" />
+                <element signature="e#25210#25216#0#HTML" expanded="true" />
+                <element signature="e#25558#25564#0#HTML" expanded="true" />
+                <element signature="e#25825#25831#0#HTML" expanded="true" />
+                <element signature="e#26034#26040#0#HTML" expanded="true" />
+                <element signature="e#26440#26446#0#HTML" expanded="true" />
+                <element signature="e#26814#26820#0#HTML" expanded="true" />
+                <element signature="e#27086#27092#0#HTML" expanded="true" />
+                <element signature="e#27291#27298#0#HTML" expanded="true" />
+                <element signature="e#27409#27415#0#HTML" expanded="true" />
+                <element signature="e#27629#27635#0#HTML" expanded="true" />
+                <element signature="e#27704#27711#0#HTML" expanded="true" />
+                <element signature="e#27827#27833#0#HTML" expanded="true" />
+                <element signature="e#28312#28318#0#HTML" expanded="true" />
+                <element signature="e#28430#28436#0#HTML" expanded="true" />
+                <element signature="e#28627#28633#0#HTML" expanded="true" />
+                <element signature="e#28844#28850#0#HTML" expanded="true" />
+                <element signature="e#29012#29018#0#HTML" expanded="true" />
+                <element signature="e#29176#29182#0#HTML" expanded="true" />
+                <element signature="e#29288#29294#0#HTML" expanded="true" />
+                <element signature="e#29446#29452#0#HTML" expanded="true" />
+                <element signature="e#29540#29546#0#HTML" expanded="true" />
+                <element signature="e#29658#29664#0#HTML" expanded="true" />
+                <element signature="e#29763#29769#0#HTML" expanded="true" />
+                <element signature="e#30013#30019#0#HTML" expanded="true" />
+                <element signature="e#30180#30186#0#HTML" expanded="true" />
+                <element signature="e#30382#30388#0#HTML" expanded="true" />
+                <element signature="e#30629#30635#0#HTML" expanded="true" />
+                <element signature="e#30920#30926#0#HTML" expanded="true" />
+                <element signature="e#31357#31363#0#HTML" expanded="true" />
+                <element signature="e#31679#31685#0#HTML" expanded="true" />
+                <element signature="e#31930#31936#0#HTML" expanded="true" />
+                <element signature="e#32237#32243#0#HTML" expanded="true" />
+                <element signature="e#32597#32603#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/dashboard/user.blade.php">
+      <file leaf-file-name="privacy.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/privacy.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="91" column="10" lean-forward="true" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
+            <state relative-caret-position="284">
+              <caret line="119" column="24" lean-forward="true" selection-start-line="119" selection-start-column="24" selection-end-line="119" selection-end-column="24" />
+              <folding>
+                <element signature="e#302#308#0#HTML" expanded="true" />
+                <element signature="e#7385#7391#0#HTML" expanded="true" />
+                <element signature="e#8038#8045#0#HTML" expanded="true" />
+                <element signature="e#10316#10322#0#HTML" expanded="true" />
+                <element signature="e#13228#13234#0#HTML" expanded="true" />
+                <element signature="e#13261#13267#1#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WelcomeController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="240" column="28" selection-start-line="240" selection-start-column="28" selection-end-line="240" selection-end-column="28" />
+              <folding>
+                <element signature="e#40#60#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,7 +234,7 @@
       <file leaf-file-name="searchResult.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/searchResult.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1025">
+            <state relative-caret-position="620">
               <caret line="286" lean-forward="true" selection-start-line="286" selection-end-line="286" />
               <folding>
                 <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -98,10 +243,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file leaf-file-name="newWelcome.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/newWelcome.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="2805">
               <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
             </state>
           </provider>
@@ -121,35 +271,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WelcomeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="96" column="24" lean-forward="true" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
-              <folding>
-                <element signature="e#40#60#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DashboardController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Therapist/DashboardController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="101" column="44" selection-start-line="101" selection-start-column="44" selection-end-line="101" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Blade File" />
         <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Blade File" />
       </list>
     </option>
   </component>
@@ -204,8 +333,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Therapist/TherapistSpecializationController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Therapist/SubscriptionController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SocialController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_06_10_134003_add_location_address_to_therapist_profiles.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
@@ -242,7 +369,6 @@
         <option value="$PROJECT_DIR$/resources/js/components/SearchSchedule.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/Register.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/RegisterProps.vue" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/views/therapist/schedule/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/dashboard/therapist.blade.php" />
@@ -250,11 +376,14 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/dashboard/user.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/newWelcome.blade.php" />
         <option value="$PROJECT_DIR$/app/Model/Therapist.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/searchResult.blade.php" />
         <option value="$PROJECT_DIR$/public/js/edit-profile.js" />
         <option value="$PROJECT_DIR$/resources/views/guest/newProfile.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/therapist/dashboard/edit-profile.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/terms.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/privacy.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" />
       </list>
     </option>
   </component>
@@ -480,7 +609,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="edi&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/dashboard/edit-profile.blade.php&#10;newP&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/guest/newProfile.blade.php&#10;edit&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/dashboard/edit-profile.blade.php&#10;Login&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/Login.vue&#10;ed&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/dashboard/edit-profile.blade.php&#10;search&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;Wel&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/WelcomeController.php&#10;se&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;The&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Model/Therapist.php&#10;Dashb&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/Therapist/DashboardController.php&#10;Welc&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/WelcomeController.php&#10;newW&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/newWelcome.blade.php&#10;Th&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Model/Therapist.php&#10;We&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/WelcomeController.php&#10;Ther&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Model/Therapist.php&#10;new&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/guest/newProfile.blade.php&#10;ne&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/guest/newProfile.blade.php&#10;Das&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/Therapist/DashboardController.php&#10;ther&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/layouts/dashboard/therapist.blade.php&#10;Da&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/Therapist/DashboardController.php&#10;env&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/.env&#10;edit-&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/dashboard/edit-profile.blade.php&#10;web&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/routes/web.php&#10;sub&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/subscribe.blade.php&#10;edit-p&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/dashboard/edit-profile.blade.php&#10;sea&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;Reg&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/RegisterProps.vue&#10;Sch&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/SearchSchedule.vue&#10;searchRes&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;Search&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/SearchSchedule.vue&#10;Sched&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/Schedule.vue&#10;searchR&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;sear&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/SearchSchedule.vue&#10;profile.js&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/profile.js&#10;profil&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/profile.js&#10;Sear&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/SearchSchedule.vue&#10;bootstrap.s&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/node_modules/bootstrap/scss/bootstrap.scss&#10;app.s&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/sass/app.scss&#10;Booki&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/User/BookingController.php&#10;Welcom&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/WelcomeController.php&#10;searc&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;SCh&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/Schedule.vue&#10;func&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/public/theme/js/functions.js&#10;reg&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/Register.vue&#10;Sc&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/Schedule.vue&#10;prof&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/profile.js&#10;Se&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/SearchSchedule.vue&#10;newp&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/guest/newProfile.blade.php&#10;profile&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/profile.js&#10;SC&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/Schedule.vue" />
+    <property name="SearchEverywhereHistoryKey" value="pri&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/privacy.blade.php&#10;Wel&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/WelcomeController.php&#10;plan&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/plans.blade.php&#10;web&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/routes/web.php&#10;edi&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/dashboard/edit-profile.blade.php&#10;newP&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/guest/newProfile.blade.php&#10;edit&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/dashboard/edit-profile.blade.php&#10;Login&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/Login.vue&#10;ed&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/dashboard/edit-profile.blade.php&#10;search&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;se&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;The&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Model/Therapist.php&#10;Dashb&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/Therapist/DashboardController.php&#10;Welc&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/WelcomeController.php&#10;newW&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/newWelcome.blade.php&#10;Th&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Model/Therapist.php&#10;We&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/WelcomeController.php&#10;Ther&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Model/Therapist.php&#10;new&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/guest/newProfile.blade.php&#10;ne&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/guest/newProfile.blade.php&#10;Das&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/Therapist/DashboardController.php&#10;ther&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/layouts/dashboard/therapist.blade.php&#10;Da&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/Therapist/DashboardController.php&#10;env&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/.env&#10;edit-&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/dashboard/edit-profile.blade.php&#10;sub&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/subscribe.blade.php&#10;edit-p&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/dashboard/edit-profile.blade.php&#10;sea&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;Reg&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/RegisterProps.vue&#10;Sch&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/SearchSchedule.vue&#10;searchRes&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;Search&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/SearchSchedule.vue&#10;Sched&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/Schedule.vue&#10;searchR&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;sear&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/SearchSchedule.vue&#10;profile.js&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/profile.js&#10;profil&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/profile.js&#10;Sear&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/SearchSchedule.vue&#10;bootstrap.s&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/node_modules/bootstrap/scss/bootstrap.scss&#10;app.s&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/sass/app.scss&#10;Booki&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/User/BookingController.php&#10;Welcom&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/WelcomeController.php&#10;searc&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;SCh&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/Schedule.vue&#10;func&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/public/theme/js/functions.js&#10;reg&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/Register.vue&#10;Sc&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/Schedule.vue&#10;prof&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/profile.js&#10;Se&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/SearchSchedule.vue&#10;newp&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/guest/newProfile.blade.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -536,12 +665,12 @@
       <workItem from="1560445195533" duration="14846000" />
       <workItem from="1560676637250" duration="8706000" />
       <workItem from="1560756213174" duration="18324000" />
-      <workItem from="1560845614511" duration="23084000" />
+      <workItem from="1560845614511" duration="25471000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221412000" />
+    <option name="totallyTimeSpent" value="223799000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -553,8 +682,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" visible="true" weight="0.22136223" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" weight="0.22136223" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -581,30 +710,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_13_082612_add_content_to_profiles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="19" column="55" lean-forward="true" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/therapist/dashboard/services.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/theme/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47820">
-          <caret line="3188" column="21" selection-start-line="3188" selection-start-column="21" selection-end-line="3188" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/plans.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="14" selection-start-line="19" selection-start-column="4" selection-end-line="27" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -850,13 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/therapist/schedule/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
@@ -910,13 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/newWelcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Therapist/DashboardController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
@@ -931,30 +1022,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="96" column="24" lean-forward="true" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
-          <folding>
-            <element signature="e#40#60#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/Login.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="18" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/searchResult.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1025">
-          <caret line="286" lean-forward="true" selection-start-line="286" selection-end-line="286" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -979,8 +1050,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/therapist/dashboard/edit-profile.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="558" column="40" selection-start-line="558" selection-start-column="40" selection-end-line="558" selection-end-column="40" />
+        <state relative-caret-position="152">
+          <caret line="553" lean-forward="true" selection-start-line="553" selection-end-line="553" />
           <folding>
             <element signature="e#945#971#0#HTML" expanded="true" />
             <element signature="e#5243#5265#0#HTML" expanded="true" />
@@ -991,6 +1062,196 @@
             <element signature="e#11745#11770#0#HTML" expanded="true" />
             <element signature="e#14128#14152#0#HTML" expanded="true" />
             <element signature="e#15281#15303#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/searchResult.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="286" lean-forward="true" selection-start-line="286" selection-end-line="286" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/newWelcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2805">
+          <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/plans.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/terms.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="e#1092#1098#0#HTML" expanded="true" />
+            <element signature="e#1449#1455#0#HTML" expanded="true" />
+            <element signature="e#1458#1464#0#HTML" expanded="true" />
+            <element signature="e#1467#1473#0#HTML" expanded="true" />
+            <element signature="e#1484#1490#0#HTML" expanded="true" />
+            <element signature="e#1779#1785#0#HTML" expanded="true" />
+            <element signature="e#1787#1793#0#HTML" expanded="true" />
+            <element signature="e#1998#2005#0#HTML" expanded="true" />
+            <element signature="e#2159#2165#0#HTML" expanded="true" />
+            <element signature="e#2258#2264#0#HTML" expanded="true" />
+            <element signature="e#2404#2410#0#HTML" expanded="true" />
+            <element signature="e#2561#2567#0#HTML" expanded="true" />
+            <element signature="e#2699#2705#0#HTML" expanded="true" />
+            <element signature="e#3036#3042#0#HTML" expanded="true" />
+            <element signature="e#3393#3399#0#HTML" expanded="true" />
+            <element signature="e#3615#3621#0#HTML" expanded="true" />
+            <element signature="e#3886#3892#0#HTML" expanded="true" />
+            <element signature="e#4100#4106#0#HTML" expanded="true" />
+            <element signature="e#4328#4334#0#HTML" expanded="true" />
+            <element signature="e#4867#4873#0#HTML" expanded="true" />
+            <element signature="e#5177#5183#0#HTML" expanded="true" />
+            <element signature="e#5353#5359#0#HTML" expanded="true" />
+            <element signature="e#5818#5824#0#HTML" expanded="true" />
+            <element signature="e#5959#5965#0#HTML" expanded="true" />
+            <element signature="e#6256#6262#0#HTML" expanded="true" />
+            <element signature="e#6716#6722#0#HTML" expanded="true" />
+            <element signature="e#7105#7111#0#HTML" expanded="true" />
+            <element signature="e#7555#7561#0#HTML" expanded="true" />
+            <element signature="e#7953#7959#0#HTML" expanded="true" />
+            <element signature="e#8424#8430#0#HTML" expanded="true" />
+            <element signature="e#8672#8679#0#HTML" expanded="true" />
+            <element signature="e#9177#9183#0#HTML" expanded="true" />
+            <element signature="e#9357#9363#0#HTML" expanded="true" />
+            <element signature="e#9856#9863#0#HTML" expanded="true" />
+            <element signature="e#10012#10018#0#HTML" expanded="true" />
+            <element signature="e#10840#10846#0#HTML" expanded="true" />
+            <element signature="e#11863#11869#0#HTML" expanded="true" />
+            <element signature="e#12347#12353#0#HTML" expanded="true" />
+            <element signature="e#12868#12874#0#HTML" expanded="true" />
+            <element signature="e#13618#13624#0#HTML" expanded="true" />
+            <element signature="e#13955#13961#0#HTML" expanded="true" />
+            <element signature="e#14378#14384#0#HTML" expanded="true" />
+            <element signature="e#14690#14696#0#HTML" expanded="true" />
+            <element signature="e#15357#15363#0#HTML" expanded="true" />
+            <element signature="e#16168#16174#0#HTML" expanded="true" />
+            <element signature="e#16840#16846#0#HTML" expanded="true" />
+            <element signature="e#17263#17269#0#HTML" expanded="true" />
+            <element signature="e#17569#17575#0#HTML" expanded="true" />
+            <element signature="e#17822#17828#0#HTML" expanded="true" />
+            <element signature="e#17946#17952#0#HTML" expanded="true" />
+            <element signature="e#18281#18287#0#HTML" expanded="true" />
+            <element signature="e#18752#18758#0#HTML" expanded="true" />
+            <element signature="e#19019#19025#0#HTML" expanded="true" />
+            <element signature="e#19385#19391#0#HTML" expanded="true" />
+            <element signature="e#19520#19526#0#HTML" expanded="true" />
+            <element signature="e#19711#19718#0#HTML" expanded="true" />
+            <element signature="e#19782#19789#0#HTML" expanded="true" />
+            <element signature="e#20023#20030#0#HTML" expanded="true" />
+            <element signature="e#20276#20282#0#HTML" expanded="true" />
+            <element signature="e#20309#20316#0#HTML" expanded="true" />
+            <element signature="e#20420#20427#0#HTML" expanded="true" />
+            <element signature="e#20705#20712#0#HTML" expanded="true" />
+            <element signature="e#20832#20839#0#HTML" expanded="true" />
+            <element signature="e#21086#21093#0#HTML" expanded="true" />
+            <element signature="e#21197#21203#0#HTML" expanded="true" />
+            <element signature="e#21369#21376#0#HTML" expanded="true" />
+            <element signature="e#21394#21401#0#HTML" expanded="true" />
+            <element signature="e#21411#21418#0#HTML" expanded="true" />
+            <element signature="e#21504#21511#0#HTML" expanded="true" />
+            <element signature="e#21748#21755#0#HTML" expanded="true" />
+            <element signature="e#21765#21772#0#HTML" expanded="true" />
+            <element signature="e#21948#21955#0#HTML" expanded="true" />
+            <element signature="e#22046#22052#0#HTML" expanded="true" />
+            <element signature="e#22083#22090#0#HTML" expanded="true" />
+            <element signature="e#22586#22593#0#HTML" expanded="true" />
+            <element signature="e#22736#22743#0#HTML" expanded="true" />
+            <element signature="e#22796#22802#0#HTML" expanded="true" />
+            <element signature="e#22835#22842#0#HTML" expanded="true" />
+            <element signature="e#22945#22952#0#HTML" expanded="true" />
+            <element signature="e#23082#23089#0#HTML" expanded="true" />
+            <element signature="e#23175#23182#0#HTML" expanded="true" />
+            <element signature="e#23255#23261#0#HTML" expanded="true" />
+            <element signature="e#23476#23483#0#HTML" expanded="true" />
+            <element signature="e#23614#23621#0#HTML" expanded="true" />
+            <element signature="e#24118#24124#0#HTML" expanded="true" />
+            <element signature="e#24386#24392#0#HTML" expanded="true" />
+            <element signature="e#24621#24627#0#HTML" expanded="true" />
+            <element signature="e#24892#24898#0#HTML" expanded="true" />
+            <element signature="e#25041#25047#0#HTML" expanded="true" />
+            <element signature="e#25210#25216#0#HTML" expanded="true" />
+            <element signature="e#25558#25564#0#HTML" expanded="true" />
+            <element signature="e#25825#25831#0#HTML" expanded="true" />
+            <element signature="e#26034#26040#0#HTML" expanded="true" />
+            <element signature="e#26440#26446#0#HTML" expanded="true" />
+            <element signature="e#26814#26820#0#HTML" expanded="true" />
+            <element signature="e#27086#27092#0#HTML" expanded="true" />
+            <element signature="e#27291#27298#0#HTML" expanded="true" />
+            <element signature="e#27409#27415#0#HTML" expanded="true" />
+            <element signature="e#27629#27635#0#HTML" expanded="true" />
+            <element signature="e#27704#27711#0#HTML" expanded="true" />
+            <element signature="e#27827#27833#0#HTML" expanded="true" />
+            <element signature="e#28312#28318#0#HTML" expanded="true" />
+            <element signature="e#28430#28436#0#HTML" expanded="true" />
+            <element signature="e#28627#28633#0#HTML" expanded="true" />
+            <element signature="e#28844#28850#0#HTML" expanded="true" />
+            <element signature="e#29012#29018#0#HTML" expanded="true" />
+            <element signature="e#29176#29182#0#HTML" expanded="true" />
+            <element signature="e#29288#29294#0#HTML" expanded="true" />
+            <element signature="e#29446#29452#0#HTML" expanded="true" />
+            <element signature="e#29540#29546#0#HTML" expanded="true" />
+            <element signature="e#29658#29664#0#HTML" expanded="true" />
+            <element signature="e#29763#29769#0#HTML" expanded="true" />
+            <element signature="e#30013#30019#0#HTML" expanded="true" />
+            <element signature="e#30180#30186#0#HTML" expanded="true" />
+            <element signature="e#30382#30388#0#HTML" expanded="true" />
+            <element signature="e#30629#30635#0#HTML" expanded="true" />
+            <element signature="e#30920#30926#0#HTML" expanded="true" />
+            <element signature="e#31357#31363#0#HTML" expanded="true" />
+            <element signature="e#31679#31685#0#HTML" expanded="true" />
+            <element signature="e#31930#31936#0#HTML" expanded="true" />
+            <element signature="e#32237#32243#0#HTML" expanded="true" />
+            <element signature="e#32597#32603#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/privacy.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="119" column="24" lean-forward="true" selection-start-line="119" selection-start-column="24" selection-end-line="119" selection-end-column="24" />
+          <folding>
+            <element signature="e#302#308#0#HTML" expanded="true" />
+            <element signature="e#7385#7391#0#HTML" expanded="true" />
+            <element signature="e#8038#8045#0#HTML" expanded="true" />
+            <element signature="e#10316#10322#0#HTML" expanded="true" />
+            <element signature="e#13228#13234#0#HTML" expanded="true" />
+            <element signature="e#13261#13267#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="240" column="28" selection-start-line="240" selection-start-column="28" selection-end-line="240" selection-end-column="28" />
+          <folding>
+            <element signature="e#40#60#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

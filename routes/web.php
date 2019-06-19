@@ -28,6 +28,8 @@ Route::get('/clear-config', function() {
 });
 
 Route::get('/search','WelcomeController@search');
+Route::get('/terms','WelcomeController@terms');
+Route::get('/privacy-policy','WelcomeController@privacyPolicy');
 
 Auth::routes();
 Route::group(['prefix'=>'admin'],function(){

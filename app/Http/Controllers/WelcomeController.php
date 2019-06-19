@@ -232,4 +232,12 @@ class WelcomeController extends Controller
         }
         return response()->json($dates,200);
     }
+
+    public function terms(){
+        return view('terms');
+    }
+
+    public function privacyPolicy(){
+        return view('privacy');
+    }
 }
