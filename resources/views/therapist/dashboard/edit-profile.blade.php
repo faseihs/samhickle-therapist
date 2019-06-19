@@ -556,7 +556,7 @@
         }
         var csrf='{{csrf_token()}}'
     </script>
-    <script src="/js/edit-profile.js?v=1"></script>
+    <script src="/js/edit-profile.js?v=2"></script>
     <style>
         .pac-container:after {
 
