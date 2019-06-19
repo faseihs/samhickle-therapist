@@ -114,9 +114,16 @@
 									@for($i=1;$i<=$therapist->getStars();$i++)
                                             <i class="icon_star voted"></i>
                                         @endfor
-                                        @if(sizeof($therapist->reviews)>0)
-                                            ({{sizeof($therapist->reviews)}})
+                                        @if($therapist->getStars()<1)
+                                            @for($i=1;$i<=5;$i++)
+                                                <i class="icon_star"></i>
+                                            @endfor
                                         @endif
+
+                                         ({{sizeof($therapist->reviews)}})
+                                       {{-- @if(sizeof($therapist->reviews)>0)
+                                            ({{sizeof($therapist->reviews)}})
+                                        @endif--}}
                                     </span>
                                     <p>{{$therapist->profile->personal_statement}}</p>
 
