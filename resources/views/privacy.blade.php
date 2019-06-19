@@ -7,9 +7,7 @@
             <div class="main_title">
                 <h1>Privacy Policy</h1>
             </div>
-    <ol>
-        <li>Privacy Policy</li>
-    </ol>
+
     <p>Therapist.co.uk Limited ("Therapist.co.uk", "we" or "us") are committed to protecting your privacy. This privacy policy describes the ways in which we collect information from you when you use&nbsp;therapist.co.uk ("the Site"), or which you otherwise provide to us, and what we may use it for. It should be read in conjunction with the Website terms and conditions of Use.</p>
     <p>Personal data is:</p>
     <p>'Any information relating to an identified or identifiable natural person ('data subject'); an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person;'</p>
