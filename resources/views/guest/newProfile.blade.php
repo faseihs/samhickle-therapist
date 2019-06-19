@@ -122,9 +122,10 @@
 
                                     <ul class="contacts">
 
-                                        @if($therapist->profile->location_name)
-                                            <li><h6>Complete Address</h6>{{$therapist->profile->location_name}}</li>
-                                            @endif </li>
+
+                                            <li><h6>Complete Address</h6>{{$therapist->completeAddress()}}</li>
+
+
                                             @if($therapist->profile->postal_code)
                                                 <li><h6>Post Code</h6>{{$therapist->profile->postal_code}}</li>
                                                 @endif </li>

@@ -124,5 +124,17 @@ class Therapist extends Authenticatable
         return $domain.'/therapist-profile/'.$this->slug;
     }
 
+    public function completeAddress(){
+        $address=$this->profile->location_name;
+        $pn=$this->profile->address;
+        if($address && $pn)
+            return $address.', Property : '.$pn;
+        else if($address && !$pn)
+            return $address;
+        else if(!$address && $pn)
+            return $pn;
+        else return '-';
+    }
+
 
 }
