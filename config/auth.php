@@ -119,7 +119,7 @@ return [
             'expire' => 60,
         ],
         'therapists' => [
-            'provider' => 'users',
+            'provider' => 'therapists',
             'table' => 'therapist_password_resets',
             'expire' => 60,
         ],

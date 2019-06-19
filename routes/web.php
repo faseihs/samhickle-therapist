@@ -22,8 +22,12 @@ Route::get('/clear-cache', function() {
 });
 Route::get('/clear-config', function() {
 
-    $exitCode = Artisan::call('cache:clear');
     Artisan::call('config:clear');
+    // return what you want
+});
+Route::get('/cache-config', function() {
+
+    Artisan::call('config:cache');
     // return what you want
 });
 
@@ -58,6 +62,11 @@ Route::group(['prefix'=>'therapist'],function(){
     Route::get('/reviews','Therapist\DashboardController@reviews');
     Route::get('/subscription','Therapist\SubscriptionController@getSubscription');
     Route::post('/subscription','Therapist\SubscriptionController@postSubscription');
+    //Password reset routes
+    Route::get('password/reset', 'Therapist\ForgotPasswordController@showLinkRequestForm');
+    Route::post('password/email', 'Therapist\ForgotPasswordController@sendResetLinkEmail');
+    Route::get('password/reset/{token}', 'Therapist\ResetPasswordController@showResetForm');
+    Route::post('password/reset', 'Therapist\ResetPasswordController@reset');
 });
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/therapist-profile/{slug}','WelcomeController@therapistSearch');

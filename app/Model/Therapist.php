@@ -2,6 +2,7 @@
 
 namespace App\Model;
 
+use App\Notifications\TherapistResetPasswordNotification;
 use Carbon\Carbon;
 use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -138,6 +139,12 @@ class Therapist extends Authenticatable
         else if(!$address && $pn)
             return 'Property Number : '.$pn;
         else return '-';
+    }
+
+    //Send password reset notification
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new TherapistResetPasswordNotification($token));
     }
 
 

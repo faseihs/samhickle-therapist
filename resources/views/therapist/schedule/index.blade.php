@@ -18,13 +18,110 @@
        {{-- <form onclick="return validateListing()" action="/therapist/schedule" method="POST">
             @csrf--}}
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div id="calendar"></div>
                 <input type="hidden" name="date" id="selectedDate">
             </div>
-            <div class="col-md-4">
+            <div class="col-md-12">
                 <ul id="timesList" class="time_select version_2 add_top_20">
+
+                    @php($startTime=7)
+                    @php($endTime=7)
+                    @php($am='am')
+                    @php($c=true)
+                    @php($in=1)
+                    @while($c)
+                        @for($i=0;$i<60;)
+                            <li style="width: auto;">
+                            <input type="checkbox" id="radio{{$in}}" name="times" value="{{$startTime<10?'0'.$startTime:$startTime}}.{{$i==0?'00':$i}}{{$am}}">
+                            <label for="radio{{$in}}">{{$startTime<10?'0'.$startTime:$startTime}}.{{$i==0?'00':$i}}{{$am}}</label>
+                            </li>
+                            @php($i+=15)
+                            @php($in++)
+                        @endfor
+
+
+                        @if($startTime>11)
+                            @php($am='pm')
+                        @endif
+                            @php($startTime++)
+                        @if($startTime>12)
+                            @php($startTime=1)
+
+                        @endif
+
+                        @if($startTime>7 && $am=='pm')
+                            @php($c=false)
+                        @endif
+
+
+                    @endwhile
+                    {{--<li>
+                        <input type="checkbox" id="radio1" name="times" value="07.00am">
+                        <label for="radio1">07.00am</label>
+                    </li>
                     <li>
+                        <input type="checkbox" id="radio1" name="times" value="07.15am">
+                        <label for="radio1">07:15</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="radio1" name="times" value="07.30am">
+                        <label for="radio1">07.30am</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="radio1" name="times" value="07.45am">
+                        <label for="radio1">07.45am</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="radio1" name="times" value="08.00am">
+                        <label for="radio1">08.00am</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="radio1" name="times" value="08.00am">
+                        <label for="radio1">08.15am</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="radio1" name="times" value="15.15am">
+                        <label for="radio1">08:30</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="radio1" name="times" value="07.30am">
+                        <label for="radio1">07.30am</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="radio1" name="times" value="07.45am">
+                        <label for="radio1">07.45am</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="radio1" name="times" value="08.00am">
+                        <label for="radio1">08.00am</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="radio1" name="times" value="09.30am">
+                        <label for="radio1">09.30am</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="radio1" name="times" value="09.30am">
+                        <label for="radio1">09.30am</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="radio1" name="times" value="09.30am">
+                        <label for="radio1">09.30am</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="radio1" name="times" value="09.30am">
+                        <label for="radio1">09.30am</label>
+                    </li> <li>
+                        <input type="checkbox" id="radio1" name="times" value="09.30am">
+                        <label for="radio1">09.30am</label>
+                    </li> <li>
+                        <input type="checkbox" id="radio1" name="times" value="09.30am">
+                        <label for="radio1">09.30am</label>
+                    </li>--}}
+
+
+                    {{--<li>
                         <input type="checkbox" id="radio1" name="times" value="09.30am">
                         <label for="radio1">09.30am</label>
                     </li>
@@ -71,7 +168,7 @@
                     <li>
                         <input type="checkbox" id="radio12" name="times" value="04.00pm">
                         <label for="radio12">04.00pm</label>
-                    </li>
+                    </li>--}}
                 </ul>
             </div>
             <div class="col-md-12">

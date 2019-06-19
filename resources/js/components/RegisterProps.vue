@@ -33,6 +33,11 @@
             </div>
         </div>
         <div class="row mt-2">
+            <div class="col-md-12 text-left">
+                <a :href="getResetLink()" class="btn btn-link btn-sm">Forgot Password</a>
+            </div>
+        </div>
+        <div class="row mt-2">
             <div class="col-md-12">
                 <p>
                     <i class="fa fa-lock"></i>
@@ -62,6 +67,11 @@
             }
         },
         methods:{
+            getResetLink(){
+                if(this.type==='user')
+                    return '/password/email'
+                else  return '/therapist/password/email'
+            },
             loginAttempt(){
                 let data = new FormData();
                 data.append('email',this.email);

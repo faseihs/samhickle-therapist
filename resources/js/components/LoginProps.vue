@@ -23,6 +23,11 @@
                 <button @click="loginAttempt" class="btn_1">Login</button>
             </div>
         </div>
+        <div class="row mt-2">
+            <div class="col-md-12 text-left">
+                <a :href="getResetLink()" class="btn btn-sm btn-link">Forgot Password</a>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -30,7 +35,7 @@
     import axios from 'axios';
     export default {
         name: "Login",
-        props:['url'],
+        props:['url','type'],
         data(){
             return{
                 email:null,
@@ -41,6 +46,11 @@
             }
         },
         methods:{
+            getResetLink(){
+                if(this.type==='user')
+                    return '/password/reset'
+                else  return '/therapist/password/reset'
+            },
             loginAttempt(){
                 let data = new FormData();
                 data.append('email',this.email);

@@ -32,6 +32,7 @@
                 <button @click="loginAttempt" class="btn_1">Register</button>
             </div>
         </div>
+
         <div class="row mt-2">
             <div class="col-md-12">
                 <p>
@@ -49,7 +50,7 @@
     import axios from 'axios';
     export default {
         name: "Register",
-        props:['callbackFunction'],
+        props:['callbackFunction','therapist'],
         data(){
             return{
                 email:null,
@@ -62,6 +63,7 @@
             }
         },
         methods:{
+
             loginAttempt(){
                 let data = new FormData();
                 data.append('email',this.email);

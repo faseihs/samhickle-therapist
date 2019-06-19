@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.therapist')
 
 @section('content')
-<div class="container">
+<div class="container margin_60">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -50,7 +50,7 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-6 offset-md-4 pb-4 mb-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Reset Password') }}
                                 </button>

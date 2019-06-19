@@ -14,23 +14,23 @@
         <modal  height="auto" name="LoginModal">
             <div class="container p-2">
                 <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
-                <login url="/api/login"></login>
+                <login type="user" url="/api/login"></login>
             </div>
         </modal>
         <modal  height="auto" name="registerModal">
             <div class="container p-2">
                 <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
-                <register url="/api/register"></register>
+                <register type="user" url="/api/register"></register>
             </div>
         </modal>
         <modal  height="auto" name="tLoginModal">
             <div class="container p-2">
-                <login url="/api/t-login"></login>
+                <login type="therapist" url="/api/t-login"></login>
             </div>
         </modal>
         <modal  height="auto" name="tregisterModal">
             <div class="container p-2">
-                <register url="/api/t-register"></register>
+                <register type="therapist" url="/api/t-register"></register>
             </div>
         </modal>
 
