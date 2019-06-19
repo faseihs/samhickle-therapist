@@ -196,20 +196,61 @@
     <script src="/js/moment.min.js"></script>
     <script src="/js/notify.min.js"></script>
     <script>
-        var csrf='{{csrf_token()}}'
-        $('#calendar').datepicker({
+        var csrf='{{csrf_token()}}';
+        var dates= {!! $dates !!};
+        console.log(dates);
+        var options ={
             todayHighlight: true,
-            daysOfWeekDisabled: [0],
+            daysOfWeekDisabled: [],
             weekStart: 1,
             format: "yyyy-mm-dd",
-            datesDisabled: ["2017/10/20", "2017/11/21","2017/12/21", "2018/01/21","2018/02/21","2018/03/21"],
-        }).on('changeDate',function (e) {
+            beforeShowDay: function(date) {
+                console.log(date);
+                var d = date;
+                var curr_date = d.getDate();
+                var curr_month = d.getMonth() + 1; //Months are zero based
+                var curr_year = d.getFullYear();
+                var formattedDate = (curr_date<10?'0'+curr_date:curr_date) + "/" + (curr_month<10?'0'+curr_month:curr_month) + "/" + curr_year
+                console.log(formattedDate);
+                for(var i =0; i<dates.length;i++){
+                    //console.log(moment(dates[i], "MM-DD-YYYY"))
+                    //debugger;
+
+                    if( moment(dates[i], "MM-DD-YYYY") ===  moment(formattedDate, "MM-DD-YYYY"))
+                        return {
+                            classes: 'bg-primary day text-white'
+                        };
+                }
+                if ($.inArray(formattedDate, dates) != -1) {
+                    return {
+                        classes: 'bg-primary day text-white'
+                    };
+                }
+                return true;
+            }
+
+        };
+        $('#calendar').datepicker(options).on('changeDate',function (e) {
+            console.log(e);
+
+            var d = e.date;
+            var curr_date = d.getDate();
+            var curr_month = d.getMonth() + 1; //Months are zero based
+            var curr_year = d.getFullYear();
+            var formattedDate = (curr_date<10?'0'+curr_date:curr_month) + "/" + (curr_month<10?'0'+curr_month:curr_month) + "/" + curr_year
+
+
             $('#repeat').prop("checked",false);
             $("input:checkbox[name=times]").each(function(){
 
                 var checkbox= $(this);
                 checkbox.prop("checked",false);
             });
+
+
+
+
+
            var momentDate = moment(e.date).format('YYYY-MM-DD');
            $('#selectedDate').val(momentDate);
             var loading = $.notify("Loading....",{
@@ -226,12 +267,12 @@
                 }
             }).done(function (data) {
                 $('.notifyjs-wrapper').trigger('notify-hide');
-                console.log(data);
+
                 $("input:checkbox[name=times]").each(function(){
 
                     var checkbox= $(this);
                     data.time.forEach(function (item) {
-                        console.log(checkbox.val());
+
                        if(checkbox.val()===item)
                            checkbox.prop('checked', true);
                     });
@@ -256,10 +297,14 @@
 
 
             });
+
+
         });
 
         function saveSchedule() {
             var date = $('#selectedDate').val();
+            console.log(date);
+
             var times="";
             var timeArray=[];
             var repeat = $('#repeat').prop("checked")===true?1:0;
@@ -290,6 +335,22 @@
             }).done(function (data) {
                 $('.notifyjs-wrapper').trigger('notify-hide');
                 $.notify("Updated Successfully....","success")
+
+
+                var d = new Date(date);
+                var curr_date = d.getDate();
+                var curr_month = d.getMonth() + 1; //Months are zero based
+                var curr_year = d.getFullYear();
+                var formattedDate = (curr_date<10?'0'+curr_date:curr_date) + "/" + (curr_month<10?'0'+curr_month:curr_month) + "/" + curr_year
+
+                $('#calendar').datepicker('destroy');
+                dates.push(formattedDate);
+                /*options={
+                    ...options,
+                    setDate: new Date(formattedDate),
+                }*/
+                $('#calendar').datepicker(options)
+
             }).fail(function () {
                 $.notify("Update Failed....","error")
                 $('.notifyjs-wrapper').trigger('notify-hide');

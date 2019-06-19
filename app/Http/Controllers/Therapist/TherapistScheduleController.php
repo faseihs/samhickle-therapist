@@ -28,7 +28,14 @@ class TherapistScheduleController extends Controller
         $therapist=Auth::user();
         $profile=$therapist->orofile;
         $schedules=$therapist->schedules;
-        return view('therapist.schedule.index',compact(['therapist','profile','schedules']));
+        $dates=[];
+        //dd($schedules);
+        foreach ($schedules as $schedule){
+            array_push($dates,Carbon::parse($schedule->date)->format('d/m/Y'));
+        }
+        $dates=json_encode($dates);
+
+        return view('therapist.schedule.index',compact(['therapist','profile','schedules','dates']));
     }
 
     /**
