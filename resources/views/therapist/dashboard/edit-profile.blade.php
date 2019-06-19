@@ -129,6 +129,57 @@
     <!-- /box_general-->
         <div class="box_general padding_bottom">
             <div class="header_box version_2">
+                <h2><i class="fa fa-map-marker"></i>Address</h2>
+            </div>
+            <div class="row">
+                <div style="display: none;" class="col-md-6">
+                    <div class="form-group">
+                        <label>City</label>
+                        <input type="text" name="city" value="{{$profile->city}}" class="form-control" placeholder="Your address">
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Property Number</label>
+                        <input type="text" name="address" value="{{$profile->address}}" class="form-control" placeholder="Your property number">
+                    </div>
+                </div>
+            </div>
+            <!-- /row-->
+            <div style="display: none;" class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>State</label>
+                        <input type="text" name="state" value="{{$profile->state}}" class="form-control" placeholder="Your state">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Post code</label>
+                        <input type="text" id="postCode" name="postal_code" value="{{$profile->location_name}}" class="form-control" placeholder="Your Post Code">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h6>Post Code</h6>
+                    <input onkeyup="adjustPostCode" autocomplete="nope" autofill="nope" value="{{$profile->postal_code}}" type="text" id="address-input" name="address_address" class="form-control map-input">
+                    <input value="{{$profile->latitude}}" type="hidden" name="address_latitude" id="address-latitude" value="0" />
+                    <input value="{{$profile->longitude}}" type="hidden" name="address_longitude" id="address-longitude" value="0" />
+
+                </div>
+            </div>
+
+            <div style="display: none;" class="row mt-2">
+                <div id="address-map-container" style="width:100%;height:400px; ">
+                    <div style="width: 100%; height: 100%" id="address-map"></div>
+                </div>
+            </div>
+            <!-- /row-->
+        </div>
+        <div class="box_general padding_bottom">
+            <div class="header_box version_2">
                 <h2><i class="fa fa-map-marker"></i>Therapy Information</h2>
             </div>
             <div class="row">
@@ -299,57 +350,7 @@
             <!-- /row-->
         </div>
 
-        <div class="box_general padding_bottom">
-            <div class="header_box version_2">
-                <h2><i class="fa fa-map-marker"></i>Address</h2>
-            </div>
-            <div class="row">
-                <div style="display: none;" class="col-md-6">
-                    <div class="form-group">
-                        <label>City</label>
-                        <input type="text" name="city" value="{{$profile->city}}" class="form-control" placeholder="Your address">
 
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Property Number</label>
-                        <input type="text" name="address" value="{{$profile->address}}" class="form-control" placeholder="Your property number">
-                    </div>
-                </div>
-            </div>
-            <!-- /row-->
-            <div style="display: none;" class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>State</label>
-                        <input type="text" name="state" value="{{$profile->state}}" class="form-control" placeholder="Your state">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Post code</label>
-                        <input type="text" id="postCode" name="postal_code" value="{{$profile->location_name}}" class="form-control" placeholder="Your Post Code">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <h6>Post Code</h6>
-                    <input onkeyup="adjustPostCode" autocomplete="nope" autofill="nope" value="{{$profile->postal_code}}" type="text" id="address-input" name="address_address" class="form-control map-input">
-                    <input value="{{$profile->latitude}}" type="hidden" name="address_latitude" id="address-latitude" value="0" />
-                    <input value="{{$profile->longitude}}" type="hidden" name="address_longitude" id="address-longitude" value="0" />
-
-                </div>
-            </div>
-
-            <div style="display: none;" class="row mt-2">
-                <div id="address-map-container" style="width:100%;height:400px; ">
-                    <div style="width: 100%; height: 100%" id="address-map"></div>
-                </div>
-            </div>
-            <!-- /row-->
-        </div>
 
         <div class="box_general padding_bottom">
             <div class="header_box version_2">
