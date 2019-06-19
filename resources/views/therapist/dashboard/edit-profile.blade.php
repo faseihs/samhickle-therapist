@@ -231,7 +231,7 @@
 
         <div class="box_general padding_bottom">
             <div class="header_box version_2">
-                <h2><i class="fa fa-folder"></i>Services</h2>
+                <h2><i class="fa fa-folder"></i>Session Cost</h2>
             </div>
             <div class="row">
 
@@ -248,6 +248,7 @@
                         </div>
 
                     <table id="pricing-list-container" style="width:100%;">
+
                         @foreach($services as $s)
                             <tr id="service{{$s->id}}" class="pricing-list-item">
                                 <td>
@@ -281,6 +282,38 @@
                                 </td>
                             </tr>
                         @endforeach
+                            <tr class="pricing-list-item">
+                                <td>
+
+                                    <div class="row">
+                                        <div class="col-md-1">
+                                            <input class="form-control" style="background:white;" value="&pound;" readonly type="text">
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <input type="number" step="any" class="form-control s-price"  placeholder="Price">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <input class="form-control" style="background:white;" value="Mins" readonly type="text">
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <input type="text"  name="services[]" class="form-control s-title" placeholder="Per Minutes">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <button type="button" class="btn btn-sm btn-success btn-circle addService"><i class="fa fa-fw fa-check"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                            </tr>
+
                     </table>
                     <a href="#0" class="btn_1 gray add-service"><i class="fa fa-fw fa-plus-circle"></i>Add Item</a>
 
@@ -346,6 +379,29 @@
                                 </td>
                             </tr>
                         @endforeach
+                            <tr class="pricing-list-item">
+                                <td>
+
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <div class="form-group">
+                                                <input type="text"  name="educations[]" class="form-control e-title" placeholder="College">
+                                            </div>
+                                        </div>
+                                        <div style="display:none;" class="col-md-4">
+                                            <div class="form-group">
+                                                <input type="text"  class="form-control e-price" value="none"  placeholder="Degree">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <button type="button" disabled class="btn btn-sm btn-success btn-circle addEducation"><i class="fa fa-fw fa-check"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                            </tr>
                     </table>
                     <button  type="button" class="btn_1 gray add-education"><i class="fa fa-fw fa-plus-circle"></i>Add Item</button>
 

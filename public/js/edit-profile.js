@@ -93,6 +93,42 @@ $('.add-service').click(function () {
     });
 });
 
+$('.addService').bind('click',function () {
+
+    var button = $(this);
+    var td = button.parent().parent().parent();
+    var sTitle=td.find('.s-title');
+    var sPrice=td.find('.s-price');
+    if(sTitle.val().length<1 || sPrice.val().length<1){
+        $.notify('Fill Details','error');
+        return;
+    }
+    var loading = $.notify("Loading....",{
+        autoHide: false,
+        style:'bootstrap',
+        className:'info'
+    });
+    $.ajax({
+        type: 'POST',
+        url:'/therapist/service',
+        data:{
+            _token:csrf,
+            service:sTitle.val(),
+            price:sPrice.val()
+        }
+    }).done(function (data) {
+        $('.notifyjs-wrapper').trigger('notify-hide');
+        $.notify("Added Successfully....","success")
+        window.location.reload(true);
+    }).fail(function () {
+        $.notify("Delete Failed....","error")
+        $('.notifyjs-wrapper').trigger('notify-hide');
+
+    });
+
+
+});
+
 function updateService(id) {
 
     var tr=$('#service'+id);
@@ -337,6 +373,54 @@ $('.add-education').click(function () {
 
     });
 });
+
+
+$('.e-title').bind('keyup',function () {
+    var thi =$(this);
+    var tr= thi.parent().parent().parent();
+    var btn = tr.find('.addEducation');
+    console.log(btn);
+    if(thi.val().length>0)
+        btn.attr('disabled',false);
+    else btn.attr('disabled',true);
+});
+
+$('.addEducation').bind('click',function () {
+
+    var button = $(this);
+    var td = button.parent().parent().parent();
+    var sTitle=td.find('.e-title');
+    var sPrice=td.find('.e-price');
+    if(sTitle.val().length<1 || sPrice.val().length<1){
+        $.notify('Fill Details','error');
+        return;
+    }
+    var loading = $.notify("Loading....",{
+        autoHide: false,
+        style:'bootstrap',
+        className:'info'
+    });
+    $.ajax({
+        type: 'POST',
+        url:'/therapist/education',
+        data:{
+            _token:csrf,
+            college:sTitle.val(),
+            description:sPrice.val()
+        }
+    }).done(function (data) {
+        $('.notifyjs-wrapper').trigger('notify-hide');
+        $.notify("Added Successfully....","success")
+        window.location.reload(true);
+    }).fail(function () {
+        $.notify("Adding Failed....","error")
+        $('.notifyjs-wrapper').trigger('notify-hide');
+
+    });
+
+
+});
+
 
 function updateEducation(id) {
 
