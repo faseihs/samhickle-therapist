@@ -328,7 +328,7 @@ $('.add-education').click(function () {
                         </td>
                     </tr>
             `)
-    $('.e-title').bind('keyup',function () {
+    $('.e-title').bind('change',function () {
         var thi =$(this);
         var tr= thi.parent().parent().parent();
         var btn = tr.find('.addEducation');
