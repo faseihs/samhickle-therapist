@@ -114,16 +114,9 @@
 									@for($i=1;$i<=$therapist->getStars();$i++)
                                             <i class="icon_star voted"></i>
                                         @endfor
-                                        @if($therapist->getStars()<1)
-                                            @for($i=1;$i<=5;$i++)
-                                                <i class="icon_star"></i>
-                                            @endfor
-                                        @endif
-
-                                         ({{sizeof($therapist->reviews)}})
-                                       {{-- @if(sizeof($therapist->reviews)>0)
+                                        @if(sizeof($therapist->reviews)>0)
                                             ({{sizeof($therapist->reviews)}})
-                                        @endif--}}
+                                        @endif
                                     </span>
                                     <p>{{$therapist->profile->personal_statement}}</p>
 
@@ -178,7 +171,7 @@
 
                                 <ul class="list_edu">
                                     @foreach($educations as $e)
-                                        <li><strong>{{$e->college}}</strong> - {{$e->description}}</li>
+                                        <li><strong>{{$e->college}}</strong></li>
                                     @endforeach
                                 </ul>
                             @endif
@@ -223,7 +216,7 @@
                             </div>
                         @endif
 
-                        @if(sizeof($chunk)>0)
+                        {{--@if(sizeof($chunk)>0)
 
                             <div class="indent_title_in">
                                 <i class="pe-7s-user"></i>
@@ -248,7 +241,7 @@
                                 <!-- /row-->
 
                             </div>
-                        @endif
+                        @endif--}}
                     <!-- /wrapper indent -->
 
                         <hr>
@@ -273,8 +266,10 @@
                                         <tbody>
                                         @foreach($services as $s)
                                             <tr>
-                                                <td>{{$s->service}}</td>
                                                 <td>&pound;{{$s->price}}</td>
+                                                <td>Per</td>
+                                                <td>{{$s->service}} minutes</td>
+
                                             </tr>
                                         @endforeach
                                         </tbody>

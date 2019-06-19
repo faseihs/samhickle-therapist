@@ -281,13 +281,9 @@
                                 @for($i=1;$i<=$t->getStars();$i++)
                                                 <i class="icon_star voted"></i>
                                             @endfor
-                                    @if($t->getStars()<1)
-                                        @for($i=1;$i<=5;$i++)
-                                            <i class="icon_star"></i>
-                                        @endfor
-                                    @endif
-
-                                     ({{sizeof($t->reviews)}})
+                                            @if(sizeof($t->reviews)>0)
+                                                ({{sizeof($t->reviews)}})
+                                            @endif
 
                                     </span>
                                         <div class="row">

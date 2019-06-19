@@ -237,7 +237,7 @@
 
                 <div class="col-md-12">
 
-                        <div class="row">
+                        <div style="display: none;" class="row">
                             <div class="col-md-12">
                                 <h6>Price Statement</h6>
                             </div>
@@ -247,22 +247,27 @@
 
                         </div>
 
-
-                    <h6>Treatments</h6>
                     <table id="pricing-list-container" style="width:100%;">
                         @foreach($services as $s)
                             <tr id="service{{$s->id}}" class="pricing-list-item">
                                 <td>
 
                                     <div  class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <input type="text" value="{{$s->service}}" name="services[]" class="form-control s-title" placeholder="Title">
-                                            </div>
+                                        <div class="col-md-1">
+                                            <input class="form-control" style="background:white;" value="&pound;" readonly type="text">
                                         </div>
-                                        <div class="col-md-4">
+
+                                        <div class="col-md-3">
                                             <div class="form-group">
                                                 <input type="text" value="{{$s->price}}" class="form-control s-price"  placeholder="Price">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <input class="form-control" style="background:white;" value="Mins" readonly type="text">
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <input type="text" value="{{$s->service}}" name="services[]" class="form-control s-title" placeholder="Minutes">
                                             </div>
                                         </div>
                                         <div class="col-md-2">
@@ -289,7 +294,7 @@
 
         <div class="box_general padding_bottom">
             <div class="header_box version_2">
-                <h2><i class="fa fa-folder"></i>Education</h2>
+                <h2><i class="fa fa-folder"></i>Qualifications</h2>
             </div>
             <div class="row">
 
@@ -303,29 +308,29 @@
                             <div class="col-md-12">
                                 <textarea name="personal_statement" class="form-control"   >{{$therapist->profile->personal_statement}}</textarea>
                             </div>
-                            <div class="col-md-12">
+                            {{--<div class="col-md-12">
                                 <h6>Education  Statement</h6>
-                            </div>
-                            <div class="col-md-12">
+                            </div>--}}
+                            <div style="display: none;  " class="col-md-12">
                                 <textarea name="education_statement" class="form-control"   >{{$therapist->profile->education_statement}}</textarea>
                             </div>
                             <input name="redirectPath" value="/therapist/education" type="hidden">
                         </div>
 
 
-                    <h6>Curriculum</h6>
+                    <h6 class="mt-4">Curriculum</h6>
                     <table id="pricing-list-container-2" style="width:100%;">
                         @foreach($educations as $e)
                             <tr id="education{{$e->id}}" class="pricing-list-item">
                                 <td>
 
                                     <div  class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-10">
                                             <div class="form-group">
                                                 <input type="text" value="{{$e->college}}" name="educations[]" class="form-control e-title" placeholder="College">
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div style="display: none;" class="col-md-4">
                                             <div class="form-group">
                                                 <input type="text" value="{{$e->description}}" class="form-control e-price"  placeholder="Degree">
                                             </div>

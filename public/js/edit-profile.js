@@ -28,16 +28,24 @@ $('.add-service').click(function () {
                         <td>
 
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text"  name="services[]" class="form-control s-title" placeholder="Title">
+                                 <div class="col-md-1">
+                                            <input class="form-control" style="background:white;" value="&pound;" readonly type="text">
                                         </div>
-                                    </div>
-                                    <div class="col-md-4">
+                                      
+                                      <div class="col-md-3">
                                         <div class="form-group">
                                             <input type="number" step="any" class="form-control s-price"  placeholder="Price">
                                         </div>
                                     </div>
+                                    <div class="col-md-1">
+                                            <input class="form-control" style="background:white;" value="Mins" readonly type="text">
+                                        </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <input type="text"  name="services[]" class="form-control s-title" placeholder="Per Minutes">
+                                        </div>
+                                    </div>
+                                    
                                     <div class="col-md-2">
                                         <div class="form-group">
                                             <button type="button" class="btn btn-sm btn-success btn-circle addService"><i class="fa fa-fw fa-check"></i></button>
@@ -264,14 +272,14 @@ $('.add-education').click(function () {
                         <td>
 
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-10">
                                         <div class="form-group">
                                             <input type="text"  name="educations[]" class="form-control e-title" placeholder="College">
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div style="display:none;" class="col-md-4">
                                         <div class="form-group">
-                                            <input type="text"  class="form-control e-price"  placeholder="Degree">
+                                            <input type="text"  class="form-control e-price" value="none"  placeholder="Degree">
                                         </div>
                                     </div>
                                     <div class="col-md-2">
