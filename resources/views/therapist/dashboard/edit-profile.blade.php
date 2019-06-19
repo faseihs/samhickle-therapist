@@ -301,7 +301,7 @@
                 <div class="col-md-12">
 
                         @csrf
-                        <div class="row">
+                        <div style="display: none;" class="row">
                             <div class="col-md-12">
                                 <h6>Main Speciality</h6>
                             </div>

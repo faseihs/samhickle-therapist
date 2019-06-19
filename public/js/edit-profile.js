@@ -284,7 +284,7 @@ $('.add-education').click(function () {
                                     </div>
                                     <div class="col-md-2">
                                         <div class="form-group">
-                                            <button type="button"  class="btn btn-sm btn-success btn-circle addEducation"><i class="fa fa-fw fa-check"></i></button>
+                                            <button type="button" disabled class="btn btn-sm btn-success btn-circle addEducation"><i class="fa fa-fw fa-check"></i></button>
                                            </div>
                                     </div>
                                 </div>
@@ -292,7 +292,16 @@ $('.add-education').click(function () {
                         </td>
                     </tr>
             `)
-    $('.addEducation').bind('click',function () {
+    $('.e-title').bind('keyup',function () {
+        var thi =$(this);
+        var tr= thi.parent().parent().parent();
+        var btn = tr.find('.addEducation');
+        console.log(btn);
+        if(thi.val().length>0)
+            btn.attr('disabled',false);
+        else btn.attr('disabled',true);
+    });
+        $('.addEducation').bind('click',function () {
 
         var button = $(this);
         var td = button.parent().parent().parent();
