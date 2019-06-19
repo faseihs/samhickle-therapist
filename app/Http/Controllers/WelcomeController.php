@@ -89,7 +89,7 @@ class WelcomeController extends Controller
             $tempObj->name_point=$therapist->name;
             $tempObj->postCode=$therapist->profile->postal_code?$therapist->profile->postal_code:'';
             $tempObj->description_point= $therapist->completeAddress();
-            $tempObj->get_directions_start_address= '';
+            $tempObj->get_directions_start_address= $input['latlng']->lat.','.$input['latlng']->lng;
             $tempObj->phone= $therapist->profile->contact?$therapist->profile->contact:'';
             array_push($mapsData,$tempObj);
         }
