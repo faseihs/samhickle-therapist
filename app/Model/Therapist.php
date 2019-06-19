@@ -128,11 +128,11 @@ class Therapist extends Authenticatable
         $address=$this->profile->location_name;
         $pn=$this->profile->address;
         if($address && $pn)
-            return $address.', Property : '.$pn;
+            return $pn.' '.$address;
         else if($address && !$pn)
             return $address;
         else if(!$address && $pn)
-            return $pn;
+            return 'Property Number : '.$pn;
         else return '-';
     }
 
