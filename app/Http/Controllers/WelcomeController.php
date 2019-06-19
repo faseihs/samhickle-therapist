@@ -93,6 +93,7 @@ class WelcomeController extends Controller
             array_push($mapsData,$tempObj);
         }
         $mapsData=json_encode($mapsData);
+        //dd($mapsData);
         //dd($therapists->all());
 
 

@@ -22,12 +22,13 @@
     </script>
     <script src="/theme/js/markerclusterer.js"></script>
     <script>
+        var doctorsData =@php echo $mapsData @endphp;
 
         var
             mapObject,
             markers = [],
             markersData = {
-                'Doctors': JSON.parse('{!!  $mapsData!!}')
+                'Doctors': doctorsData
             };
 
         var mapOptions = {

@@ -128,7 +128,11 @@ class Therapist extends Authenticatable
         $address=$this->profile->location_name;
         $pn=$this->profile->address;
         if($address && $pn)
-            return $pn.' '.$address;
+        {
+            $str=str_replace($this->profile->postal_code?$this->profile->postal_code:'',"",$address);
+            $str=str_replace(", UK","",$str);
+            return $pn.' '.$str;
+        }
         else if($address && !$pn)
             return $address;
         else if(!$address && $pn)
