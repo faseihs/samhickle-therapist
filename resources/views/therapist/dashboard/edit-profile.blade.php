@@ -164,7 +164,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <h6>Post Code</h6>
-                    <input onkeyup="adjustPostCode" autocomplete="nope" autofill="nope" value="{{$profile->postal_code}}" type="text" id="address-input" name="address_address" class="form-control map-input">
+                    <input  autocomplete="nope" autofill="nope" value="{{$profile->location_name}}" type="text" id="address-input" name="address_address" class="form-control map-input">
                     <input value="{{$profile->latitude}}" type="hidden" name="address_latitude" id="address-latitude" value="0" />
                     <input value="{{$profile->longitude}}" type="hidden" name="address_longitude" id="address-longitude" value="0" />
 
@@ -495,7 +495,7 @@
                     const place = autocomplete.getPlace();
                     console.log(place);
                     $('#postCode').val(place.name);
-                    $('#address-input').val(place.name);
+                    $('#address-input').val(place.formatted_address);
                     geocoder.geocode({'placeId': place.place_id}, function (results, status) {
                         if (status === google.maps.GeocoderStatus.OK) {
                             const lat = results[0].geometry.location.lat();

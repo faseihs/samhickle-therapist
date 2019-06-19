@@ -87,7 +87,7 @@ class WelcomeController extends Controller
             $tempObj->type= 'therapist';
             $tempObj->url_detail= '/therapist-profile/'.$therapist->slug;
             $tempObj->name_point=$therapist->name;
-            $tempObj->description_point= $therapist->profile->address?$therapist->profile->address:'-';
+            $tempObj->description_point= $therapist->profile->location_name?$therapist->profile->location_name:'-';
             $tempObj->get_directions_start_address= '';
             $tempObj->phone= $therapist->profile->contact?$therapist->profile->contact:'-';
             array_push($mapsData,$tempObj);
