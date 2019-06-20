@@ -14,6 +14,18 @@
 @section('scripts')
     <!-- SPECIFIC SCRIPTS -->
     <script src="/theme/js/tables_func.js"></script>
+    <script>
+        $("li.main").hover(
+            function () {
+                $('li.main').removeClass('popular')
+                $(this).addClass('popular');
+            },
+            function () {
+                $('li.main').removeClass('popular')
+                $(this).addClass('popular');
+            }
+        );
+    </script>
 @endsection
 
 @section('content')
@@ -36,7 +48,7 @@
 
         <ul class="pricing-list bounce-invert">
             @foreach($plans as  $index=>$plan)
-                <li class="{{$index==ceil(sizeof($plans)%2)?'popular':''}}">
+                <li class="main {{$index==ceil(sizeof($plans)%2)?'popular':''}}">
                     <ul class="pricing-wrapper">
                         <li data-type="monthly" class="is-visible">
                             <header class="pricing-header">
@@ -79,6 +91,7 @@
                     <!-- /pricing-wrapper -->
                 </li>
             @endforeach
+
 
             {{--<li class="popular">
                 <ul class="pricing-wrapper">
