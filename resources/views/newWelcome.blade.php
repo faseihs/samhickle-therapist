@@ -114,9 +114,9 @@
                     <h3>VIEW PROFILE
                     </h3>
                 <p>
-                    Browse and compare therapists profiles. See their specialities, availability and read their reviews.
+                    Browse and compare therapists profiles online. See their specialities, prices, availability and read their reviews.
 
-                </p><br></div>
+                </p></div>
             </div>
             <div class="col-lg-4">
                 <div class="box_feat" id="icon_3">
