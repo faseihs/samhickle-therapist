@@ -23,6 +23,11 @@
                 <button @click="loginAttempt" class="btn_1">Login</button>
             </div>
         </div>
+        <div class="row mt-2">
+            <div class="col-md-12 text-center">
+                <a href="/password/reset" class="btn btn-sm btn-link">Forgot Password</a>
+            </div>
+        </div>
     </div>
 </template>
 
