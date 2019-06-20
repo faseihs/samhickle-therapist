@@ -147,5 +147,16 @@ class Therapist extends Authenticatable
         $this->notify(new TherapistResetPasswordNotification($token));
     }
 
+    public function checkTypeExists($type){
+        if(!$this->profile->personal_statement)
+            return false;
+
+        if(strpos($this->profile->personal_statement,$type) !== false){
+            return true;
+        }
+        else return false;
+    }
+
+
 
 }

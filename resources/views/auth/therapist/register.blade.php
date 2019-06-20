@@ -41,7 +41,7 @@
                                 <div class="checkbox-holder text-left">
                                     <div class="checkbox_2">
                                         <input required type="checkbox" value="accept_2" id="check_2" name="check_2" checked>
-                                        <label for="check_2"><span>I Agree to the <strong>Terms &amp; Conditions</strong></span></label>
+                                        <label for="check_2"><span>I Agree to the <strong><a target="_blank" href="/terms">Terms &amp; Conditions</a></strong></span></label>
                                     </div>
                                 </div>
                                 <div class="form-group text-center add_top_30">

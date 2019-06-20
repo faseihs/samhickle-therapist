@@ -62,6 +62,20 @@
                     <input type="file" accept="image/*" name="dp" class="form-control" >
                 </div>
             </div>
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>You are</label>
+                    <select   name="youAre[]" id="youAreGroup" multiple="multiple">
+                        @php($youAre=explode("|",$therapist->personal_statement))
+                        <option {{$therapist->checkTypeExists("Therapist")?'selected':''}}  value="Therapist">Therapist</option>
+                        <option {{$therapist->checkTypeExists("Counsellor")?'selected':''}} value="Counsellor">Counsellor</option>
+                        <option {{$therapist->checkTypeExists("Psychologist")?'selected':''}} value="Psychologist">Psychologist</option>
+                        <option {{$therapist->checkTypeExists("Psychotherapist")?'selected':''}} value="Psychotherapist">Psychotherapist</option>
+
+                    </select>
+                </div>
+            </div>
         </div>
         @if($profile->dp)
         <div id="imgDiv" class="row text-center">
@@ -345,9 +359,9 @@
                             <div class="col-md-12">
                                 <h6>Main Speciality</h6>
                             </div>
-                            <div class="col-md-12">
+                            {{--<div class="col-md-12">
                                 <textarea name="personal_statement" class="form-control"   >{{$therapist->profile->personal_statement}}</textarea>
-                            </div>
+                            </div>--}}
                             {{--<div class="col-md-12">
                                 <h6>Education  Statement</h6>
                             </div>--}}
@@ -471,6 +485,9 @@
                 width:'100%'
             })
             $('#selectGroup').multipleSelect({
+                width:'100%'
+            })
+            $('#youAreGroup').multipleSelect({
                 width:'100%'
             })
         })

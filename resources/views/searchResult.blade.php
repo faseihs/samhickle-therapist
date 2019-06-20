@@ -272,7 +272,7 @@
                                     </a>
                                 </figure>
                                     <div class="wrapper col-md-3">
-                                        <small>Therapist</small>
+                                        <small style="overflow-wrap: break-word;">{{$t->profile->personal_statement?$t->profile->personal_statement:'Therapist'}}</small>
                                         <h5><a style="color: #333;" href="/therapist-profile/{{$t->slug}}">{{$t->name}}</a></h5>
                                         <p><i class="fa fa-location-arrow"></i> Distance : {{number_format($t->distance,'0')}} kms</p>
 

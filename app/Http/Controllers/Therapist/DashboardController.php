@@ -107,7 +107,7 @@ class DashboardController extends Controller
             $profile->types_of_therapy=$request->types_of_therapy;
             $profile->deliveries=$request->deliveries;
             $profile->price_statement=$request->price_statement;
-            $profile->personal_statement=$request->personal_statement;
+            $profile->personal_statement=implode(",",$request->youAre);
             $profile->education_statement=$request->education_statement;
             $therapist->problems()->sync($request->problems);
             $therapist->groups()->sync($request->groups);

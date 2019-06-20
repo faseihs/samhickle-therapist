@@ -120,7 +120,7 @@
                                             ({{sizeof($therapist->reviews)}})
                                         @endif
                                     </span>
-                                    <p>{{$therapist->profile->personal_statement}}</p>
+                                   {{-- <p>{{$therapist->profile->personal_statement}}</p>--}}
 
                                     <ul class="contacts">
 
