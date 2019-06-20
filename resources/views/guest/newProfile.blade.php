@@ -87,7 +87,7 @@
             <div class="col-xl-7 col-lg-7">
                 <nav id="secondary_nav">
                     <div class="container">
-                        <ul class="clearfix">
+
                         <ul class="clearfix">
                             <li><a href="#section_1" class="active">General info</a></li>
                             @if(sizeof($reviews)>0)
