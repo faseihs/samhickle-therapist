@@ -39,6 +39,19 @@
                     <input type="email" name="email" value="{{$therapist->email}}" class="form-control" placeholder="Your email">
                 </div>
             </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>You are</label>
+                    <select   name="youAre[]" id="youAreGroup" multiple="multiple">
+                        @php($youAre=explode("|",$therapist->personal_statement))
+                        <option {{$therapist->checkTypeExists("Therapist")?'selected':''}}  value="Therapist">Therapist</option>
+                        <option {{$therapist->checkTypeExists("Counsellor")?'selected':''}} value="Counsellor">Counsellor</option>
+                        <option {{$therapist->checkTypeExists("Psychologist")?'selected':''}} value="Psychologist">Psychologist</option>
+                        <option {{$therapist->checkTypeExists("Psychotherapist")?'selected':''}} value="Psychotherapist">Psychotherapist</option>
+
+                    </select>
+                </div>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -63,19 +76,7 @@
                 </div>
             </div>
 
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label>You are</label>
-                    <select   name="youAre[]" id="youAreGroup" multiple="multiple">
-                        @php($youAre=explode("|",$therapist->personal_statement))
-                        <option {{$therapist->checkTypeExists("Therapist")?'selected':''}}  value="Therapist">Therapist</option>
-                        <option {{$therapist->checkTypeExists("Counsellor")?'selected':''}} value="Counsellor">Counsellor</option>
-                        <option {{$therapist->checkTypeExists("Psychologist")?'selected':''}} value="Psychologist">Psychologist</option>
-                        <option {{$therapist->checkTypeExists("Psychotherapist")?'selected':''}} value="Psychotherapist">Psychotherapist</option>
 
-                    </select>
-                </div>
-            </div>
         </div>
         @if($profile->dp)
         <div id="imgDiv" class="row text-center">
