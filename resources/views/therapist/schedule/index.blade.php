@@ -50,9 +50,9 @@
 
                         @endif
 
-                        @if($startTime>7 && $am=='pm')
-                            @php($c=false)
-                        @endif
+                            @if($startTime>7 && $am=='pm')
+                                @php($c=false)
+                            @endif
 
 
                     @endwhile

@@ -35,7 +35,7 @@
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @enderror
-                                <a href="/password/reset" class="forgot"><small>Forgot password?</small></a>
+                                <a href="/therapist/password/reset" class="forgot"><small>Forgot password?</small></a>
                             </div>
 
                             <div class="form-group">
