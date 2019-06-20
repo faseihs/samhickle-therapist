@@ -222,23 +222,40 @@
 <footer>
     <div class="container margin_60_35">
         <div class="row">
-            <div class="col-lg-6 col-md-12">
+           {{-- <div class="col-lg-6 col-md-12">
                 <p>
                     <a href="/" title="Therapist.co.uk">
                         <img style="width: 350px;height: 40px;" src="/theme/img/mainLogo.png" data-retina="true" alt=""  class="img-fluid">
                     </a>
                 </p>
+            </div>--}}
+            <div class="col-lg-3 col-md-4">
+
+                <ul class="links">
+                    <li><a style="color:#999;" href="/">Home</a></li>
+                    <li><a href="#0">About us</a></li>
+
+
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                {{--
+                                <h5>About</h5>
+                --}}
+                <ul class="links">
+
+                    <li><a href="/therapist/register">Therapist Register</a></li>
+                    <li><a href="/therapist/login">Therapist Login</a></li>
+                </ul>
             </div>
             <div class="col-lg-3 col-md-4">
 {{--
                 <h5>About</h5>
 --}}
                 <ul class="links">
-                    <li><a href="#0">About us</a></li>
+
                     <li><a href="/register">Patient Register</a></li>
                     <li><a href="/login">Patient Login</a></li>
-                    <li><a href="/therapist/register">Therapist Register</a></li>
-                    <li><a href="/therapist/login">Therapist Login</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-4">
