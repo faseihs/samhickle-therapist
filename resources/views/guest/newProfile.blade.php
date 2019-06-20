@@ -90,7 +90,9 @@
                         <ul class="clearfix">
                         <ul class="clearfix">
                             <li><a href="#section_1" class="active">General info</a></li>
+                            @if(sizeof($reviews)>0)
                             <li><a href="#section_2">Reviews</a></li>
+                            @endif
                             <li><a href="#sidebar">Booking</a></li>
                         </ul>
                     </div>
@@ -162,9 +164,6 @@
                             @if($profile->education_statement)
                                 <p>{{$profile->education_statement}}</p>
                             @endif
-
-                        </div>
-                        <div class="wrapper_indent">
                             @if(sizeof($educations)>0)
 
 
@@ -177,6 +176,10 @@
                             @endif
 
                         </div>
+                       {{-- <div class="wrapper_indent">
+
+
+                        </div>--}}
                         @if(sizeof($therapist->problems)>0)
                             <div class="indent_title_in">
                                 <i class="pe-7s-user"></i>
@@ -282,6 +285,8 @@
                     <!-- /section_1 -->
                 </div>
                 <!-- /box_general -->
+                @if(sizeof($reviews)>0)
+
 
                 <div id="section_2">
                     <div  class="box_general_3">
@@ -396,6 +401,7 @@
 --}}
                     </div>
                 </div>
+            @endif
                 <!-- /section_2 -->
             </div>
             <schedule name="{{$therapist->name}}" slug="{{$therapist->slug}}"></schedule>

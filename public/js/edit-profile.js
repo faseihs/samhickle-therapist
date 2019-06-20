@@ -51,9 +51,9 @@ $('.add-service').click(function () {
 <!--
                                             <button type="button" class="btn btn-sm btn-success btn-circle addService"><i class="fa fa-fw fa-check"></i></button>
 -->
-                                           <button class="btn btn-sm btn-danger removeRow" type="button">
+                                           <<!--button class="btn btn-sm btn-danger removeRow" type="button">
                                                     <i class="fa fa-trash-o"></i>
-                                                </button>
+                                                </button>-->
                                            </div>
                                     </div>
                                 </div>
@@ -331,9 +331,9 @@ $('.add-education').click(function () {
 <!--
                                             <button type="button" disabled class="btn btn-sm btn-success btn-circle addEducation"><i class="fa fa-fw fa-check"></i></button>
 -->
-                                           <button class="btn btn-sm btn-danger removeRow" type="button">
+                                          <!-- <button class="btn btn-sm btn-danger removeRow" type="button">
                                                     <i class="fa fa-trash-o"></i>
-                                                </button>
+                                                </button>-->
                                            </div>
                                     </div>
                                 </div>

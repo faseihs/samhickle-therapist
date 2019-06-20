@@ -25,7 +25,7 @@ class DashboardController extends Controller
     }
 
     public function index(){
-        return redirect('/therapist/bookings');
+        return redirect('/therapist/edit-profile');
 
         return view('therapist.dashboard.index');
     }

@@ -52,6 +52,20 @@
                 </a>
             </li>--}}
 
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Schedule">
+                <a class="nav-link" href="/therapist/edit-profile">
+                    <i class="fa fa-fw fa-user-circle"></i>
+                    <span class="nav-link-text">Profile</span>
+                </a>
+            </li>
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Schedule">
+                <a class="nav-link" href="/therapist/schedule">
+                    <i class="fa fa-fw fa-plus-circle"></i>
+                    <span class="nav-link-text">Schedule</span>
+                </a>
+            </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Bookings">
                 <a class="nav-link" href="/therapist/bookings">
                     <i class="fa fa-fw fa-calendar-check-o"></i>
@@ -65,18 +79,6 @@
                 </a>
             </li>
 
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Schedule">
-                <a class="nav-link" href="/therapist/schedule">
-                    <i class="fa fa-fw fa-plus-circle"></i>
-                    <span class="nav-link-text">Schedule</span>
-                </a>
-            </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Schedule">
-                <a class="nav-link" href="/therapist/edit-profile">
-                    <i class="fa fa-fw fa-user-circle"></i>
-                    <span class="nav-link-text">Profile</span>
-                </a>
-            </li>
             {{--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="My profile">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseProfile" data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-wrench"></i>

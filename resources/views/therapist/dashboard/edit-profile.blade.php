@@ -309,9 +309,9 @@
 {{--
                                                 <button type="button" class="btn btn-sm btn-success btn-circle addService"><i class="fa fa-fw fa-check"></i></button>
 --}}
-                                                <button class="btn btn-sm btn-danger removeRow" type="button">
+                                               {{-- <button class="btn btn-sm btn-danger removeRow" type="button">
                                                     <i class="fa fa-trash-o"></i>
-                                                </button>
+                                                </button>--}}
                                             </div>
                                         </div>
                                     </div>
@@ -320,7 +320,7 @@
                             </tr>
 
                     </table>
-                    <a href="#0" class="btn_1 gray add-service"><i class="fa fa-fw fa-plus-circle"></i>Add Item</a>
+                    <a href="#0" class="btn_1 gray add-service"><i class="fa fa-fw fa-plus-circle"></i>Add another Item</a>
 
 
 
@@ -403,9 +403,9 @@
 {{--
                                                 <button type="button" disabled class="btn btn-sm btn-success btn-circle addEducation"><i class="fa fa-fw fa-check"></i></button>
 --}}
-                                                <button class="btn btn-sm btn-danger removeRow" type="button">
+                                                {{--<button class="btn btn-sm btn-danger removeRow" type="button">
                                                     <i class="fa fa-trash-o"></i>
-                                                </button>
+                                                </button>--}}
                                             </div>
                                         </div>
                                     </div>
@@ -413,7 +413,7 @@
                                 </td>
                             </tr>
                     </table>
-                    <button  type="button" class="btn_1 gray add-education"><i class="fa fa-fw fa-plus-circle"></i>Add Item</button>
+                    <button  type="button" class="btn_1 gray add-education"><i class="fa fa-fw fa-plus-circle"></i>Add another Item</button>
 
 
                 </div>
