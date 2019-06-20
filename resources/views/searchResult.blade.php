@@ -276,7 +276,11 @@
                                         <h5><a style="color: #333;" href="/therapist-profile/{{$t->slug}}">{{$t->name}}</a></h5>
                                         <p><i class="fa fa-location-arrow"></i> Distance : {{number_format($t->distance,'0')}} kms</p>
 
-                                        <p>{{$t->profile->personal_statement}}</p>
+                                        <p>{{--@php($p=implode(",",$t->problems->all()))
+                                            {{$p}}--}}
+                                            @foreach($t->problems as $i=>$p)
+                                                {{$i<sizeof($t->problems)-1?$p->name.',':$p->name}}
+                                            @endforeach</p>
                                         <span class="rating">
                                 @for($i=1;$i<=$t->getStars();$i++)
                                                 <i class="icon_star voted"></i>
