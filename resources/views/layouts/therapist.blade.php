@@ -232,7 +232,7 @@
             <div class="col-lg-2 col-md-2">
 
                 <ul class="links">
-                    <li><a style="color:#999;" href="/">Home</a></li>
+                    <li><a  href="/">Home</a></li>
                     <li><a href="#0">About us</a></li>
 
 
@@ -269,6 +269,11 @@
                     </ul>
                 </div>
             </div>
+            <style>
+                .follow_us ul li a i {
+                    margin-right: 20px;
+                }
+            </style>
             <div class="col-lg-3 col-md-3 text-left">
                 <h5>Contact with Us</h5>
                 <ul class="contacts">
