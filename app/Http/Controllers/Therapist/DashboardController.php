@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Therapist;
 
 use App\Model\Group;
 use App\Model\Problem;
+use App\Model\TherapistEducation;
+use App\Model\TherapistService;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -111,6 +113,21 @@ class DashboardController extends Controller
             $therapist->groups()->sync($request->groups);
             $therapist->save();
             $profile->save();
+
+            foreach ($request->newEducations as $e){
+                if($e){
+                    $education = new TherapistEducation(['description'=>'none','college'=>$e]);
+                    $therapist->educations()->save($education);
+                }
+
+            }
+
+            foreach ($request->newPrices as $index=>$p){
+                if($p && $request->newMinutes[$index]){
+                    $service= new TherapistService(['price'=>$p,'service'=>$request->newMinutes[$index]]);
+                    $therapist->services()->save($service);
+                }
+            }
             DB::commit();
 
         }

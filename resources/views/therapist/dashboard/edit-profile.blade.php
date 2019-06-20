@@ -273,7 +273,7 @@
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <button type="button" onclick="delSevice({{$s->id}})" class="btn btn-sm btn-danger btn-circle"><i class="fa fa-fw fa-remove"></i></button>
+                                                <button type="button" onclick="delSevice({{$s->id}})" class="btn btn-sm btn-danger btn-circle"><i class="fa fa-fw fa-trash"></i></button>
                                                 <button type="button" onclick="updateService({{$s->id}})" class="btn btn-sm btn-info btn-circle" href="#"><i class="fa fa-fw fa-edit"></i></button>
                                             </div>
                                         </div>
@@ -292,7 +292,7 @@
 
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <input type="number" step="any" class="form-control s-price"  placeholder="Price">
+                                                <input type="number" name="newPrices[]" step="any" class="form-control s-price"  placeholder="Price">
                                             </div>
                                         </div>
                                         <div class="col-md-1">
@@ -300,13 +300,18 @@
                                         </div>
                                         <div class="col-md-5">
                                             <div class="form-group">
-                                                <input type="text"  name="services[]" class="form-control s-title" placeholder="Per Minutes">
+                                                <input type="text"  name="newMinutes[]" class="form-control s-title" placeholder="Per Minutes">
                                             </div>
                                         </div>
 
                                         <div class="col-md-2">
                                             <div class="form-group">
+{{--
                                                 <button type="button" class="btn btn-sm btn-success btn-circle addService"><i class="fa fa-fw fa-check"></i></button>
+--}}
+                                                <button class="btn btn-sm btn-danger removeRow" type="button">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -370,7 +375,7 @@
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <button type="button" onclick="delEducation({{$e->id}})" class="btn btn-sm btn-danger btn-circle"><i class="fa fa-fw fa-remove"></i></button>
+                                                <button type="button" onclick="delEducation({{$e->id}})" class="btn btn-sm btn-danger btn-circle"><i class="fa fa-fw fa-trash-o"></i></button>
                                                 <button type="button" onclick="updateEducation({{$e->id}})" class="btn btn-sm btn-info btn-circle" href="#"><i class="fa fa-fw fa-edit"></i></button>
                                             </div>
                                         </div>
@@ -385,7 +390,7 @@
                                     <div class="row">
                                         <div class="col-md-10">
                                             <div class="form-group">
-                                                <input type="text"  name="educations[]" class="form-control e-title" placeholder="College">
+                                                <input type="text"  name="newEducations[]" class="form-control e-title" placeholder="College">
                                             </div>
                                         </div>
                                         <div style="display:none;" class="col-md-4">
@@ -395,7 +400,12 @@
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
+{{--
                                                 <button type="button" disabled class="btn btn-sm btn-success btn-circle addEducation"><i class="fa fa-fw fa-check"></i></button>
+--}}
+                                                <button class="btn btn-sm btn-danger removeRow" type="button">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>

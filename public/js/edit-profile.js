@@ -34,7 +34,7 @@ $('.add-service').click(function () {
                                       
                                       <div class="col-md-3">
                                         <div class="form-group">
-                                            <input type="number" step="any" class="form-control s-price"  placeholder="Price">
+                                            <input type="number" name="newPrices[]" step="any" class="form-control s-price"  placeholder="Price">
                                         </div>
                                     </div>
                                     <div class="col-md-1">
@@ -42,13 +42,18 @@ $('.add-service').click(function () {
                                         </div>
                                     <div class="col-md-5">
                                         <div class="form-group">
-                                            <input type="text"  name="services[]" class="form-control s-title" placeholder="Per Minutes">
+                                            <input type="text"  name="newMinutes[]" class="form-control s-title" placeholder="Per Minutes">
                                         </div>
                                     </div>
                                     
                                     <div class="col-md-2">
                                         <div class="form-group">
+<!--
                                             <button type="button" class="btn btn-sm btn-success btn-circle addService"><i class="fa fa-fw fa-check"></i></button>
+-->
+                                           <button class="btn btn-sm btn-danger removeRow" type="button">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </button>
                                            </div>
                                     </div>
                                 </div>
@@ -56,6 +61,9 @@ $('.add-service').click(function () {
                         </td>
                     </tr>
             `)
+    $('.removeRow').bind('click',function () {
+        $(this).parent().parent().parent().parent().parent().remove();
+    });
     $('.addService').bind('click',function () {
 
         var button = $(this);
@@ -310,7 +318,7 @@ $('.add-education').click(function () {
                                 <div class="row">
                                     <div class="col-md-10">
                                         <div class="form-group">
-                                            <input type="text"  name="educations[]" class="form-control e-title" placeholder="College">
+                                            <input type="text"  name="newEducations[]" class="form-control e-title" placeholder="College">
                                         </div>
                                     </div>
                                     <div style="display:none;" class="col-md-4">
@@ -320,7 +328,12 @@ $('.add-education').click(function () {
                                     </div>
                                     <div class="col-md-2">
                                         <div class="form-group">
+<!--
                                             <button type="button" disabled class="btn btn-sm btn-success btn-circle addEducation"><i class="fa fa-fw fa-check"></i></button>
+-->
+                                           <button class="btn btn-sm btn-danger removeRow" type="button">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </button>
                                            </div>
                                     </div>
                                 </div>
@@ -328,6 +341,9 @@ $('.add-education').click(function () {
                         </td>
                     </tr>
             `)
+    $('.removeRow').bind('click',function () {
+        $(this).parent().parent().parent().parent().parent().remove();
+    });
     $('.e-title').bind('change',function () {
         var thi =$(this);
         var tr= thi.parent().parent().parent();
@@ -454,4 +470,9 @@ function updateEducation(id) {
 
     });
 }
+
+
+$('.removeRow').bind('click',function () {
+    $(this).parent().parent().parent().parent().parent().remove();
+});
 
