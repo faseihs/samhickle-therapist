@@ -233,7 +233,7 @@
 
                 <ul class="links">
                     <li><a  href="/">Home</a></li>
-                    <li><a href="#0">About us</a></li>
+                    <li><a href="/about">About us</a></li>
 
 
                 </ul>
