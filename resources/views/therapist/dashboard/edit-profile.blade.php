@@ -446,7 +446,7 @@
             </div>
             <div class="form-group">
                 <label>Password</label>
-                <input type="password"  autocomplete="off" id="password1" class="form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}"  placeholder="Your password">
+                <input type="password"  autocomplete="new-password" id="password1" class="form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}"  placeholder="Your password">
                 @error('password')
                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('password') }}</strong>
