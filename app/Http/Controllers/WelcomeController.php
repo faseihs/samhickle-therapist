@@ -240,4 +240,7 @@ class WelcomeController extends Controller
     public function privacyPolicy(){
         return view('privacy');
     }
+    public function about(){
+        return view('about');
+    }
 }

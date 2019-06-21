@@ -33,6 +33,7 @@ Route::get('/cache-config', function() {
 
 Route::get('/search','WelcomeController@search');
 Route::get('/terms','WelcomeController@terms');
+Route::get('/about','WelcomeController@about');
 Route::get('/privacy-policy','WelcomeController@privacyPolicy');
 
 Auth::routes();
