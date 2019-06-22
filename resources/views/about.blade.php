@@ -9,10 +9,10 @@
             </div>
             <div class="row">
                 <div class="col-md-12 ">
-                    <h6> Therapist.co.uk making therapy easy</h6>
+                    <h6 style="font-size: 40px;"> Therapist.co.uk making therapy easy</h6>
 
 
-                    <p>We created therapist.co.uk to solve problems of finding a suitable therapist. We started with online appointment-booking – and we haven’t stopped building since. With therapist.co.uk you can see therapist’s specialities, appointment times, competitive prices, book instantly online, and make informed choices with verified reviews.
+                    <p style="font-size: 20px;">We created therapist.co.uk to solve problems of finding a suitable therapist. We started with online appointment-booking – and we haven’t stopped building since. With therapist.co.uk you can see therapist’s specialities, appointment times, competitive prices, book instantly online, and make informed choices with verified reviews.
                     </p>
                     </div>
                 <div class="col-md-12 text-center m-auto">
