@@ -24,7 +24,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3">
+                        <div class="col-lg-3 col-md-3 ">
                             <div class="form-group">
                                 <select required class="form-control" name="group_id" id="country">
                                     <option selected disabled value="">Who is the therapy for?</option>
@@ -34,7 +34,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4" >
+                        <div class="col-lg-4 col-md-4 mb-2" >
 
                            {{-- <div id="postCodeDiv" class="form-group">
                                 <input type="text" class="form-control" placeholder="Enter Postcode ....">
