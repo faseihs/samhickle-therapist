@@ -307,6 +307,43 @@
 
 <!-- COMMON SCRIPTS -->
 <script src="/theme/js/jquery-2.2.4.min.js"></script>
+<script>
+    var resized=false;
+    setInterval(
+        function(){
+            $(window).resize(function() {
+                var mobileWidth =  (window.innerWidth > 0) ?
+                    window.innerWidth :
+                    screen.width;
+                var viewport = (mobileWidth > 768) ?
+                    'width=device-width, initial-scale=1.0' :
+                    'width=1200';
+                console.log("Resized");
+                if(!resized){
+                    $("meta[name=viewport]").attr('content', viewport);
+                    resized=true;
+                }
+
+            }).resize();
+        },
+        3000
+    );
+    $(window).resize(function() {
+        var mobileWidth =  (window.innerWidth > 0) ?
+            window.innerWidth :
+            screen.width;
+        var viewport = (mobileWidth > 768) ?
+            'width=device-width, initial-scale=1.0' :
+            'width=1200';
+        console.log("Resized");
+        if(!resized){
+            $("meta[name=viewport]").attr('content', viewport);
+            resized=true;
+        }
+
+    }).resize();
+
+</script>
 <script src="/theme/js/common_scripts.min.js"></script>
 <script src="/theme/js/functions.js?v=1"></script>
 <script>
@@ -314,6 +351,8 @@
 </script>
 <script src="/js/navbar.js?v=1"></script>
 @yield('scripts')
+
+
 
 </body>
 
