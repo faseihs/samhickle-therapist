@@ -34,7 +34,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4">
+                        <div class="col-lg-4 col-md-4" >
 
                            {{-- <div id="postCodeDiv" class="form-group">
                                 <input type="text" class="form-control" placeholder="Enter Postcode ....">
@@ -50,7 +50,7 @@
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-2">
-                            <input style="height:25px;"  type="submit" class="form-control" value="Search">
+                            <input style="height:25px;position: relative"  type="submit" class="form-control pl-0 pr-0" value="Search">
                         </div>
                         <style>
                             .input-group-addon-btn {

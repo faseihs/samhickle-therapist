@@ -34,6 +34,57 @@
             </div>
         </modal>
 
+
+        <div id="tregisterModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <register type="therapist" url="/api/t-register"></register>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div id="loginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <login type="therapist" url="/api/t-login"></login>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div id="tloginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
+                        <login type="user" url="/api/login"></login>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
     </li>
 
 
@@ -61,18 +112,22 @@
                 return string.charAt(0).toUpperCase() + string.slice(1);
             },
             showLogin(){
-                this.$modal.show('LoginModal');
+                //this.$modal.show('LoginModal');
+                $('#loginModal').modal('show');
             }
             ,
             showRegister(){
-                this.$modal.show('registerModal');
+                //this.$modal.show('registerModal');
+                $('#tregisterModal').modal('show');
             },
             showtLogin(){
-                this.$modal.show('tLoginModal');
+                //this.$modal.show('tLoginModal');
+                $('#tloginModal').modal('show');
             }
             ,
             showtRegister(){
-                this.$modal.show('tregisterModal');
+                //this.$modal.show('tregisterModal');
+                $('#tregisterModal').modal('show');
             },
             getUrl(){
               if(this.name==='patients')
@@ -88,6 +143,11 @@
                 console.log(window.auth);
                 return window.auth==='false';
             }
+        },
+        mounted(){
+            $('a.show-submenu').on("click", function () {
+                $(this).next().toggleClass("show_normal");
+            });
         }
     }
 </script>

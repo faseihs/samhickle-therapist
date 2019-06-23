@@ -83,10 +83,10 @@
                             </div>
                             <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
                             <div class="row">
-                                <div class="col-md-6 text-right">
+                                <div class=" loginBtn col-md-6 text-right">
                                     <button @click.prevent="showLogin" class="btn_1" >Login</button>
                                 </div>
-                                <div class="col-md-6 text-left">
+                                <div class="regBtn col-md-6 text-left">
                                     <button @click.prevent="showRegister" class="btn_1" >Register</button>
                                 </div>
                             </div>

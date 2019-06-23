@@ -30,6 +30,34 @@
 
     <!-- YOUR CUSTOM CSS -->
     <link href="/theme/css/custom.css" rel="stylesheet">
+    <style>
+        #logo{
+            background-size: 350px 40px !important;
+        }
+        @media (max-width: 576px) {
+            #logo{
+                background-size: 175px 40px !important;
+            }
+            .v--modal{
+                width: 100% !important;
+                left: 0 !important;
+            }
+            .v--modal .text-left{
+                text-align: center;
+            }
+
+            .loginBtn{
+                text-align: center !important;
+            }
+            .regBtn{
+                text-align: center !important;
+            }
+
+        }
+        .modal-backdrop {
+            z-index: -1 !important;
+        }
+    </style>
     @yield('styles')
 
 </head>
@@ -49,10 +77,10 @@
         <div class="row">
             <div class="col-lg-5 col-6">
                 <div style="padding-bottom: 5px;" id="logo_home" >
-                    <h1><a class="pb-4" style="height:40px;width:auto;background: url('/theme/img/mainLogo.png') no-repeat 0 0;background-size: 350px 40px" href="/" title="Therapist">Therapist</a></h1>
+                    <h1><a id="logo" class="pb-4" style="height:40px;width:auto;background: url('/theme/img/mainLogo.png') no-repeat;" href="/" title="Therapist">Therapist</a></h1>
                 </div>
             </div>
-            <nav class="col-lg-7 col-6">
+            <nav class="col-lg-7 col-6 col-sm-2">
                 <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="#0"><span>Menu mobile</span></a>
                 <ul id="top_access">
                     {{--@auth('therapist')
@@ -97,9 +125,9 @@
                             <a href="#0" class="show-submenu">Login/Signup<i class="icon-down-open-mini"></i></a>
                             <ul>
                                @guest('web')
---}}{{--
+
                                     <li><span class="menu-s">Patients </span> <a class="d-inline-block menu-a" href="/login">Login</a><a class="d-inline-block menu-a" href="/register">Register</a></li>
---}}{{--
+
                                    <navbar-auth name="patients"></navbar-auth>
 
                                 @endguest
@@ -307,7 +335,7 @@
 
 <!-- COMMON SCRIPTS -->
 <script src="/theme/js/jquery-2.2.4.min.js"></script>
-<script>
+{{--<script>
     var resized=false;
     setInterval(
         function(){
@@ -343,13 +371,14 @@
 
     }).resize();
 
-</script>
+</script>--}}
+
 <script src="/theme/js/common_scripts.min.js"></script>
 <script src="/theme/js/functions.js?v=1"></script>
 <script>
     window.auth = '{{Auth::user()?'true':'false'}}';
 </script>
-<script src="/js/navbar.js?v=1"></script>
+<script src="/js/navbar.js?v=3"></script>
 @yield('scripts')
 
 

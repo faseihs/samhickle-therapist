@@ -190,6 +190,8 @@
     });
 </script>
 
+
+
 @yield('scripts')
 
 </body>
