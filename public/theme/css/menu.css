@@ -270,9 +270,14 @@
 
   /* Menu mobile second level */
   .main-menu ul li.submenu ul {
-    border-left: 1px solid #ededed;
     margin: 0 0 10px 25px;
+
   }
+
+  .main-menu ul li.submenu ul li {
+    border-top: 0.5px dashed #e74e84;
+  }
+
 
   .main-menu ul li.submenu ul li {
     border: 0;

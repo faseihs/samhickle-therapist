@@ -6,8 +6,8 @@
     <div class="hero_home version_1" style="background: #3f4079 url('/theme/img/bg.jpg') no-repeat center center;
 		background-size: cover;">
         <div class="content">
-            <h3>Find a therapist near you</h3>
-            <p>
+            <h3 class="customText">Find a therapist near you</h3>
+            <p class="customText">
                 Search, Compare and Book
             </p>
             <form id="searchForm" onsubmit="return validateForm()" method="get" action="/search">

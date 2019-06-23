@@ -48,6 +48,7 @@
 	});
 	$('a.show-submenu').on("click", function () {
 		$(this).next().toggleClass("show_normal");
+
 	});
 
 	// Hamburger icon 

@@ -24,7 +24,7 @@
     <!-- BASE CSS -->
     <link href="/theme/css/bootstrap.min.css" rel="stylesheet">
     <link href="/theme/css/style.css?v=1" rel="stylesheet">
-    <link href="/theme/css/menu.css?v=1" rel="stylesheet">
+    <link href="/theme/css/menu.css?v=2" rel="stylesheet">
     <link href="/theme/css/vendors.css" rel="stylesheet">
     <link href="/theme/css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
 
@@ -52,7 +52,19 @@
             .regBtn{
                 text-align: center !important;
             }
+            .customText{
+                color:black !important;
+            }
+            #lBtn{
+                top:20% !important;
+            }
+            .show-normal a{
+                color:#e74e84 !important;
+            }
 
+            .main-menu ul li a{
+                color:#e74e84 !important;
+            }
         }
         .modal-backdrop {
             z-index: -1 !important;
@@ -75,12 +87,12 @@
 <header  class="header_sticky">
     <div  class="container">
         <div class="row">
-            <div class="col-lg-5 col-6">
+            <div class="col-lg-5 col-8 col-sm-8">
                 <div style="padding-bottom: 5px;" id="logo_home" >
                     <h1><a id="logo" class="pb-4" style="height:40px;width:auto;background: url('/theme/img/mainLogo.png') no-repeat;" href="/" title="Therapist">Therapist</a></h1>
                 </div>
             </div>
-            <nav class="col-lg-7 col-6 col-sm-2">
+            <nav class="col-lg-7 col-4  col-sm-4">
                 <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="#0"><span>Menu mobile</span></a>
                 <ul id="top_access">
                     {{--@auth('therapist')
