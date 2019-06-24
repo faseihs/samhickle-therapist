@@ -51,6 +51,7 @@
             }
             .regBtn{
                 text-align: center !important;
+                margin-top: 4px !important;
             }
             .customText{
                 color:black !important;
@@ -64,6 +65,21 @@
 
             .main-menu ul li a{
                 color:#e74e84 !important;
+            }
+            .nBtn{
+                width: 50% !important;
+            }
+            .pBtn{
+                width: 50% !important;
+            }
+            .pricing-features li {
+                width: auto !important;
+            }
+            .pricing-features {
+                width: auto !important;
+            }
+            .pricing-body{
+                overflow-x: inherit !important;
             }
         }
         .modal-backdrop {

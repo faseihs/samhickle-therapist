@@ -6,10 +6,16 @@
                 <div id="mainDiv" class="col-md-12">
 
                     <div class="row">
-                        <div style="margin-top:15px;" class="col-md-1">
+                        <div style="margin-top:15px;" class="col-md-6 col-sm-6 text-left pBtn">
                             <i @click="fetchPrevious" style="cursor: pointer" class="fa fa-angle-left fa-2x"></i>
                         </div>
-                        <div  class="col-md-10 table-responsive ">
+                        <div style="margin-top:15px;" class="col-md-6 col-sm-6 text-right nBtn">
+                            <i @click="fetchNext" style="cursor: pointer" class="fa fa-angle-right fa-2x"></i>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div  class="col-md-12 table-responsive ">
                             <table class="table table-borderless">
                                 <thead>
                                 <tr>
@@ -62,9 +68,9 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div style="margin-top:15px;" class="col-md-1">
+                        <!--<div style="margin-top:15px;" class="col-md-1">
                             <i @click="fetchNext" style="cursor: pointer" class="fa fa-angle-right fa-2x"></i>
-                        </div>
+                        </div>-->
 
                     </div>
 
