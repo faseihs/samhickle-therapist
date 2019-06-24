@@ -406,7 +406,7 @@
 <script>
     window.auth = '{{Auth::user()?'true':'false'}}';
 </script>
-<script src="/js/navbar.js?v=3"></script>
+<script src="/js/navbar.js?v=4"></script>
 @yield('scripts')
 
 
