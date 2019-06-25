@@ -81,6 +81,13 @@
             .pricing-body{
                 overflow-x: inherit !important;
             }
+            .yesDisplay{
+                display: initial !important;
+            }
+
+            .noDisplay{
+                display: none;
+            }
         }
         .modal-backdrop {
             z-index: -1 !important;
@@ -148,6 +155,7 @@
 
                             </ul>
                         </li>--}}
+                        <li class="d-none yesDisplay "><a href="/">Home</a></li>
                         <li><a href="/therapist/register">List your practice on <span class="text-main">therapist.co.uk</span></a></li>
                         {{--<li class="submenu">
                             <a href="#0" class="show-submenu">Login/Signup<i class="icon-down-open-mini"></i></a>
@@ -166,6 +174,8 @@
 
                             </ul>
                         </li>--}}
+
+
                         @if(!Auth::user() && !Auth::guard('therapist')->check())
 
                             <navbar-auth name="patients"></navbar-auth>
@@ -188,6 +198,17 @@
                                 </ul>
                             </li>
                         @endauth
+                        <li class="d-none yesDisplay "><a href="/about">About</a></li>
+                        <li class="d-none yesDisplay "><a href="/terms">Terms and Conditions</a></li>
+                        <li class="d-none yesDisplay "><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li class="submenu d-none yesDisplay ">
+                            <a href="#0" class="show-submenu">Contact Us<i class="icon-down-open-mini"></i></a>
+                            <ul class="show_normal">
+                                <li><a href="mailto:help@therapist.co.uk"><i class="icon_mail_alt"></i> help@therapist.co.uk</a></li>
+                            </ul>
+                        </li>
+
+
 
 
                         {{--<li class="submenu">
@@ -285,7 +306,7 @@
                     </a>
                 </p>
             </div>--}}
-            <div class="col-lg-2 col-md-2">
+            <div class="col-lg-2 col-md-2 noDisplay">
 
                 <ul class="links">
                     <li><a  href="/">Home</a></li>
@@ -294,7 +315,7 @@
 
                 </ul>
             </div>
-            <div class="col-lg-2 col-md-2">
+            <div class="col-lg-2 col-md-2 noDisplay">
                 {{--
                                 <h5>About</h5>
                 --}}
@@ -304,7 +325,7 @@
                     <li><a href="/therapist/login">Therapist Login</a></li>
                 </ul>
             </div>
-            <div class="col-lg-2 col-md-2">
+            <div class="col-lg-2 col-md-2 noDisplay">
 {{--
                 <h5>About</h5>
 --}}
@@ -314,7 +335,7 @@
                     <li><a href="/login">Patient Login</a></li>
                 </ul>
             </div>
-            <div class="col-lg-3 col-md-3">
+            <div class="col-lg-3 col-md-3 noDisplay">
                 <div class="follow_us">
                     <h5>Follow us</h5>
                     <ul>
@@ -330,7 +351,7 @@
                     margin-right: 20px;
                 }
             </style>
-            <div class="col-lg-3 col-md-3 text-left">
+            <div class="col-lg-3 col-md-3 text-left noDisplay">
                 <h5>Contact with Us</h5>
                 <ul class="contacts">
                     {{--
@@ -344,7 +365,7 @@
         <!--/row-->
         <hr>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 noDisplay">
                 <ul id="additional_links">
                     <li><a href="/terms">Terms and conditions</a></li>
                     <li><a href="/privacy-policy">Privacy</a></li>
