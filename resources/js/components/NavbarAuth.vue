@@ -51,7 +51,7 @@
 
             </div>
         </div>
-        <div id="loginModal" class="modal fade" role="dialog">
+        <div id="tloginModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
 
                 <!-- Modal content-->
@@ -67,7 +67,7 @@
 
             </div>
         </div>
-        <div id="tloginModal" class="modal fade" role="dialog">
+        <div id="loginModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
 
                 <!-- Modal content-->
