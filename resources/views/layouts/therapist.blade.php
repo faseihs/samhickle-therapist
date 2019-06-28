@@ -184,10 +184,15 @@
 
                         @auth('therapist')
                             <li><a href="/therapist/dashboard">Dashboard</a></li>
+                            {{--<li class="submenu">
+                                <a href="#0" class="show-submenu">Therapist<i class="icon-down-open-mini"></i></a>
+                                <ul>
+
+                                </ul>
+                            </li>--}}
                         @endauth
                         @auth('web')
                             <li><a href="/user/dashboard">Dashboard</a></li>
-
                         @endauth
                         <li class="d-none yesDisplay "><a href="/about">About</a></li>
                         <li class="d-none yesDisplay "><a href="/terms">Terms and Conditions</a></li>
