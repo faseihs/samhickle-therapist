@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7497c9c8-384b-4766-9260-d9fe2326679a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/NavbarAuth.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/NavbarAuth.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/RegisterProps.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/RegisterProps.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/therapist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/therapist.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,29 +42,35 @@
       <file leaf-file-name="therapist.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/therapist.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="192" column="32" lean-forward="true" selection-start-line="192" selection-start-column="32" selection-end-line="192" selection-end-column="32" />
+            <state relative-caret-position="427">
+              <caret line="101" column="9" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Therapist.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Model/Therapist.php">
+      <file leaf-file-name="RegisterController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="65" column="4" lean-forward="true" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
-              <folding>
-                <element signature="e#29#86#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="64">
+              <caret line="136" column="51" selection-start-line="136" selection-start-column="51" selection-end-line="136" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DashboardController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Therapist/DashboardController.php">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
+            <state relative-caret-position="-602">
+              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Register.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/Register.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="18" column="120" selection-start-line="18" selection-start-column="120" selection-end-line="18" selection-end-column="120" />
             </state>
           </provider>
         </entry>
@@ -63,35 +78,8 @@
       <file leaf-file-name="SearchSchedule.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/components/SearchSchedule.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="13" column="30" selection-start-line="8" selection-start-column="24" selection-end-line="13" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Schedule.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/components/Schedule.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="20" column="51" lean-forward="true" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#aside#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#aside#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#aside#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#14037#14063#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="searchResult.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/searchResult.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="20" column="76" lean-forward="true" selection-start-line="20" selection-start-column="76" selection-end-line="20" selection-end-column="76" />
-              <folding>
-                <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="3412">
+              <caret line="292" column="42" lean-forward="true" selection-start-line="292" selection-start-column="42" selection-end-line="292" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -99,11 +87,20 @@
       <file leaf-file-name="NavbarAuth.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/components/NavbarAuth.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="40" column="37" lean-forward="true" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+            <state relative-caret-position="361">
+              <caret line="46" column="56" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
               <folding>
                 <element signature="e#3543#3571#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterProps.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/RegisterProps.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="18" column="120" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="120" />
             </state>
           </provider>
         </entry>
@@ -144,8 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Pra</find>
-      <find>Te</find>
       <find>e</find>
       <find>Curric</find>
       <find>Servi</find>
@@ -174,6 +169,8 @@
       <find>&lt;login&gt;</find>
       <find>Login</find>
       <find>Dashb</find>
+      <find>tregis</find>
+      <find>treg</find>
     </findStrings>
     <replaceStrings>
       <replace>radio_time[]</replace>
@@ -197,7 +194,6 @@
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/webpack.mix.js" />
         <option value="$PROJECT_DIR$/resources/js/navbar.js" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/User/BookingController.php" />
         <option value="$PROJECT_DIR$/resources/js/profile.js" />
@@ -206,8 +202,6 @@
         <option value="$PROJECT_DIR$/resources/views/privacy.blade.php" />
         <option value="$PROJECT_DIR$/app/Notifications/TherapistResetPasswordNotification.php" />
         <option value="$PROJECT_DIR$/resources/js/components/LoginProps.vue" />
-        <option value="$PROJECT_DIR$/resources/js/components/Register.vue" />
-        <option value="$PROJECT_DIR$/resources/js/components/RegisterProps.vue" />
         <option value="$PROJECT_DIR$/resources/views/therapist/password/email.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Therapist/ForgotPasswordController.php" />
@@ -238,11 +232,14 @@
         <option value="$PROJECT_DIR$/public/theme/js/functions.js" />
         <option value="$PROJECT_DIR$/public/theme/css/menu.css" />
         <option value="$PROJECT_DIR$/resources/js/components/SearchSchedule.vue" />
-        <option value="$PROJECT_DIR$/resources/js/components/NavbarAuth.vue" />
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Model/Therapist.php" />
         <option value="$PROJECT_DIR$/resources/js/components/Schedule.vue" />
         <option value="$PROJECT_DIR$/resources/views/searchResult.blade.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/NavbarAuth.vue" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/RegisterProps.vue" />
+        <option value="$PROJECT_DIR$/resources/js/components/Register.vue" />
         <option value="$PROJECT_DIR$/resources/views/layouts/therapist.blade.php" />
       </list>
     </option>
@@ -401,12 +398,33 @@
               <item name="therapist" type="b2602c69:ProjectViewProjectNode" />
               <item name="therapist" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="therapist" type="b2602c69:ProjectViewProjectNode" />
+              <item name="therapist" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Providers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="therapist" type="b2602c69:ProjectViewProjectNode" />
               <item name="therapist" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="therapist" type="b2602c69:ProjectViewProjectNode" />
+              <item name="therapist" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="therapist" type="b2602c69:ProjectViewProjectNode" />
+              <item name="therapist" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="therapist" type="b2602c69:ProjectViewProjectNode" />
@@ -428,7 +446,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="Nav&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/NavbarAuth.vue&#10;search&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;Sched&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/Schedule.vue&#10;SearchS&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/SearchSchedule.vue&#10;Dash&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/Therapist/DashboardController.php&#10;edit&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/dashboard/edit-profile.blade.php&#10;Thera&#9;null&#9;null&#10;env&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/.env&#10;ther&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/layouts/therapist.blade.php&#10;Navb&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/NavbarAuth.vue&#10;Na&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/NavbarAuth.vue&#10;th&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/layouts/therapist.blade.php&#10;Sea&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/SearchSchedule.vue&#10;therapist&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/layouts/therapist.blade.php&#10;func&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/public/theme/js/functions.js&#10;menu.cs&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/public/theme/css/menu.css&#10;newW&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/newWelcome.blade.php&#10;therap&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/layouts/therapist.blade.php&#10;web&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/routes/web.php&#10;mai.php&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/config/mail.php&#10;database.p&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/config/database.php&#10;searc&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;LoginP&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/LoginProps.vue&#10;Log&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/Login.vue&#10;thera&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/layouts/therapist.blade.php&#10;index&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/schedule/index.blade.php&#10;SChed&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/SearchSchedule.vue&#10;sea&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;Da&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/Therapist/DashboardController.php&#10;edi&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/dashboard/edit-profile.blade.php&#10;Ther&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Model/Therapist.php&#10;regist&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/auth/register.blade.php&#10;register&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/auth/therapist/register.blade.php&#10;newP&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/guest/newProfile.blade.php&#10;newWe&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/newWelcome.blade.php&#10;ndex&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/schedule/index.blade.php&#10;Scc&#9;null&#9;null&#10;Booki&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/User/BookingController.php&#10;Plan&#9;null&#9;null&#10;plans&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/plans.blade.php&#10;Wel&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/WelcomeController.php&#10;Das&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/Therapist/DashboardController.php&#10;login&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/auth/therapist/login.blade.php&#10;ed&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/dashboard/edit-profile.blade.php&#10;edit-&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/dashboard/edit-profile.blade.php&#10;Ssch&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/SearchSchedule.vue&#10;TherapistSch&#9;null&#9;null&#10;common&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/public/theme/js/common_scripts.js&#10;functi&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/public/theme/js/functions.js&#10;auth&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/config/auth.php" />
+    <property name="SearchEverywhereHistoryKey" value="web&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/routes/web.php&#10;Nav&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/NavbarAuth.vue&#10;Search&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/SearchSchedule.vue&#10;search&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;Sched&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/Schedule.vue&#10;SearchS&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/SearchSchedule.vue&#10;Dash&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/Therapist/DashboardController.php&#10;edit&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/dashboard/edit-profile.blade.php&#10;Thera&#9;null&#9;null&#10;env&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/.env&#10;ther&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/layouts/therapist.blade.php&#10;Navb&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/NavbarAuth.vue&#10;Na&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/NavbarAuth.vue&#10;th&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/layouts/therapist.blade.php&#10;Sea&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/SearchSchedule.vue&#10;therapist&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/layouts/therapist.blade.php&#10;func&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/public/theme/js/functions.js&#10;menu.cs&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/public/theme/css/menu.css&#10;newW&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/newWelcome.blade.php&#10;therap&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/layouts/therapist.blade.php&#10;mai.php&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/config/mail.php&#10;database.p&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/config/database.php&#10;searc&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;LoginP&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/LoginProps.vue&#10;Log&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/Login.vue&#10;thera&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/layouts/therapist.blade.php&#10;index&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/schedule/index.blade.php&#10;SChed&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/SearchSchedule.vue&#10;sea&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/searchResult.blade.php&#10;Da&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/Therapist/DashboardController.php&#10;edi&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/dashboard/edit-profile.blade.php&#10;Ther&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Model/Therapist.php&#10;regist&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/auth/register.blade.php&#10;register&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/auth/therapist/register.blade.php&#10;newP&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/guest/newProfile.blade.php&#10;newWe&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/newWelcome.blade.php&#10;ndex&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/schedule/index.blade.php&#10;Scc&#9;null&#9;null&#10;Booki&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/User/BookingController.php&#10;Plan&#9;null&#9;null&#10;plans&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/plans.blade.php&#10;Wel&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/WelcomeController.php&#10;Das&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/app/Http/Controllers/Therapist/DashboardController.php&#10;login&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/auth/therapist/login.blade.php&#10;ed&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/dashboard/edit-profile.blade.php&#10;edit-&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/views/therapist/dashboard/edit-profile.blade.php&#10;Ssch&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/resources/js/components/SearchSchedule.vue&#10;TherapistSch&#9;null&#9;null&#10;common&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/public/theme/js/common_scripts.js&#10;functi&#9;FILE&#9;file://C:/xampp7/htdocs/fiverr/therapist/public/theme/js/functions.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -499,12 +517,12 @@
       <workItem from="1561536897019" duration="1268000" />
       <workItem from="1561544908584" duration="823000" />
       <workItem from="1561661416191" duration="197000" />
-      <workItem from="1561719628385" duration="3391000" />
+      <workItem from="1561719628385" duration="5294000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="278037000" />
+    <option name="totallyTimeSpent" value="279940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -516,8 +534,8 @@
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49924356" visible="true" weight="0.24767801" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3267776" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49924356" weight="0.24767801" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3267776" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -540,17 +558,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Therapist/TherapistEducationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="29" column="39" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="29" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Therapist/TherapistServiceController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -569,20 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/Register.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/RegisterProps.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
         </state>
       </provider>
     </entry>
@@ -747,13 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3344">
@@ -848,13 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/SearchSchedule.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="13" column="30" selection-start-line="8" selection-start-column="24" selection-end-line="13" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/Schedule.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
@@ -897,18 +880,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/NavbarAuth.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="40" column="37" lean-forward="true" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+        <state relative-caret-position="361">
+          <caret line="46" column="56" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
           <folding>
             <element signature="e#3543#3571#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-602">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="136" column="51" selection-start-line="136" selection-start-column="51" selection-end-line="136" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/SearchSchedule.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3412">
+          <caret line="292" column="42" lean-forward="true" selection-start-line="292" selection-start-column="42" selection-end-line="292" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/RegisterProps.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="18" column="120" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/Register.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="18" column="120" selection-start-line="18" selection-start-column="120" selection-end-line="18" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/therapist.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="192" column="32" lean-forward="true" selection-start-line="192" selection-start-column="32" selection-end-line="192" selection-end-column="32" />
+        <state relative-caret-position="427">
+          <caret line="101" column="9" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
         </state>
       </provider>
     </entry>

@@ -92,6 +92,14 @@
         .modal-backdrop {
             z-index: -1 !important;
         }
+        input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
     </style>
     @yield('styles')
 
@@ -423,7 +431,7 @@
 <script>
     window.auth = '{{Auth::user()?'true':'false'}}';
 </script>
-<script src="/js/navbar.js?v=5"></script>
+<script src="/js/navbar.js?v=6"></script>
 @yield('scripts')
 
 

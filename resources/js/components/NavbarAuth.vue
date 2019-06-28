@@ -44,7 +44,7 @@
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
-                        <register type="therapist" url="/api/t-register"></register>
+                        <register type="user" url="/api/register"></register>
                     </div>
 
                 </div>

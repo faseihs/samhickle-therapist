@@ -134,6 +134,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'contact'=>['required','string','min:11']
 
         ]);
         if ($validator->fails()) {
@@ -148,6 +149,7 @@ class RegisterController extends Controller
             ]);
             $profile=new UserProfile();
             $profile->user_id=$user->id;
+            $profile->contact=$request->contact;
             $profile->save();
             DB::commit();
             Auth::guard('web')->login($user);

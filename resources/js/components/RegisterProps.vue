@@ -12,6 +12,12 @@
             </div>
             <input v-model="email" type="email" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
         </div>
+        <div v-if="type==='user'" class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon10"><i class="fa fa-user"></i></span>
+            </div>
+            <input v-model="contact" type="number" class="form-control" placeholder="Telephone Number (Ex 07911 123456)" aria-describedby="basic-addon1">
+        </div>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon2"><i class="fa fa-lock"></i></span>
@@ -54,7 +60,7 @@
     import axios from 'axios';
     export default {
         name: "Register",
-        props:['url'],
+        props:['url','type'],
         data(){
             return{
                 email:null,
@@ -62,6 +68,7 @@
                 remember:false,
                 password_confirmation:null,
                 name:null,
+                contact:null,
                 csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
 
             }
@@ -78,6 +85,8 @@
                 data.append('password',this.password);
                 data.append('name',this.name);
                 data.append('password_confirmation',this.password_confirmation);
+                if(this.type ==='user')
+                    data.append('contact',this.contact);
                 axios.post(this.url,data)
                     .then(r=>{
                         window.location.reload();
