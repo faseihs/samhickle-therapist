@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Therapist;
 
+use App\Mail\ToPatient;
 use App\Model\Booking;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 
 class BookingController extends Controller
@@ -52,6 +54,20 @@ class BookingController extends Controller
             DB::beginTransaction();
             $booking->update($request->all());
             DB::commit();
+            if($booking->status==0)
+                $booking->Status="stalled";
+            else if($booking->status==1)
+                $booking->Status="approved";
+            else if($booking->status==2)
+                $booking->Status="cancelled";
+            try{
+                $user=$booking->user;
+                Mail::to($user->email)->send(new ToPatient($user,"",$booking));
+
+            }
+            catch (\Exception $e){
+                dd($e);
+            }
             return Redirect::back()->with('success','Successfully Updated');
         }
         catch(\Exception $e){

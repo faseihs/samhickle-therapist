@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Model\Booking;
 use App\Model\Therapist;
 use Carbon\Carbon;
 use Illuminate\Notifications\Notifiable;
@@ -57,5 +58,24 @@ class User extends Authenticatable
         $reviews=$this->reviews()->where('therapist_id',$therapist->id)->get();
         return sizeof($bookings)>sizeof($reviews);
 
+    }
+
+    public function visited(Booking $visisted){
+        $now=Carbon::now();
+        if($now->lt(Carbon::parse($visisted->date)) && $visisted->status==1)
+            return false;
+        else return true;
+    }
+
+    public function canCancelBooking(Booking $booking){
+        $now=Carbon::now();
+        if($now->lt(Carbon::parse($booking->date))){
+            return true;
+        }
+        else {
+            if($booking->status==0)
+                return true;
+            else return false;
+        }
     }
 }

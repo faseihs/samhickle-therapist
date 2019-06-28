@@ -82,6 +82,7 @@ Route::group(['prefix'=>'user'],function(){
     Route::post('/edit-profile','User\DashboardController@updateProfile');
     Route::get('/bookings','User\DashboardController@reviews');
     Route::get('/bookings','User\DashboardController@bookings');
+    Route::post('/booking/{id}','User\DashboardController@updateBooking');
     Route::get('/reviews','User\DashboardController@reviews');
     Route::post('/api/booking','User\BookingController@apiBooking');
 

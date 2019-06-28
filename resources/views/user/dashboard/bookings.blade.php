@@ -47,6 +47,17 @@
                             <li><strong>Telephone</strong> {{$b->therapist->profile->contact?$b->therapist->profile->contact:'-'}}</li>
                             <li><strong>Email</strong> {{$b->therapist->email}}</li>
                         </ul>
+                        <ul class="buttons">
+                            @if($user->canCancelBooking($b))
+                                <li><button onclick="document.getElementById('cancel{{$b->id}}').submit()"  class="btn_1 gray delete">Cancel/Delete</button></li>
+                                <form id="cancel{{$b->id}}" style="display: none;" method="POST" action="/user/booking/{{$b->id}}">
+                                    @csrf
+                                    <input name="status" value="3" type="hidden">
+                                </form>
+                            @endif
+
+                        </ul>
+
                     </li>
                 @endforeach
             </ul>

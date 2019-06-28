@@ -8,6 +8,36 @@
 
     <link href="/theme/css/date_picker.css" rel="stylesheet">
     <link rel="stylesheet" href="/js/jquery-ui/jquery-ui.css">
+    <style>
+        .strip_list{
+            margin-right: 8px
+        }
+        .noDisplay{
+            display: none !important;
+        }
+        .noDisplayMobile{
+            display: initial !important;
+        }
+        @media (max-width: 576px) {
+            .strip_list {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+
+            .dp{
+                height: 60px !important;
+                width: 60px !important;
+                border-radius: 50%;
+            }
+
+            .noDisplayMobile{
+                display: none !important;
+            }
+            .noDisplay{
+                display: initial !important;
+            }
+        }
+    </style>
 @endsection
 
 
@@ -15,7 +45,7 @@
     <script>
         window.auth = '{{Auth::user()?'true':'false'}}';
     </script>
-    <script src="/js/profile.js?v=21"></script>
+    <script src="/js/profile.js?v=23"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script
             src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_MAPS_API')}}">
@@ -266,12 +296,19 @@
 
                         <div class="strip_list wow fadeIn row">
 
-                                <figure>
-                                    <a href="/therapist-profile/{{$t->slug}}"><img style="width: 100%;" src="{{$t->profile->dp?'/'.$t->profile->dp:'http://via.placeholder.com/565x565.jpg'}}" class="img-fluid" alt="">
-                                        <div class="preview"><span>Read more</span></div>
-                                    </a>
-                                </figure>
+                            <figure class="noDisplayMobile">
+                                <a href="/therapist-profile/{{$t->slug}}"><img style="width: 100%;" src="{{$t->profile->dp?'/'.$t->profile->dp:'http://via.placeholder.com/565x565.jpg'}}" class="img-fluid dp" alt="">
+                                    <div class="preview"><span>Read more</span></div>
+                                </a>
+                            </figure>
                                     <div class="wrapper col-md-3">
+
+                                            <a class="noDisplay" href="/therapist-profile/{{$t->slug}}"><img style="width: 100%;" src="{{$t->profile->dp?'/'.$t->profile->dp:'http://via.placeholder.com/565x565.jpg'}}" class="img-fluid dp" alt="">
+                                                <div class="preview"><span>Read more</span></div>
+                                            </a>
+
+
+
                                         <small style="overflow-wrap: break-word;">{{$t->profile->personal_statement?$t->profile->personal_statement:'Therapist'}}</small>
                                         <h5><a style="color: #333;" href="/therapist-profile/{{$t->slug}}">{{$t->name}}</a></h5>
                                         <p><i class="fa fa-location-arrow"></i> Distance : {{number_format($t->distance,'0')}} kms</p>

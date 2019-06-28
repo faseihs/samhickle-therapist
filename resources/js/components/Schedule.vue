@@ -386,13 +386,18 @@
                 data.append('time',this.selectedTime);
                 data.append('date',this.selectedDate);
                 data.append('reason',this.reason);
+                let loading =this.$toasted.info("Loading",{
+                    icon:"sync",
+                });
                 axios.post('/user/api/booking',data)
                     .then(r=>{
+                        loading.goAway(0);
                         this.$modal.hide('instantModal');
                         this.$modal.show('thankyouModal');
+
                     }).catch(e=>{
                     for(let i in e.response.data.error){
-
+                        loading.goAway(0);
                         this.$toasted.error(e.response.data.error[i][0],{
                             icon:"error",
                             onClick : (e, toastObject) => {
@@ -412,13 +417,17 @@
                 data.append('date',$('#bookingDate').val());
                 data.append('reason',this.reason);
                 data.append('request','request');
+                let loading =this.$toasted.info("Loading",{
+                    icon:"sync",
+                });
                 axios.post('/user/api/booking',data)
                     .then(r=>{
+                        loading.goAway(0);
                         this.$modal.hide('requestModal');
                         this.$modal.show('thankyouModal2');
                     }).catch(e=>{
                     for(let i in e.response.data.error){
-
+                        loading.goAway(0);
                         this.$toasted.error(e.response.data.error[i][0],{
                             icon:"error",
                             onClick : (e, toastObject) => {

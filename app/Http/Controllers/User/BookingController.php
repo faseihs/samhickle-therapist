@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Mail\ToPatient;
+use App\Mail\ToTherapist;
 use App\Model\Booking;
 use App\Model\Therapist;
 use App\Rules\TherapistSlugPresent;
@@ -10,6 +12,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 
@@ -195,6 +198,15 @@ class BookingController extends Controller
                 $booking->description=$request->description;
             $booking->save();
             DB::commit();
+
+            try{
+                Mail::to($theapist->email)->send(new ToTherapist($theapist,$booking));
+                Mail::to($user->email)->send(new ToPatient($user,"self"));
+
+            }
+            catch (\Exception $e){
+                response()->json($e->getMessage(),201);
+            }
             return response()->json($booking,201);
         }
         catch(\Exception $e){

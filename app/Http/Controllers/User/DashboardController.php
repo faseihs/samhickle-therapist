@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Model\Booking;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -155,5 +156,23 @@ class DashboardController extends Controller
                 'reviews',
                 'type'
             ]));
+    }
+
+    public function updateBooking(Request $request,$id){
+        $booking=Booking::findOrFail($id);
+        $this->validate($request,[
+            'status'=>'required'
+        ]);
+
+        try{
+            DB::beginTransaction();
+            $booking->delete();
+            DB::commit();
+            return Redirect::back()->with('success','Successfully Updated');
+        }
+        catch(\Exception $e){
+            DB::rollback();
+            dd($e);
+        }
     }
 }
