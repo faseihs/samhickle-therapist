@@ -183,20 +183,11 @@
                         @endif
 
                         @auth('therapist')
-                            <li class="submenu">
-                                <a href="#0" class="show-submenu">Therapist<i class="icon-down-open-mini"></i></a>
-                                <ul>
-                                    <li><a href="/therapist/dashboard">Dashboard</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="/therapist/dashboard">Dashboard</a></li>
                         @endauth
                         @auth('web')
-                            <li class="submenu">
-                                <a href="#0" class="show-submenu">Patients<i class="icon-down-open-mini"></i></a>
-                                <ul>
-                                    <li><a href="/user/dashboard">Dashboard</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="/user/dashboard">Dashboard</a></li>
+
                         @endauth
                         <li class="d-none yesDisplay "><a href="/about">About</a></li>
                         <li class="d-none yesDisplay "><a href="/terms">Terms and Conditions</a></li>
