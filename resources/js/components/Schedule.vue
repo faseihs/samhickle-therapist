@@ -9,12 +9,17 @@
 
             <div id="mainDiv" class="col-md-12">
 
-                <div class="row">
-                    <div style="margin-top:15px;" class="col-md-1">
+                <div class="row ">
+                    <div style="margin-top:15px;" class="col-md-6 col-sm-6 text-left pBtn">
                         <i @click="fetchPrevious" style="cursor: pointer" class="fa fa-angle-left fa-2x"></i>
                     </div>
-                    <div style="border-top:1px solid #e1e8ed;margin-left: -10px;
-    padding-left: 0px;margin-top:4px;padding-top: 8px;" class="col-md-10 table-responsive ">
+                    <div style="margin-top:15px;" class="col-md-6 col-sm-6 text-right nBtn">
+                        <i @click="fetchNext" style="cursor: pointer;margin-right: 16px;" class="fa fa-angle-right fa-2x"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div style="margin-left: -10px;
+    padding-left: 0px;margin-top:4px;padding-top: 8px;" class="col-md-12 table-responsive ">
                         <table class="table table-borderless">
                             <thead>
                             <tr>
@@ -50,9 +55,9 @@
                             </tbody>
                         </table>
                     </div>
-                    <div style="margin-top:15px;" class="col-md-1">
+                    <!--<div style="margin-top:15px;" class="col-md-1">
                         <i @click="fetchNext" style="cursor: pointer" class="fa fa-angle-right fa-2x"></i>
-                    </div>
+                    </div>-->
 
                 </div>
 
@@ -71,10 +76,10 @@
                         </div>
                         <p class="text-center h6">Book appointment - <span class="text-primary">in less than 60 seconds</span></p>
                         <div class="row">
-                            <div class="col-md-6 text-right">
+                            <div class="loginBtn col-md-6 text-right">
                                 <button @click.prevent="showLogin" class="btn_1" >Login</button>
                             </div>
-                            <div class="col-md-6 text-left">
+                            <div class="regBtn col-md-6 text-left">
                                 <button @click.prevent="showRegister" class="btn_1" >Register</button>
                             </div>
                         </div>
