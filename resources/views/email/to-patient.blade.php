@@ -7,7 +7,7 @@
 <p>To manage your request go to <a href="https://therapist.co.uk/user/bookings">Dashboard</a></p>
 <p></p>
 <p>Be Well,</p>
-<p>Your Therapist.co.uk Team</p>
+<p>Therapist.co.uk</p>
 
 @endif
 
@@ -19,7 +19,5 @@
     <p>To manage your request go to <a href="https://therapist.co.uk/user/bookings">Dashboard</a></p>
     <p></p>
     <p>Thank you for booking with therapist.co.uk</p>
-    <p></p>
-    <p>Your Therapist.co.uk Team</p>
 
 @endif

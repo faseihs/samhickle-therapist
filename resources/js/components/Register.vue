@@ -16,7 +16,7 @@
             <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon10"><i class="fa fa-user"></i></span>
             </div>
-            <input v-model="contact" type="number" class="form-control" placeholder="Telephone Number (Ex 07911 123456)" aria-describedby="basic-addon1">
+            <input v-model="contact" type="text" class="form-control" placeholder="Telephone Number (Ex 07911 123456)" aria-describedby="basic-addon1">
         </div>
         <div class="input-group mb-3">
             <div class="input-group-prepend">

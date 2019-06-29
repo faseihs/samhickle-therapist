@@ -57,7 +57,7 @@ class BookingController extends Controller
             if($booking->status==0)
                 $booking->Status="stalled";
             else if($booking->status==1)
-                $booking->Status="approved";
+                $booking->Status="confirmed";
             else if($booking->status==2)
                 $booking->Status="cancelled";
             try{

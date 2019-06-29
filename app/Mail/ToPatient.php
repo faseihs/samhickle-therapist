@@ -38,7 +38,11 @@ class ToPatient extends Mailable
      */
     public function build()
     {
-        return $this->view('email.to-patient')
+        $return = $this->view('email.to-patient')
             ->with(['patient',$this->patient,'type'=>$this->type,'booking'=>$this->booking]);
+        if($this->type!="self")
+            $return->subject("Booking ".$this->booking->Status);
+        else $return->subject("Booking Request Sent");
+        return $return;
     }
 }
