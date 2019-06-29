@@ -37,6 +37,7 @@ class ToTherapist extends Mailable
     public function build()
     {
         return $this->view('email.to-therapist')
+            ->subject("Booking Request")
             ->with(['therapist'=>$this->therapist,'booking'=>$this->booking]);
     }
 }
