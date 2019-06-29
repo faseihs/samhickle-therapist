@@ -65,7 +65,7 @@
         window.auth = '{{Auth::user()?'true':'false'}}';
     </script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="/js/profile.js?v=23"></script>
+    <script src="/js/profile.js?v=24"></script>
 
 @endsection
 @section('content')
