@@ -6,7 +6,6 @@
 <p>Thank you for using Therapist.co.uk. Your appointment request has been sent to the therapist.</p>
 <p>To manage your request go to <a href="https://therapist.co.uk/user/bookings">Dashboard</a></p>
 <p></p>
-<p>Be Well,</p>
 <p>Therapist.co.uk</p>
 
 @endif

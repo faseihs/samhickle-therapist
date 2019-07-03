@@ -45,6 +45,10 @@
                            {{-- <li><strong>Visits</strong> Cardiology test, Diabetic diagnose</li>--}}
                             <li><strong>Telephone</strong> {{$b->user->profile->contact?$b->user->profile->contact:'-'}}</li>
                             <li><strong>Email</strong> {{$b->user->email}}</li>
+                            @if($b->description)
+                                <li><strong>Reason</strong> {{$b->description}}</li>
+                            @endif
+
                         </ul>
                         <ul class="buttons">
                             @if($b->status!=1)

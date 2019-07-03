@@ -46,6 +46,9 @@
                              <li><strong>Visits</strong> {{$b->therapist->profile->address?$b->therapist->profile->address:'-'}}</li>
                             <li><strong>Telephone</strong> {{$b->therapist->profile->contact?$b->therapist->profile->contact:'-'}}</li>
                             <li><strong>Email</strong> {{$b->therapist->email}}</li>
+                            @if($b->description)
+                                <li><strong>Reason</strong> {{$b->description}}</li>
+                            @endif
                         </ul>
                         {{--<ul class="buttons">
                             @if($user->canCancelBooking($b))

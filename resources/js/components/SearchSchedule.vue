@@ -483,7 +483,7 @@
                 data.append('slug',this.tempSlug?this.tempSlug:this.slug);
                 data.append('time',$('#bookingTime').val());
                 data.append('date',$('#bookingDate').val());
-                data.append('reason',this.reason);
+                data.append('description',this.reason);
                 data.append('request','request');
                 let loading =this.$toasted.info("Loading",{
                     icon:"sync",
@@ -513,7 +513,7 @@
                 data.append('slug',this.tempSlug?this.tempSlug:this.slug);
                 data.append('time',this.selectedTime);
                 data.append('date',this.selectedDate);
-                data.append('reason',this.reason);
+                data.append('description',this.reason);
                 let loading =this.$toasted.info("Loading",{
                     icon:"sync",
                 });
