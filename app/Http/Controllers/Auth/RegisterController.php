@@ -4,11 +4,13 @@ namespace App\Http\Controllers\Auth;
 
 use App\Model\Group;
 use App\Model\Problem;
+use App\Model\Subscription;
 use App\Model\Therapist;
 use App\Model\TherapistProfile;
 use App\Model\UserProfile;
 use App\User;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -81,6 +83,12 @@ class RegisterController extends Controller
         $profile->save();
         return $user;
     }
+    public function showAdminTherapistRegister(Request $request)
+    {
+        if(Auth::guard('web')->check() || Auth::guard('therapist')->check())
+            return redirect('/');
+        return view('auth.admin-register');
+    }
 
 
     public function showTherapistRegister(Request $request)
@@ -115,6 +123,53 @@ class RegisterController extends Controller
             $profile->save();
             $therapist->problems()->sync($request->problems);
             $therapist->groups()->sync($request->groups);
+            DB::commit();
+            if (Auth::guard('therapist')->attempt(['email' => $therapist->email, 'password' => $request->password], false)) {
+                return redirect()->intended('/therapist/subscription');
+            }
+            return redirect('/therapist/subscription');
+        }
+        catch(\Exception $e){
+            DB::rollback();
+            dd($e);
+        }
+
+
+    }
+    public function adminTherapistRegister(Request $request){
+        //dd($request->all());
+        $this->validate($request,[
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:therapists'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'problems'=>['array'],
+            'groups'=>['array'],
+        ]);
+        try{
+            DB::beginTransaction();
+            $therapist= new Therapist();
+            $therapist->email=$request->email;
+            $therapist->password=bcrypt($request->password);
+            $therapist->save();
+            $profile = new  TherapistProfile();
+            $profile->therapist_id=$therapist->id;
+            $profile->save();
+            $therapist->problems()->sync($request->problems);
+            $therapist->groups()->sync($request->groups);
+            $sub= new Subscription();
+            $plan_id=2;
+            $sub->subscription_plan_id=$plan_id;
+            $sub->therapist_id=$therapist->id;
+            $sub->type='free';
+            $sub->price=0;
+            $sub->start=Carbon::now()->toDateTimeString();
+            if($plan_id==1)
+                $end=Carbon::now()->addYear(3)->toDateTimeString();
+            else if($plan_id==2)
+                $end=Carbon::now()->addYear(1)->toDateTimeString();
+            else if($plan_id==3)
+                $end=Carbon::now()->addYear(5)->toDateTimeString();
+            $sub->end=$end;
+            $sub->save();
             DB::commit();
             if (Auth::guard('therapist')->attempt(['email' => $therapist->email, 'password' => $request->password], false)) {
                 return redirect()->intended('/therapist/subscription');

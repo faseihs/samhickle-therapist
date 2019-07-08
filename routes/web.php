@@ -25,6 +25,11 @@ Route::get('/clear-config', function() {
     Artisan::call('config:clear');
     // return what you want
 });
+Route::get('/many-seed', function() {
+
+    Artisan::call('db:seed --class=ManyTherapistSeeder');
+    // return what you want
+});
 Route::get('/cache-config', function() {
 
     Artisan::call('config:cache');
@@ -99,6 +104,8 @@ Route::post('/api/login','Auth\LoginController@userApiLogin');
 Route::post('/api/register','Auth\RegisterController@userApiRegister');
 Route::post('/api/t-login','Auth\LoginController@therapistApiLogin');
 Route::post('/api/t-register','Auth\RegisterController@therapistApiRegister');
+Route::get('/admin-register','Auth\RegisterController@showAdminTherapistRegister');
+Route::post('/admin-register','Auth\RegisterController@adminTherapistRegister');
 
 
 
